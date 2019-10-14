@@ -10,6 +10,8 @@ export class Media extends Component {
 
     componentDidMount(){
         const player = new Plyr('#player');
+        //alert(window.location.origin);
+        //donne localhost:3000
     }
 
     render() {
@@ -31,9 +33,9 @@ export class Media extends Component {
                                             
                     <img 
                         srcSet={media.versions.map((w) => (
-                            '/img/medias/' + w + '/' + media.src + ' ' + w + 'w'
+                            window.location.origin+'/img/medias/' + w + '/' + media.src + ' ' + w + 'w'
                         ))} 
-                        src={`/img/medias/${media.src}`} 
+                        src={window.location.origin+`/img/medias/${media.src}`} 
                         alt="" 
                         className="original" 
                     />
@@ -51,7 +53,7 @@ export class Media extends Component {
                         loop
                     >
                         <source 
-                            src={'/img/medias/'+media.src} 
+                            src={window.location.origin+'/img/medias/'+media.src} 
                             type="video/mp4" 
                         />
                         Votre navigateur ne supporte pas la vidéo.

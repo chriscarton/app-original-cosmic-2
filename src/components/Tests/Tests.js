@@ -1,25 +1,15 @@
 import React, { Component } from 'react';
 import './Tests.scss';
-import data from '../Projects/data.js';
 
 export class Tests extends Component {
 
-    constructor(props){
-        super(props);
-    }
+
 
     render() {
-        /*
-        let myJSON = JSON.stringify(data,null,'\t');
-        console.log(myJSON);
-        */
+        
         return (
             <div id="Tests">
-                {/* {myJSON} */}
-                <div className="title">
-                    Cocogoose!
-                </div>
-                <p>Et voici une phrase!</p>
+                {/* Pour faire tout un tas de tests */}
             </div>
         )
     }

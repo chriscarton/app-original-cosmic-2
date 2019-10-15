@@ -40,8 +40,9 @@ export class App extends Component {
 
 
   render(){
+    
     return (
-      <Router basename={'/app-original-cosmic'}>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="App">
           <Header/>
           <Route
@@ -52,16 +53,16 @@ export class App extends Component {
                   
                     <Switch location={location}>
                       <Route 
-                        path={`${process.env.PUBLIC_URL}/`} 
+                        path="/"
                         exact 
                         component={Homepage}
                       />
-                      <Route path={`${process.env.PUBLIC_URL}/studio`} exact component={Studiocontact} />
-                      <Route path={`${process.env.PUBLIC_URL}/showreel`} exact component={Showreel} />
-                      <Route path={`${process.env.PUBLIC_URL}/projets`} exact component={AllProjects} />
-                      <Route path={`${process.env.PUBLIC_URL}/projet/:slug`} exact component={SingleProject} />
+                      <Route path="/studio" exact component={Studiocontact} />
+                      <Route path="/showreel" exact component={Showreel} />
+                      <Route path="/projets" exact component={AllProjects} />
+                      <Route path="/projet/:slug" exact component={SingleProject} />
 
-                      <Route path={`${process.env.PUBLIC_URL}/tests`} exact component={Tests} />
+                      <Route path="/tests" exact component={Tests} />
                       <Route component={NotFound} />
 
                     </Switch>

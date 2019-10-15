@@ -24,30 +24,30 @@ export class Studiocontact extends Component {
 
 
                     <div id="Denis">
-                        <img alt="" src="/img/team/DENIS.jpg"/>
+                        <img alt="" src={process.env.PUBLIC_URL+"/img/team/DENIS.jpg"}/>
                     </div>
                     <div id="Adrien">
-                        <img alt="" src="/img/team/ADRIEN.jpg" />
+                        <img alt="" src={process.env.PUBLIC_URL+"/img/team/ADRIEN.jpg"} />
                     </div>
                     
                     <div id="Romain">
-                        <img alt="" src="/img/team/ROMAIN.jpg" />
+                        <img alt="" src={process.env.PUBLIC_URL+"/img/team/ROMAIN.jpg"} />
                     </div>
                     <div id="Julien">
-                        <img alt="" src="/img/team/JULIEN.jpg" />
+                        <img alt="" src={process.env.PUBLIC_URL+"/img/team/JULIEN.jpg"} />
                     </div>
                     
                     <div id="Raph">
-                        <img alt="" src="/img/team/RAPH.jpg" />
+                        <img alt="" src={process.env.PUBLIC_URL+"/img/team/RAPH.jpg"} />
                     </div>
                     <div id="Frank">
-                        <img alt="" src="/img/team/FRANK.jpg" />
+                        <img alt="" src={process.env.PUBLIC_URL+"/img/team/FRANK.jpg"} />
                     </div>
                     <div id="Chris">
-                        <img alt="" src="/img/team/CHRIS.jpg" />
+                        <img alt="" src={process.env.PUBLIC_URL+"/img/team/CHRIS.jpg"} />
                     </div>
                     <div id="Emma">
-                        <img alt="" src="/img/team/EMMA.jpg" />
+                        <img alt="" src={process.env.PUBLIC_URL+"/img/team/EMMA.jpg"} />
                     </div>
                     
                 </div>

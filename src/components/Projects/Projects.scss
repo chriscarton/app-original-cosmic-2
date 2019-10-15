@@ -16,101 +16,74 @@
             ;
             display:grid;
         }
-
+        
         .item{
-            &.alex-le-fou{
-                grid-area: alex-le-fou;
-            }
-            &.amanda-is{
-                grid-area: amanda-is;
-            }
             
-            &.le-deserteur{
-                grid-area:le-deserteur;
-            }
-            &.afrika-glam {
-                grid-area:afrika-glam;
-            }
-            &.original-cosmic-playlist{
-                grid-area:original-cosmic-playlist;
-            }
-            &.paleo{
-                grid-area:paleo;
-            }
-            &.the-mice{
-                grid-area:the-mice;
-            }
-            &.yellow-and-blue{
-                grid-area:yellow-and-blue;
-            }
-            &.akina-wise{
-                grid-area:akina-wise;
-            }
-            &.eldorado-afro{
-                grid-area:eldorado-afro;
-            }
-
-            &.ombres-colorees{
-                grid-area:ombres-colorees;
-            }
-            &.maescroc{
-                grid-area:maescroc;
-            }
-            &.omg{
-                grid-area:omg;
-            }
-            &.doux-divorce-records{
-                grid-area:doux-divorce-records;
-            }
-
-            &.ronan-martin{
-                grid-area:ronan-martin;
-            }
-
-            &.ronan-martin-les-rayons{
-                grid-area:les-rayons;
-            }
-            &.vendetta{
-                grid-area:vendetta;
-            }
-
-            img{
-                display:block;
-                width:100%;
-                height:100%;
-                object-fit:cover;
-            }
-
-            video.videogif{
-                object-fit: cover;
-                object-position: center center;
-                width:100%;
-                height:100%;
-                display:block;
+            a{
+                
+                img, video{
+                    display:block;
+                    width: 100%;                   
+                    height:100%;
+                    object-fit:cover;
+                    object-position: center center;
+                }
             }
         }
+        
     }
-    .all-projects{
-        text-align:center;
-        padding-top:30px;
-        padding-bottom:30px;
-        a{
-            display:inline-block;
-            color:black;
-            background-color:$yellow;
-            padding:10px;
-            margin-right:5px;
-            margin-left:5px;
-            border:1px solid black;
-            transition:all 0.25s ease-in;
-            text-decoration: none;
-            &:hover{
-                background-color:black;
-                border:1px solid $yellow;
-                color:$yellow;
-            }
-
-        }
+    .alex-le-fou{
+        grid-area: alex-le-fou;
+    }
+    .amanda-is{
+        grid-area: amanda-is;
+    }
+    
+    .le-deserteur{
+        grid-area:le-deserteur;
+    }
+    .afrika-glam {
+        grid-area:afrika-glam;
+    }
+    .original-cosmic-playlist{
+        grid-area:original-cosmic-playlist;
+    }
+    .paleo{
+        grid-area:paleo;
+    }
+    .the-mice{
+        grid-area:the-mice;
+    }
+    .yellow-and-blue{
+        grid-area:yellow-and-blue;
+    }
+    .akina-wise{
+        grid-area:akina-wise;
+    }
+    .eldorado-afro{
+        grid-area:eldorado-afro;
+    }
+    .ombres-colorees{
+        grid-area:ombres-colorees;
+    }
+    .maescroc{
+        grid-area:maescroc;
+    }
+    .omg{
+        grid-area:omg;
+    }
+    .doux-divorce-records{
+        grid-area:doux-divorce-records;
     }
 
+    .ronan-martin{
+        grid-area:ronan-martin;
+    }
+
+    .ronan-martin-les-rayons{
+        grid-area:les-rayons;
+    }
+    .vendetta{
+        grid-area:vendetta;
+    }
 }

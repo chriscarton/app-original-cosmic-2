@@ -1,24 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
 import './ProjectNav.scss';
 
-
 export class ProjectNav extends Component {
-
-    
-    handleClick(){
-        /*
-        let singleProject = document.querySelector('#singleProject');
-        singleProject.classList.add('to-out');
-
-        setTimeout(()=>{
-            singleProject.classList.remove('to-out');
-            singleProject.classList.add('to-in');
-        },1000);
-        */
-    }
-    
 
     render() {
         

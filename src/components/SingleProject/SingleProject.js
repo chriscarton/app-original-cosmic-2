@@ -3,15 +3,8 @@ import data from '../Projects/data.js';
 import './SingleProject.scss';
 import parse from 'html-react-parser';
 import ProjectNav from '../../elements/ProjectNav/ProjectNav.js';
+
 import Media from '../../elements/Media/Media.js';
-
-import loader from '../../assets/img/loader.gif';
-
-//https://www.npmjs.com/package/react-lazy-load
-import LazyLoad from 'react-lazy-load';
-
-//import Image from '../../elements/Image/Image.js';
-import Img from 'react-image';
 
 export class SingleProject extends Component {
     constructor(props) {
@@ -21,6 +14,7 @@ export class SingleProject extends Component {
         let paramSlug = this.props.match.params.slug;
 
         let results = data.filter(function (entry,index) {
+            
             if (entry.slug === paramSlug) {
 
                 entry.prev = data[index-1];
@@ -32,32 +26,14 @@ export class SingleProject extends Component {
         let match = results[0];
 
         this.state = {
-            match: match,
-            isNew: false,
-            //isLoading:true
+            match: match
         }
-        
-        //this.handleNext = this.handleNext.bind(this);
 
     }
 
 
-
-    componentDidMount() {
-        
-        
-        this.smallHeader();
-
-
-        //window.addEventListener('load', this.handleLoad);
-
-
-     
-
-    }
-
+    //Pour régler le problème de persistence des images lors de la navigation précédent suivant
     componentWillUpdate(){
-        console.log('componentWillUpdate!');
 
         let imgs = document.querySelectorAll('#singleProject img');
 
@@ -69,28 +45,15 @@ export class SingleProject extends Component {
     }
 
     componentDidUpdate(){
-        console.log('componentDidUpdate!');
-        setTimeout(function(){
-            window.scrollTo(0, 0);
-        },1000);
-        
+        window.scrollTo(0, 0);
     }
 
-    smallHeader(){
-        let header = document.querySelector('#Header');
-        header.classList.add('small-header')
-    }
-
-
-    //fuck hell ben ça ça marche...
+    //Pour mettre à jour le composant si navigation précédent ou suivant
     componentWillReceiveProps(nextProps) {
 
         window.scrollTo(0, 0);
 
         let paramSlug = nextProps.match.params.slug;
-
-       
-
 
         let results = data.filter(function (entry, index) {
             if (entry.slug === paramSlug) {
@@ -98,19 +61,16 @@ export class SingleProject extends Component {
                 entry.prev = data[index - 1];
                 entry.next = data[index + 1];
 
-                return entry;
             }
+            return entry;
         });
         let match = results[0];
 
-        setTimeout(()=>{
-            this.setState({
-                match: match
-            });
-        },1000);
+        this.setState({
+            match: match
+        });
+        
     }
-
-
 
 
     cartouche(){
@@ -125,43 +85,30 @@ export class SingleProject extends Component {
         );
     }
     
-    //Je ne sais pas si j'ai encore besoin de ça.
-    shouldComponentUpdate() { 
-        return true; 
-    }
-
-    imgOnLoad(e){
-        e.target.classList.add('is-loaded');
-    }
-
+ 
     render() {
 
-        let isLoading = this.state.isLoading;
         let match = this.state.match;
         
         let prev = match.prev;
         let next = match.next;
         
-        let loading = <img src={loader} className="loader" alt="" />;
-
         return (
             <div id="singleProject">
-                {this.state.isLoading ? (    
-                    <div id="ocLoaderContainer">
-                        <img src={loader} alt=""/>
-                    </div>
-                ):(
-                <div id="projectGrid" className={`grid ${match.slug}`}>
+                <div className={`grid ${match.slug}`}>
                     {this.cartouche()}
             
                     {match.medias.length > 0 && match.medias.map((media, index) => (
-                        
-                        <Media
-                            key={index}
-                            index={index}
-                            media={media}
-                        />
-
+                        <div
+                            className={`media media${index}`}
+                        >
+                            <Media
+                                key={index}
+                                index={index}
+                                media={media}
+                                path='img/medias'
+                            />
+                        </div>
                     ))}
 
                     {prev && 
@@ -170,12 +117,7 @@ export class SingleProject extends Component {
                     {next && 
                         <ProjectNav direction="next" arrow="right" link={`/projet/${next.slug}`} text="Projet suivant" />
                     }
-                    
-                    <div className="blank">{/* Just an empty color placeholder for grid layout */}</div>
-                    <div className="black">{/* Just an empty color placeholder for grid layout */}</div>
-                    <div className="yellow">{/* Just an empty color placeholder for grid layout */}</div>
                 </div>
-                )}
             </div>
         )
     }

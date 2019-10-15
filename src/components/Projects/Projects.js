@@ -3,6 +3,8 @@ import './Projects.scss';
 import data from './data.js';
 import { Link } from 'react-router-dom';
 
+import Media from '../../elements/Media/Media.js';
+
 export class Projects extends Component {
 
     constructor(props){
@@ -16,39 +18,15 @@ export class Projects extends Component {
         return (
             <div id="Projects">
                 <div className="items">
-                    {this.state.projects.map((item)=>(
+                    {this.state.projects.map((item,index)=>(
                         <div className={`item ${item.slug}`} key={item.id}>
                             <Link to={`projet/${item.slug}`}>
-                                {item.cover.type=="image" &&
-                                    // <img 
-                                    //     srcSet={item.cover.versions.map((w) => (
-                                    //     '/img/projects/'+ w + '/' + item.cover.src+' '+w+'w'
-                                    //     ))}    
-                                    //     src={`/img/projects/${item.cover.src}`} 
-                                    //     alt=""
-                                    // />
-                                    <img
-                                        srcSet={item.cover.versions.map((w) => (
-                                            window.location.origin+'/img/projects/' + w + '/' + item.cover.src + ' ' + w + 'w'
-                                        ))}
-                                        src={window.location.origin+`/img/projects/${item.cover.src}`}
-                                        alt=""
-                                    />
-                                }
-                                {item.cover.type==="videogif" &&
-                                    <video
-                                        className="videogif"
-                                        autoPlay
-                                        loop
-                                        muted
-                                    >
-                                        <source
-                                            src={window.location.origin+'/img/projects/' + item.cover.src}
-                                            type="video/mp4"
-                                        />
-                                        Votre navigateur ne supporte pas la vidéo.
-                                    </video>
-                                }
+                                <Media
+                                    key={index}
+                                    index={index}
+                                    media={item.cover}
+                                    path='img/projects'
+                                />
                             </Link>
                         </div>
                     ))}

@@ -26,7 +26,7 @@ export class Studio extends Component {
                 </p>
                 <hr />
                 <p>
-                    contact@originalcosmic.fr<br/>
+                    <a href="mailto:contact@originalcosmic.fr" className="mailto">contact@originalcosmic.fr</a><br/>
                     +33 (0) 6 18 78 43 78<br/>
                 </p>
             </div>

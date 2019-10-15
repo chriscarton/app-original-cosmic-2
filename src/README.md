@@ -78,9 +78,9 @@ https://github.com/Popmotion/popmotion/issues/535
 
 ## Fonte Cocogoose 
 
-Bon voilà je me doutais bien que ça allait merder car cette fonte je ne l'ai trouvé qu'en *trial* sur dafont, c'est pour dire. Bref, il n'y a pas de chiffres dans cette fonte. Quand j'essaye d'écrire *Erreur 404* ça me fait *Erreur @@@* (voyez le @ comme un caractère bizarre). 
+La Cocogoose ne contient pas de chiffres !
 
-Donc la solution (pour de l'intégration uniquement) c'est de faire un span numbers pour les nombres. 
+Donc pour de l'intégration, voici l'astuce. 
 
     h1,h2,h3,h4,h5,h6{
         font-family: 'COCOGOOSE';
@@ -89,31 +89,13 @@ Donc la solution (pour de l'intégration uniquement) c'est de faire un span numb
         }
     }
 
-Si Frank veut vraiment utiliser cette typo il faut l'acheter et elle coûte 25 bucks. 
+Cette fonte est payante et elle coûte 25 bucks. 
 
 https://www.zetafonts.com/cocogoose
 
-# Fonte Ubuntu Mono 
-
-Là il n'y a pas de problème technique par contre (ben oui). Mais je sais bien que si on me demande le nom de la fonte il y a forcément un *Apple Genius* qui va se pointer et me dire : *mais non non malheureux, n'utilise pas ça, Linux c'est d'la merde*. 
-
-Voilà le fait est que Frank n'a pas pu me dire quelle typo il utilisait donc j'ai utilisé la monospace de mon système et il s'avère que c'est celle-ci et que ça marche très très bien. 
-
-# TO DO
-
-Trouver une solution pour le padding des iframes qui est légèrement trop grand...
-
-Mettre en place github pages via la vidéo de traversy media
-
-Il faudrait une solution 404 pour :
-http://localhost:3000/projet/ldsqd
-
-Formulaire de contact 
-
-Peut-être qu'il y a un problème avec l'évènement ready de la video
-Et bien vérifié que la vidéo existe sinon ça peut planter les autres pages...
-
 # Faire une vidéo à partir d'un .gif
+
+Chose que l'on ne fera plus. 
 
 Lancer la commande : 
 
@@ -141,3 +123,104 @@ Pareil pour 600 :
 mogrify -path 1280 -resize 1280x "1280x>" *.jpg
 
 convert -path 1920 -resize 1920x1920\> *.jpg:
+
+# Deployer 
+
+## Attention ne pas faire ce qui suit : 
+
+    //https://medium.com/p/f694d46427c1/responses/show
+
+    //package.json
+    "homepage": "https://myapp.com/directory-name",
+
+    //App.js
+    <Router basename={'/directory-name'}>
+        <Route path='/' component={Home} />
+        ...
+    </Router>
+
+    //Update the routes
+    <Router basename={'/subdirectory'}>
+        <Route path={`${process.env.PUBLIC_URL}/`} component={Home} />
+        <Route path={`${process.env.PUBLIC_URL}/news`} component={News} />
+        <Route path={`${process.env.PUBLIC_URL}/about`} component={About} />
+    </Router>
+
+    //Update the Links
+    <Link to={`${process.env.PUBLIC_URL}/page-path`}>…</Link>
+
+## Mais simplement ceci : 
+
+    //Dans package.json
+    "homepage": "https://chriscarton.github.io/app-original-cosmic/",
+
+**Important** : 
+
+    Nom du dossier = Nom du repository
+
+Dans App.js
+
+    <Router basename={process.env.PUBLIC_URL}>
+
+Ajouter pour les images et autres videos : 
+
+    process.env.PUBLIC_URL
+
+Comme ceci : 
+
+    <img
+        srcSet={item.cover.versions.map((w) => (
+            process.env.PUBLIC_URL+'/img/projects/' + w + '/' + item.cover.src + ' ' + w + 'w'
+        ))}
+        src={process.env.PUBLIC_URL+`/img/projects/${item.cover.src}`}
+        alt=""
+    />
+
+Et c'est tout, ça fonctionnera aussi bien en local que sur github pages ou dans un sous-dossier.
+
+# Déployer dans GITHUB PAGES
+
+    yarn add gh-pages 
+
+Dans *package.json* ajouter : 
+
+    "homepage":"https://chriscarton.github.io/nom-du-dossier"
+
+Dans *package.json* scripts, modifier *deploy*
+
+    "deploy":"gh-pages -d build" 
+
+Et enfin : 
+
+    yarn run deploy
+
+# COUPER UNE VIDÉO AVEC ffmepg 
+
+
+    https://medium.com/abraia/basic-video-editing-for-social-media-with-ffmpeg-commands-1e873801659
+
+    ffmpeg -i sequenceacouper.avi -ss 00:39:45.00 -t 00:00:30.00 -c:v copy -c:a copy  nouvellesequence.avi
+
+    ffmpeg -i paleo_128.avi -ss 00:00 -t 00:00:12 -c:v copy -c:a copy  paleo_128-10s.avi
+
+    couper le son : 
+
+    ffmpeg -i paleo_cut.mp4 -c copy -an paleo_no_sound.mp4
+
+    //celle-ci marche pas
+    ffmpeg -i paleo_no_sound.mp4 -vf scale=400:-1 paleo_resized.mp4
+
+    ffmpeg -i paleo_no_sound.mp4 -filter:v scale=720:-1 -c:a copy paleo_resized.mp4
+
+    ffmpeg -i paleo_no_sound.mp4 -c:v libx264 -b:v 1.5M -c:a aac -b:a 128k paleo_128.mp4
+
+    ffmpeg -i paleo_128-10s.mp4 -vf scale=400:-1 paleo_scale.mp4
+
+    ffmpeg -i paleo_128-10s.mp4 -vf "scale=600:-2" paleo_scale.mp4
+
+    //OMG
+    ffmpeg -i omg.mp4 -ss 03.00 -t 05.00 -c:v copy -c:a copy  omg_cut.mp4
+    ffmpeg -i omg_cut.mp4 -c:v libx264 -b:v 1.5M -c:a aac -b:a 128k omg_nosound.mp4
+    ffmpeg -i omg_cut.mp4 -vf "scale=800:-2" omg_resized.mp4
+
+    ffmpeg -i omg_resized.mp4 -ss 00.00 -t 05.00 -c:v copy -c:a copy  omg_resized-2.mp4

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './showreel.scss';
 
-import Plyr from 'react-plyr';
-
 export class Showreel extends Component {
     render() {
         return (

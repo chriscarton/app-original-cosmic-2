@@ -3,9 +3,9 @@ let data = [
         id:1,
         name:"Voici mon premier projet",
         cover:{
-            src:"/img/projects/alexandre-le-fou.jpg",
+            src:"alexandre-le-fou.jpg",
             type:"image",
-            versions:['320','600','960']
+            versions:['320','600','800','960']
         },
         content:null,
         slug:"alex-le-fou",
@@ -15,9 +15,9 @@ let data = [
         id: 2,
         name: "Voici mon second projet",
         cover:{
-            src:"/img/projects/amanda-is.jpg",
+            src:"amanda-is.jpg",
             type: "image",
-            versions:['320','600']
+            versions:['320','600','800','960']
         },
         content:null,
         slug:"amanda-is",
@@ -29,7 +29,7 @@ let data = [
         cover:{
             src:"le-deserteur.jpg",
             type: "image",
-            versions:['320','600']
+            versions:['320','600','800','960']
         },
         content: "Affiche française pour « 𝗟𝗲 𝗗𝗲́𝘀𝗲𝗿𝘁𝗲𝘂𝗿 » de Maxime Giroux. Avec Martin Dubreuil, Romain Duris, Reda Kateb et SoKo. Production : Metafilms.<hr/>𝗖𝗹𝗶𝗲𝗻𝘁: Ligne 7<br>𝗠𝗶𝘀𝘀𝗶𝗼𝗻 : Print / Multimédia © 2019 𝘖𝘳𝘪𝘨𝘪𝘯𝘢𝘭 𝘊𝘰𝘴𝘮𝘪𝘤",
         slug:"le-deserteur",
@@ -72,7 +72,7 @@ let data = [
         cover:{
             src:"afrika-glam.jpg",
             type: "image",
-            versions:['320','600']
+            versions:['320','600','800','960']
         },
         content: "AFRIKA GLAM Pour Afrika Box<hr>Direction artistique<br>Photographie<br>Design graphique<br>Print<br>2019",
         slug:"afrika-glam",
@@ -94,13 +94,13 @@ let data = [
         name: "Original Cosmic Playlist",
         cover:{
             src:"ocp1.mp4",
-            type: "videogif"
+            type: "video"
         },
         content:"Original Cosmic Playlist. Chaque mois, une playlist, une composition visuelle originale.",
         slug:"original-cosmic-playlist",
         medias:[
             {
-                type:"videogif",
+                type:"video",
                 src:"ocp1.mp4"
             },
             {
@@ -114,7 +114,7 @@ let data = [
         name: "Paleo",
         cover:{
             src:"paleo.mp4",
-            type: "videogif"
+            type: "video"
         },
         content: "PALEO<hr>Animation 2D<br>clip promotionnel<br>Pour Bitteschoen TV<br>2017",
         slug:"paleo",
@@ -131,7 +131,7 @@ let data = [
         cover:{
             src:"the-mice.jpg",
             type: "image",
-            versions:['320','600','960']
+            versions:['320','600','800','960']
         },
         content: "THE MICE « Incantations »<hr><br>Pochette de disque<br>Photographie<br>Design graphique<br>Clip musical<br>2016",
         slug:"the-mice",
@@ -158,7 +158,7 @@ let data = [
         cover:{
             src:"yellow-and-blue.jpg",
             type: "image",
-            versions:['320','600','960']
+            versions:['320','600','800','960']
         },
         content: "MARK ROTHKO « Yellow and blue »<hr><br>Réinterprétation Photographique<br>Direction artistique<br>2016",
         slug:"yellow-and-blue",
@@ -176,7 +176,7 @@ let data = [
         cover:{
             src:"akina-wise.jpg",
             type: "image",
-            versions: ['320', '600', '960']
+            versions: ['320', '600', '800','960']
         },
         content: "AKINA WISE « Galaxy Girl »<hr><br>Pochette de disque<br>Design graphique / Photographie<br>2017",
         slug:"akina-wise",
@@ -199,7 +199,7 @@ let data = [
         cover:{
             src: "eldorado-afro.jpg",
             type: "image",
-            versions: ['320', '600']
+            versions: ['320', '600', '800']
         },
         content:"Eldorado Afro: Une journée sur l’héritage africain du Mexique<hr><br>𝗖𝗹𝗶𝗲𝗻𝘁: Wawa L’asso<br>𝗠𝗶𝘀𝘀𝗶𝗼𝗻: Design graphique / DA<br>Direction artistique: F.E Original Cosmic<br>Photo: Elliot Duk<br>Style: Jeannine Fischer<br>Modèle: Coralie Djondo<br>Make up: Sophia<br>Assistante: Estelle Periou<hr>© 2019 𝘖𝘳𝘪𝘨𝘪𝘯𝘢𝘭 𝘊𝘰𝘴𝘮𝘪𝘤",
         slug:"eldorado-afro",
@@ -224,7 +224,7 @@ let data = [
             type: "image",
             versions: ['320', '600']
         },
-        content:"Ombres Colorées<hr>Client: Wawa L’AssoMission: Print / MultimédiaPhoto: Matt DohenyModel: Will B.Bell",
+        content:"Ombres Colorées <hr> Client: Wawa L’Asso<br>Mission: Print / Multimédia<br>Photo: Matt Doheny<br>Model: Will B.Bell",
         slug:"ombres-colorees",
         medias:[
             {
@@ -262,7 +262,7 @@ let data = [
         name:"OMG",
         cover:{
             src:"omg.mp4",
-            type:"videogif"
+            type:"video"
         },
         content: "OMG<br>En développement<br>Film court d’animation",
         slug:'omg',
@@ -331,7 +331,7 @@ let data = [
         cover:{
             src: "les-rayons.jpg",
             type: "image",
-            versions: ['320', '600']
+            versions: ['320', '600', '800']
         },
         content: "RONAN MARTIN « Les rayons »<hr>Pochette de disque<br>Clip musical<br>Direction artistique<br>Réalisation vidéo<br>Design graphique<br>2015",
         slug: "ronan-martin-les-rayons",
@@ -357,7 +357,7 @@ let data = [
         name: "Salvak « Vendetta »",
         cover:{
             src: "cycle-01.mp4",
-            type: "videogif"
+            type: "video"
         },
         content: "SALVAK « Vendetta »<hr>Clip musical<br>Animation 2d<br>2017",
         slug: "vendetta",

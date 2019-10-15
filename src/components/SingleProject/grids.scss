@@ -3,7 +3,6 @@
 
 //D'abord on commence par le mobile : 
 .original-cosmic-playlist{
-    grid-template-columns: 1fr 1fr;
     .media1{
         background-color:$yellow;
         padding:25px;
@@ -13,28 +12,44 @@
     }
 }
 
+.maescroc{
+    .media{
+        img{
+            object-fit: scale-down;
+            width:100%;
+            height:auto;
+        }
+    }
+}
 
 
 
 @media screen and (min-width:600px){
-
+    /*
     .alex-le-fou{
         
     }
     .amanda-is{
 
     }
-
+    */
     .le-deserteur{        
         grid-template-areas:
             'media0 media0 media0 media0'
             'cartou cartou media1 media2'
             'cartou cartou media3 media4'
-            '.      media5 previo nextio'
+            'media5 media5 previo nextio'
         ;
+        .media0{
+            min-height:100vh;
+        }
+        .media5{
+            img{
+                object-fit: scale-down;
+            }
+        }
     }
     .afrika-glam{
-        background-color:#BC3633;
         grid-template-areas: 
             'media0 media0 media0 media0'
             'cartou media1 media1 previo'
@@ -45,12 +60,13 @@
         }
         
         .media0{
-            background-color:#7E1D18;
-        
+            background-color:#C6C8B3;
+            height:100vh;
         }
         
     }
     .original-cosmic-playlist{
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: 
             'media0 media1'
             'cartou cartou'
@@ -58,7 +74,6 @@
         ;
     }
     .paleo{
-        //Intégrer la vidéo et faire la mise en page...
         grid-template-areas: 
             'media0 media0 media0'
             'cartou previo nextio'
@@ -67,17 +82,26 @@
     }
     .the-mice{
         grid-template-areas:
-            'media0 media0 media0 media0 media0'
-            'media1 media1 cartou media2 media2'
-            'media1 media1 cartou previo nextio'
+            'media0 media0'
+            'media1 cartou'
+            'media2 media2'
+            'previo nextio'
         ;
+        @media screen and (max-width:1070px){
+            grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (min-width:1070px){
+            grid-template-areas:
+                'media0 media0 media0 media0 media0'
+                'media1 media1 cartou media2 media2'
+                'media1 media1 cartou previo nextio'
+            ;
+        }
 
         .media2{
             background-color: #97AA73;
-            padding:25px;
-            display:flex;
+            display: grid;
             align-items: center;
-            justify-content: center;
         }
 
     }
@@ -90,12 +114,17 @@
         ;
     }
     .akina-wise{
-        grid-template-areas: 
-            'cartou media0 media0 media0'
-            'cartou media0 media0 media0'
-            'cartou media1 media1 media1'
-            'previo previo nextio nextio'
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            'media0 media0'
+            'cartou media1'
+            'previo nextio'
         ;
+        .media1{
+            img{
+                object-fit: contain;
+            }
+        }
     }
     .eldorado-afro{
         grid-template-areas:
@@ -103,19 +132,40 @@
             'cartou cartou'
             'previo nextio'
         ;
+        @media screen and(min-width:1200px){
+            .media{
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    object-fit: contain;
+                    width:960px;
+                    height:auto;
+                }
+            }
+        }
     }
     .ombres-colorees{
         grid-template-areas:
-            'media0 media0'
-            'cartou cartou'
-            'previo nextio'
+            'media0 media0 cartou'
+            'media0 media0 previo'
+            'media0 media0 nextio'
         ;
     }
     .maescroc{
+
         grid-template-areas:
-            'media0 media0 media1 media1 media1'
-            'previo cartou cartou cartou nextio'
+            'media0 media1 cartou'
+            'previo nextio cartou'
         ;
+
+        .media0{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+
     }
     .omg{
         grid-template-areas:
@@ -129,6 +179,16 @@
             'media0 media0 media1 media1'
             'media2 media2 cartou cartou'
             'previo .      .      nextio'
+        ;
+        @media screen and (min-width:1000px){
+            .media{
+                img{
+                    object-fit: scale-down;
+                    width:100%;
+                    height:auto;
+                }
+            }
+        }
     }
     .ronan-martin{
         grid-template-areas:
@@ -152,6 +212,12 @@
         grid-template-areas:
             'media0 media0 media0'
             'previo cartou cartou'
+        ;
+        .media0{
+            display:grid;
+            align-items: center;
+        }
     }
 
 }
+

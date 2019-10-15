@@ -1,59 +1,37 @@
 import React, { Component } from 'react';
 import parse from 'html-react-parser';
-import loader from '../../assets/img/loader.gif';
 import Plyr from 'plyr';
-
-import './Media.scss';
 
 export class Media extends Component {
 
-
     componentDidMount(){
-        const player = new Plyr('#player');
-        //alert(window.location.origin);
-        //donne localhost:3000
+        new Plyr('#player');
     }
 
     render() {
 
-        let index = this.props.index;
         let media = this.props.media;
 
-        //On va voir...
-        //let versions = ['320','600','960','1280'];
-
         return (
-            <div
-                className={`media media${index}`}
-                style={{
-                    animationDelay: index * 0.75 + 's'
-                }}
-            >
+            <>
                 {media.type === 'image' &&
-                                            
                     <img 
                         srcSet={media.versions.map((w) => (
-                            window.location.origin+'/img/medias/' + w + '/' + media.src + ' ' + w + 'w'
+                            process.env.PUBLIC_URL+'/'+this.props.path+'/' + w + '/' + media.src + ' ' + w + 'w'
                         ))} 
-                        src={window.location.origin+`/img/medias/${media.src}`} 
-                        alt="" 
-                        className="original" 
+                        src={process.env.PUBLIC_URL+'/'+this.props.path+'/'+media.src} 
+                        alt=""  
                     />
-                    
                 }
                 {media.type === 'video' &&
-                    <div className="video">
-                        
-                    </div>
-                }
-                {media.type === 'videogif' &&
                     <video
-                        className="videogif"
+                        className="video"
                         autoPlay 
                         loop
+                        muted
                     >
                         <source 
-                            src={window.location.origin+'/img/medias/'+media.src} 
+                            src={process.env.PUBLIC_URL+'/'+this.props.path+'/'+media.src} 
                             type="video/mp4" 
                         />
                         Votre navigateur ne supporte pas la vidéo.
@@ -65,14 +43,11 @@ export class Media extends Component {
                     </div>
                 }
                 {media.type === 'iframe' &&
-                    // <div className="iframe-container">
-                    //     {parse(media.src)}
-                    // </div>
                     <div class="plyr__video-embed" id="player">
                         {parse(media.src)}
                     </div>
                 }
-            </div>
+            </>
         )
     }
 }

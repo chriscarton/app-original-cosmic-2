@@ -100,6 +100,7 @@ export class SingleProject extends Component {
             
                     {match.medias.length > 0 && match.medias.map((media, index) => (
                         <div
+                            key={index}
                             className={`media media${index}`}
                         >
                             <Media

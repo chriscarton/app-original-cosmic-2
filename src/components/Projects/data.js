@@ -36,33 +36,33 @@ let data = [
         medias:[
             {
                 type:'image',
-                src:"DSRTRFONNW.jpg",
-                versions:['320','600','960','1280']
+                src:"le-deserteur-1.jpg",
+                versions:['320','480','600','800','960']
             },
             {
                 type:'image',
-                src:"DSRTRmock1a-480x480.jpg",
-                versions: ['320']
+                src:"le-deserteur-2.jpg",
+                versions: ['480']
             },
             {
                 type:'image',
-                src:"DSRTRmock2a-480x480.jpg",
-                versions: ['320']
+                src:"le-deserteur-3.jpg",
+                versions: ['480']
             },
             {
                 type:'image',
-                src:"DSRTRmock3a-480x480.jpg",
-                versions: ['320']
+                src:"le-deserteur-4.jpg",
+                versions: ['480']
             },
             {   
                 type:'image',
-                src:"DSRTRmock4a-480x480.jpg",
-                versions: ['320']
+                src:"le-deserteur-5.jpg",
+                versions: ['480']
             },
             {
                 type:'image',
-                src:"DSRTRmock5a-480x480.jpg",
-                versions: ['320']
+                src:"le-deserteur-6.jpg",
+                versions: ['480']
             }
         ]
     },
@@ -79,12 +79,12 @@ let data = [
         medias:[
             {
                 type: "image",
-                src: "AFGLAMA0PTA-960x960.jpg",
+                src: "afrika-glam-1.jpg",
                 versions: ['320','600']
             },
             {
                 type:"image",
-                src:"AFRIKAGLAMPOSTCARD-1440x960.jpg",
+                src:"afrika-glam-2.jpg",
                 versions: ['320', '600', '960']
             }
         ]
@@ -138,12 +138,12 @@ let data = [
         medias:[
             {
                 type:"image",
-                src:"themicevinyl-1440x960.jpg",
+                src:"the-mice-1.jpg",
                 versions: ['320', '600', '960']
             },
             {
                 type:"image",
-                src:"micecover2-960x960.jpg",
+                src:"the-mice-2.jpg",
                 versions: ['320', '600']
             },
             {
@@ -165,7 +165,7 @@ let data = [
         medias:[
             {
                 type:"image",
-                src:"fb8b0920194783.562e73d182e89-1336x890.jpg",
+                src:"yellow-and-blue-1.jpg",
                 versions: ['320', '600', '960']
             }
         ]
@@ -183,12 +183,12 @@ let data = [
         medias:[
             {
                 type:"image",
-                src:"akinavinyl-1440x960.jpg",
+                src:"akina-wise-1.jpg",
                 versions: ['320', '600', '960']
             },
             {
                 type: "image",
-                src: "akinados-960x960.jpg",
+                src: "akina-wise-2.jpg",
                 versions: ['320', '600']
             }
         ]
@@ -206,7 +206,7 @@ let data = [
         medias:[
             {
                 type:"image",
-                src:"EldoradoAfroAff-960x1440.jpg",
+                src:"eldorado-afro-1.jpg",
                 versions: ['320', '600']
             }
             //there is none...
@@ -229,7 +229,7 @@ let data = [
         medias:[
             {
                 type:"image",
-                src:"WAKAMOCKPOSTOC-1440x1440.jpg",
+                src:"ombre-colorees-1.jpg",
                 versions: ['320', '600', '960']
             }
         ]
@@ -247,12 +247,12 @@ let data = [
         medias:[
             {
                 type:"image",
-                src:"9e290317527117.56647b81cf2d0-960x960.jpg",
+                src:"maescroc-1.jpg",
                 versions: ['320', '600']
             },
             {
                 type: "image",
-                src: "f0238c17527117.5664a1a5ad5a0-1-433x866.jpg",
+                src: "maescroc-2.jpg",
                 versions: ['320']
             }
         ]
@@ -286,17 +286,17 @@ let data = [
         medias: [
             {
                 type:"image",
-                src:"13925472_1153557848000435_706687528803582981_o-960x960.png",
+                src:"doux-divorce-records-1.jpg",
                 versions: ['320', '600']
             },
             {
                 type: "image",
-                src: "13909005_574832796029717_191003813203858820_o-480x480.jpg",
+                src: "doux-divorce-records-2.jpg",
                 versions: ['320']
             },
             {
                 type: "image",
-                src: "11021112_878714695484753_6208556186257630867_n-480x480.jpg",
+                src: "doux-divorce-records-3.jpg",
                 versions: ['320']
             }
         ]
@@ -314,12 +314,12 @@ let data = [
         medias: [
             {
                 type: "image",
-                src: "ronaninter3-1920x960.jpg",
+                src: "ronan-martin-1.jpg",
                 versions: ['320','600','960', '1280']
             },
             {
                 type:"image",
-                src:"rmdosvinl-960x960.jpg",
+                src:"ronan-martin-2.jpg",
                 versions: ['320', '600']
             }
             
@@ -338,7 +338,7 @@ let data = [
         medias: [
             {
                 type: "image",
-                src: "ronanrayonsvin-1440x960.jpg",
+                src: "les-rayons-1.jpg",
                 versions: ['320', '600', '960']
             },
             {
@@ -347,7 +347,7 @@ let data = [
             },
             {
                 type: "image",
-                src: "1907526_913693705320185_9131023012842273479_n-480x480.png",
+                src: "les-rayons-2.jpg",
                 versions: ['320']
             }
         ]

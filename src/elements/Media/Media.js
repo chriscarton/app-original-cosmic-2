@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import parse from 'html-react-parser';
 import Plyr from 'plyr';
+import './Media.scss';
 
 export class Media extends Component {
 
-    componentDidMount(){
-        new Plyr('#player');
-    }
+
 
     render() {
 
@@ -21,6 +20,8 @@ export class Media extends Component {
                         ))} 
                         src={process.env.PUBLIC_URL+'/'+this.props.path+'/'+media.src} 
                         alt=""  
+                        sizes="100vw"
+                        style={{maxWidth:media.versions[media.versions.length-1]+'px'}}
                     />
                 }
                 {media.type === 'video' &&
@@ -43,7 +44,7 @@ export class Media extends Component {
                     </div>
                 }
                 {media.type === 'iframe' &&
-                    <div class="plyr__video-embed" id="player">
+                    <div className="iframe-container">
                         {parse(media.src)}
                     </div>
                 }

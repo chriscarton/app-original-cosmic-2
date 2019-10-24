@@ -7,17 +7,29 @@ export class ProjectNav extends Component {
     render() {
         
         return (
-            <Link 
-                to={{
-                    pathname:this.props.link,
-                    state:'flushDeal'
-                }}
-                className={`nav nav-${this.props.direction}`}
-                onClick={this.handleClick}
-            >
-                <i className={`fa fa-arrow-${this.props.arrow}`}></i>
-                &nbsp;{this.props.text}
-            </Link>
+            <nav id="ProjectNav">
+                <Link 
+                    to={{
+                        pathname:this.props.link,
+                        state:'flushDeal'
+                    }}
+                    className={`nav nav-${this.props.direction}`}
+                    onClick={this.handleClick}
+                >
+                    {this.props.direction==="prev" && 
+                        <>
+                            <i className={`fa fa-arrow-${this.props.arrow}`}></i>
+                            &nbsp;{this.props.text}
+                        </>
+                    }
+                    {this.props.direction === "next" &&
+                        <>
+                            {this.props.text}&nbsp;
+                            <i className={`fa fa-arrow-${this.props.arrow}`}></i>
+                        </>
+                    }
+                </Link>
+            </nav>
         )
     }
 }

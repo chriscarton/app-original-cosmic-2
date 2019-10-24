@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+
+#Landing{
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor:pointer;
+    h1{
+        margin:0px;
+    }
+    p{
+        font-family: 'Ubuntu Mono';
+    }
+    a{
+        display:none;
+    }
+}

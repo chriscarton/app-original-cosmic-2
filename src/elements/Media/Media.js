@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import parse from 'html-react-parser';
-import Plyr from 'plyr';
 import './Media.scss';
 
 export class Media extends Component {
-
-
 
     render() {
 

@@ -1,77 +1,41 @@
 @import '../../variables.scss';
 
-
-#singleProject{
-    position:relative;
-
-    .grid{
-        display:grid;
-        background-color: white;
-        min-height:100vh;
-        grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
-        .cartouche{
-            background-color:white;
-            padding:25px;
-            padding-left:50px;
-            padding-right:50px;
-            display:flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .nav-prev{
-            padding:50px;
-        }
-        .nav-next{
-            padding:50px;
-        }
-
-        img,video{
-            display:block;
-        }
-
-        //Du générique...
-        @media screen and (min-width:600px){
-        
-            .cartouche{
-                grid-area:cartou;
-            }
-            .media0{
-                grid-area:media0;
-            }
-            .media1{
-                grid-area:media1;
-            }
-            .media2{
-                grid-area:media2;
-            }
-            .media3{
-                grid-area:media3;
-            }
-            .media4{
-                grid-area:media4;
-            }
-            .media5{
-                grid-area:media5;
-            }
-            .nav-prev{
-                grid-area:previo;
-            }
-            .nav-next{
-                grid-area:nextio;
-            }
-
-        }
-        
-    }
-
-    @import 'grids.scss';
-}
-
-@media screen and (min-width:600px){
     #singleProject{
-        #projectGrid.grid{
-            min-height: 100vh;
+        position: relative;
+        display: grid;
+        grid-template-columns: 80vw 20vw;
+        min-height:100vh;
+        .alice-carousel{
+            //border:5px dashed black;
+            background-color:silver;
+            max-width: 80vw;
+            
+            .item{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+            }
+
+            img{
+                //border:5px dashed blue;
+                max-width:100%;
+                height:auto;
+            }
+        }
+        .informations{
+            background-color:royalblue;
+        
+            nav#ProjectNav{
+                
+            }
+            a{
+                display:block;
+                font-family: 'Ubuntu Mono';
+                text-decoration: none;
+                color:black;
+            }
         }
     }
-}
+
+

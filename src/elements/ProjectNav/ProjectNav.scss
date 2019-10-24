@@ -1,20 +1,2 @@
 @import '../../variables.scss';
-.nav{
-    background-color:black;
-    color:white;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition:all 0.15s ease-in;
-    font-weight: bold;
-    &:hover{
-        color:$yellow;
-    }
-}
-.nav-prev{
-    background-color:lighten(black,10%); 
-}
-.nav-next{
 
-}

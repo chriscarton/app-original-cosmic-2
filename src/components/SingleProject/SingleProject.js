@@ -4,7 +4,12 @@ import './SingleProject.scss';
 import parse from 'html-react-parser';
 import ProjectNav from '../../elements/ProjectNav/ProjectNav.js';
 
+import { Link } from "react-router-dom";
+
 import Media from '../../elements/Media/Media.js';
+
+import AliceCarousel from 'react-alice-carousel';
+import "react-alice-carousel/lib/alice-carousel.css";
 
 export class SingleProject extends Component {
     constructor(props) {
@@ -46,6 +51,7 @@ export class SingleProject extends Component {
 
     componentDidUpdate(){
         window.scrollTo(0, 0);
+        //new Glide('.glide').mount();
     }
 
     //Pour mettre à jour le composant si navigation précédent ou suivant
@@ -73,19 +79,41 @@ export class SingleProject extends Component {
     }
 
 
-    cartouche(){
-        return(
-            <div className="cartouche">
-                {this.state.match.content && 
-                <div className="content">
-                    {parse(this.state.match.content)}
-                </div>
-                }
-            </div>
-        );
+    Gallery = () => {
+
+        let match = this.state.match;
+
+        const handleOnDragStart = e => e.preventDefault();
+        return (
+            <AliceCarousel 
+                mouseDragEnabled
+                responsive="{0: { items: 1}}"
+
+                >
+
+                {match.medias.length > 0 && match.medias.map((media, index) => (
+                    
+                    // <Media
+                    //     key={index}
+                    //     index={index}
+                    //     media={media}
+                    //     path='img/medias'
+                    // />
+
+                    <div
+                        key={index}
+                        className="item"
+                    >
+                        <img
+                            src={process.env.PUBLIC_URL + '/' + 'img/medias' + '/' + media.src}
+                            alt=""
+                        />
+                    </div>
+                ))}
+            </AliceCarousel>
+        )
     }
-    
- 
+
     render() {
 
         let match = this.state.match;
@@ -95,29 +123,29 @@ export class SingleProject extends Component {
         
         return (
             <div id="singleProject">
-                <div className={`grid ${match.slug}`}>
-                    {this.cartouche()}
-            
-                    {match.medias.length > 0 && match.medias.map((media, index) => (
-                        <div
-                            key={index}
-                            className={`media media${index}`}
-                        >
-                            <Media
-                                key={index}
-                                index={index}
-                                media={media}
-                                path='img/medias'
-                            />
-                        </div>
-                    ))}
+                
+                    
+                    {this.Gallery()}
+                    
+                
+                <div className="informations">
 
-                    {prev && 
-                        <ProjectNav direction="prev" arrow="left" link={`/projet/${prev.slug}`} text="Projet précédent" />
+                    <nav id="ProjectNav">
+                        <Link to="/">Retour</Link>
+                        {prev &&
+                            <ProjectNav direction="prev" arrow="left" link={`/projet/${prev.slug}`} text="Précédent" />
+                        }
+                        {next &&
+                            <ProjectNav direction="next" arrow="right" link={`/projet/${next.slug}`} text="Suivant" />
+                        }
+                    </nav>
+
+                    {this.state.match.content &&
+                        <div className="content">
+                            {parse(this.state.match.content)}
+                        </div>
                     }
-                    {next && 
-                        <ProjectNav direction="next" arrow="right" link={`/projet/${next.slug}`} text="Projet suivant" />
-                    }
+
                 </div>
             </div>
         )

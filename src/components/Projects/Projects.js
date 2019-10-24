@@ -4,6 +4,7 @@ import data from './data.js';
 import { Link } from 'react-router-dom';
 
 import Media from '../../elements/Media/Media.js';
+import Header from '../../elements/Header/Header.js';
 
 export class Projects extends Component {
 
@@ -17,6 +18,7 @@ export class Projects extends Component {
     render() {
         return (
             <div id="Projects">
+                <Header/>
                 <div className="items">
                     {this.state.projects.map((item,index)=>(
                         <div className={`item ${item.slug}`} key={item.id}>

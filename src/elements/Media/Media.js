@@ -4,6 +4,11 @@ import './Media.scss';
 
 export class Media extends Component {
 
+    /*
+        J'enlève srcSet parce que c'est de la merde en boite. 
+        Si l'image la plus grande est trop petite, elle se retrouve étirée sur toute la largeur disponible.
+    */
+
     render() {
 
         let media = this.props.media;
@@ -12,13 +17,11 @@ export class Media extends Component {
             <>
                 {media.type === 'image' &&
                     <img 
-                        srcSet={media.versions.map((w) => (
-                            process.env.PUBLIC_URL+'/'+this.props.path+'/' + w + '/' + media.src + ' ' + w + 'w'
-                        ))} 
+                        // srcSet={media.versions.map((w) => (
+                        //     process.env.PUBLIC_URL+'/'+this.props.path+'/' + w + '/' + media.src + ' ' + w + 'w'
+                        // ))} 
                         src={process.env.PUBLIC_URL+'/'+this.props.path+'/'+media.src} 
                         alt=""  
-                        sizes="100vw"
-                        style={{maxWidth:media.versions[media.versions.length-1]+'px'}}
                     />
                 }
                 {media.type === 'video' &&

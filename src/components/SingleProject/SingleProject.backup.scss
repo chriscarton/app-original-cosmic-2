@@ -1,0 +1,103 @@
+@import '../../variables.scss';
+
+
+
+@media screen and (min-width:600px){
+    #singleProject{
+        position: relative;
+        display: grid;
+        grid-template-columns: 65vw 35vw;
+        min-height:100vh;
+        overflow:hidden;
+        .visual{
+            max-width: 65vw;
+            
+            .item{
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                img{
+                    max-width:100%;
+                    height:auto;
+                }
+                
+            }
+
+            #carouselNav{
+                border:1px solid rgb(184, 171, 166);
+                text-align: center;
+                button{
+                    display:inline;
+                    margin:0px;
+                    padding:0px;
+                }
+            }
+        }
+        .informations{
+            background-color:rgb(240, 240, 240);
+            padding:10px;
+            
+            
+            min-height:25vh;
+            a{
+                display:block;
+                text-decoration: none;
+                color:black;
+                text-transform: uppercase;
+                font-size:0.80rem;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+            #mainNav{
+                display:flex;
+                justify-content: space-between;
+
+                
+
+                #projectNav{
+                    display:flex;
+                    flex-wrap:wrap;
+                    a{
+                        margin-right:5px;
+                        
+                    }
+                }
+
+                margin-bottom:75px;
+
+            }
+            #mediasPagination{
+                margin-bottom:75px;
+                display:flex;
+                flex-wrap:wrap;
+
+                a{
+                    display:flex;
+                    border:1px solid #272727;
+                    cursor:pointer;
+                    font-size:0.8rem;
+                    width:25px;
+                    height:25px;
+                    align-items:center;
+                    justify-content: center;
+                    margin-right:5px;
+                    margin-bottom:5px;
+                    &.media-link-active{
+                        background-color:white;
+                        border:1px solid white;
+                    }
+                }
+            }
+            
+            
+            .content{
+                align-self: center;
+                justify-self:center;
+            }
+        }
+    }
+}

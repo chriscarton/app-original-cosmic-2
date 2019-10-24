@@ -94,9 +94,7 @@ export class SingleProject extends Component {
             <div id="singleProject">
                     
                 <Gallery item={match}></Gallery>
-                
-            
-                
+                    
             </div>
         )
     }

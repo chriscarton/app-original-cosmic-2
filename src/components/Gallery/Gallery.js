@@ -4,6 +4,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import { Link } from "react-router-dom";
 import ProjectNav from '../../elements/ProjectNav/ProjectNav.js';
 import parse from 'html-react-parser';
+import Media from '../../elements/Media/Media.js';
 
 export default class Gallery extends React.Component {
 
@@ -11,9 +12,11 @@ export default class Gallery extends React.Component {
     state = {
         galleryItems: this.props.item.medias.map((media,index) => (
             <div className="item" key={index}>
-                <img
-                    src={process.env.PUBLIC_URL + '/' + 'img/medias' + '/' + media.src}
-                    alt=""
+                <Media
+                    key={index}
+                    index={index}
+                    media={media}
+                    path='img/medias'
                 />
             </div>
         ))
@@ -24,7 +27,7 @@ export default class Gallery extends React.Component {
             <div className="informations">
 
                 <div id="mainNav">
-                    <Link to="/">
+                    <Link to="/projets">
                         <i className="fa fa-chevron-left"></i>
                         &nbsp;Retour
                     </Link>
@@ -55,8 +58,18 @@ export default class Gallery extends React.Component {
         );
     }
 
+    //Doesn't work on I.E, A A
+    handleThumbClick(i,e){
+        this.Carousel.slideTo(i);
+        let prevActive = document.querySelector('.media-link-active');
+        if(prevActive != null){
+            prevActive.classList.remove('media-link-active');
+        }
+        e.target.classList.add('media-link-active');
+    }
+
     thumbItem = (item, i) => (
-        <a key={item} onClick={() => this.Carousel.slideTo(i)}>
+        <a className="media-link" key={item} onClick={(e) => this.handleThumbClick(i,e)}>
             {i+1}
         </a>
     )

@@ -1,15 +1,8 @@
 import React, { Component } from 'react'
 import data from '../Projects/data.js';
 import './SingleProject.scss';
-import parse from 'html-react-parser';
-import ProjectNav from '../../elements/ProjectNav/ProjectNav.js';
 
-import { Link } from "react-router-dom";
-
-import Media from '../../elements/Media/Media.js';
-
-import AliceCarousel from 'react-alice-carousel';
-import "react-alice-carousel/lib/alice-carousel.css";
+import Gallery from '../Gallery/Gallery.js';
 
 export class SingleProject extends Component {
     constructor(props) {
@@ -51,7 +44,6 @@ export class SingleProject extends Component {
 
     componentDidUpdate(){
         window.scrollTo(0, 0);
-        //new Glide('.glide').mount();
     }
 
     //Pour mettre à jour le composant si navigation précédent ou suivant
@@ -85,32 +77,9 @@ export class SingleProject extends Component {
 
         const handleOnDragStart = e => e.preventDefault();
         return (
-            <AliceCarousel 
-                mouseDragEnabled
-                responsive="{0: { items: 1}}"
-
-                >
-
-                {match.medias.length > 0 && match.medias.map((media, index) => (
-                    
-                    // <Media
-                    //     key={index}
-                    //     index={index}
-                    //     media={media}
-                    //     path='img/medias'
-                    // />
-
-                    <div
-                        key={index}
-                        className="item"
-                    >
-                        <img
-                            src={process.env.PUBLIC_URL + '/' + 'img/medias' + '/' + media.src}
-                            alt=""
-                        />
-                    </div>
-                ))}
-            </AliceCarousel>
+            <div className="visual">
+                
+            </div>
         )
     }
 
@@ -123,30 +92,11 @@ export class SingleProject extends Component {
         
         return (
             <div id="singleProject">
-                
                     
-                    {this.Gallery()}
-                    
+                <Gallery item={match}></Gallery>
                 
-                <div className="informations">
-
-                    <nav id="ProjectNav">
-                        <Link to="/">Retour</Link>
-                        {prev &&
-                            <ProjectNav direction="prev" arrow="left" link={`/projet/${prev.slug}`} text="Précédent" />
-                        }
-                        {next &&
-                            <ProjectNav direction="next" arrow="right" link={`/projet/${next.slug}`} text="Suivant" />
-                        }
-                    </nav>
-
-                    {this.state.match.content &&
-                        <div className="content">
-                            {parse(this.state.match.content)}
-                        </div>
-                    }
-
-                </div>
+            
+                
             </div>
         )
     }

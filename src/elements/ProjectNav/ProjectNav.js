@@ -18,14 +18,14 @@ export class ProjectNav extends Component {
                 >
                     {this.props.direction==="prev" && 
                         <>
-                            <i className={`fa fa-arrow-${this.props.arrow}`}></i>
+                            <i className={`fa fa-caret-${this.props.arrow}`}></i>
                             &nbsp;{this.props.text}
                         </>
                     }
                     {this.props.direction === "next" &&
                         <>
                             {this.props.text}&nbsp;
-                            <i className={`fa fa-arrow-${this.props.arrow}`}></i>
+                            <i className={`fa fa-caret-${this.props.arrow}`}></i>
                         </>
                     }
                 </Link>

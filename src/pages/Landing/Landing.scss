@@ -9,11 +9,14 @@
     cursor:pointer;
     h1{
         margin:0px;
+        z-index:0;
     }
     p{
         font-family: 'Ubuntu Mono';
     }
     a{
-        display:none;
+        //display:none;
+        text-decoration: none;
+        color:inherit;
     }
 }

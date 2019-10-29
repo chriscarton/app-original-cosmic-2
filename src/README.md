@@ -169,7 +169,7 @@ Tout est plus ou moins expliqué ici :
 
 https://raquelmsmith.com/blog/how-to-deploy-create-react-app-to-github-pages/
 
-Créer dans le dossier public un fichier 404.html contenant ce code :
+Créer **à la racine** un fichier 404.html contenant ce code :
 
     <!DOCTYPE html>
     <html>
@@ -195,7 +195,7 @@ Créer dans le dossier public un fichier 404.html contenant ce code :
         // https://username.github.io/repo-name/one/two?a=b&c=d#qwe becomes
         // https://username.github.io/repo-name/?p=/one/two&q=a=b~and~c=d#qwe
         // Otherwise, leave segmentCount as 0.
-        var segmentCount = 0;
+        var segmentCount = 1;
         var l = window.location;
         l.replace(
             l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
@@ -209,6 +209,10 @@ Créer dans le dossier public un fichier 404.html contenant ce code :
     <body>
     </body>
     </html>
+
+** ATTENTION ** : *segmentCount* doit être à 1 si on utilise pas de nom de domaine : 
+
+    var segmentCount = 1;
 
 Insérer le script se trouvant ci-dessous dans le head de index.html
 
@@ -243,7 +247,7 @@ Insérer le script se trouvant ci-dessous dans le head de index.html
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
 
-# Créer un autodeploy pour Github Pages [À TESTER] : 
+# Créer un autodeploy pour Github Pages : 
 
 En gros permet de faire un build et d'envoyer direct sur github pages. 
 

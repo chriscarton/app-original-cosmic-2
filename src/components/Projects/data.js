@@ -1,7 +1,7 @@
 let data = [
     {
         id:1,
-        name:"Voici mon premier projet",
+        name:"Alexandre le fou",
         cover:{
             src:"alexandre-le-fou.jpg",
             type:"image",
@@ -13,7 +13,7 @@ let data = [
     },
     {
         id: 2,
-        name: "Voici mon second projet",
+        name: "Amanda",
         cover:{
             src:"amanda-is.jpg",
             type: "image",
@@ -31,7 +31,7 @@ let data = [
             type: "image",
             versions:['320','600','800','960']
         },
-        content: "Affiche française pour « 𝗟𝗲 𝗗𝗲́𝘀𝗲𝗿𝘁𝗲𝘂𝗿 » de Maxime Giroux. Avec Martin Dubreuil, Romain Duris, Reda Kateb et SoKo. Production : Metafilms.<hr/>𝗖𝗹𝗶𝗲𝗻𝘁: Ligne 7<br>𝗠𝗶𝘀𝘀𝗶𝗼𝗻 : Print / Multimédia © 2019 𝘖𝘳𝘪𝘨𝘪𝘯𝘢𝘭 𝘊𝘰𝘴𝘮𝘪𝘤",
+        content: "Affiche française pour « <b>Le Déserteur</b> » de Maxime Giroux. Avec Martin Dubreuil, Romain Duris, Reda Kateb et SoKo. Production : Metafilms.<hr/><b>Client</b>:Ligne 7<br><b>Mission</b> : Print / Multimédia © 2019 𝘖𝘳𝘪𝘨𝘪𝘯𝘢𝘭 𝘊𝘰𝘴𝘮𝘪𝘤",
         slug:"le-deserteur",
         medias:[
             {
@@ -201,7 +201,7 @@ let data = [
             type: "image",
             versions: ['320', '600', '800']
         },
-        content:"Eldorado Afro: Une journée sur l’héritage africain du Mexique<hr><br>𝗖𝗹𝗶𝗲𝗻𝘁: Wawa L’asso<br>𝗠𝗶𝘀𝘀𝗶𝗼𝗻: Design graphique / DA<br>Direction artistique: F.E Original Cosmic<br>Photo: Elliot Duk<br>Style: Jeannine Fischer<br>Modèle: Coralie Djondo<br>Make up: Sophia<br>Assistante: Estelle Periou<hr>© 2019 𝘖𝘳𝘪𝘨𝘪𝘯𝘢𝘭 𝘊𝘰𝘴𝘮𝘪𝘤",
+        content:"Eldorado Afro: Une journée sur l’héritage africain du Mexique<hr><br><b>Client</b>: Wawa L’asso<br><b>Mission</b>: Design graphique / DA<br>Direction artistique: F.E Original Cosmic<br>Photo: Elliot Duk<br>Style: Jeannine Fischer<br>Modèle: Coralie Djondo<br>Make up: Sophia<br>Assistante: Estelle Periou<hr>© 2019 𝘖𝘳𝘪𝘨𝘪𝘯𝘢𝘭 𝘊𝘰𝘴𝘮𝘪𝘤",
         slug:"eldorado-afro",
         medias:[
             {

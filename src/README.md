@@ -1,8 +1,3 @@
-# Encoder les fonts en base64
-
-Par exemple pour qu'un titre ne s'affiche qu'une fois que la fonte est chargée. 
-Voir https://transfonter.org/ qui propose cette option. 
-
 # Problème de persistance des images 
 
 Il se peut que l'attribut src persiste si l'on est renvoyé vers le même composant mais avec des données différentes. 
@@ -10,8 +5,7 @@ Il se peut que l'attribut src persiste si l'on est renvoyé vers le même compos
 Voici comment régler ce problème : 
 
     componentWillUpdate(){
-        console.log('componentWillUpdate!');
-
+        
         let imgs = document.querySelectorAll('#singleProject img');
 
         if(imgs){
@@ -71,7 +65,7 @@ Modifier le render de App.js comme ceci :
 
 **Attention** *RouteContainer* doit bien recevoir pathname (*key={location.pathname}*) et non pas *key* comme indiqué dans la documentation. 
 
-Cette issue est documentée dans : 
+Ce problème est documenté dans : 
 https://github.com/Popmotion/popmotion/issues/535
 
 # Problèmes avec les fontes
@@ -126,43 +120,18 @@ convert -path 1920 -resize 1920x1920\> *.jpg:
 
 # Deployer 
 
-## Attention ne pas faire ce qui suit : 
-
-    //https://medium.com/p/f694d46427c1/responses/show
-
-    //package.json
-    "homepage": "https://myapp.com/directory-name",
-
-    //App.js
-    <Router basename={'/directory-name'}>
-        <Route path='/' component={Home} />
-        ...
-    </Router>
-
-    //Update the routes
-    <Router basename={'/subdirectory'}>
-        <Route path={`${process.env.PUBLIC_URL}/`} component={Home} />
-        <Route path={`${process.env.PUBLIC_URL}/news`} component={News} />
-        <Route path={`${process.env.PUBLIC_URL}/about`} component={About} />
-    </Router>
-
-    //Update the Links
-    <Link to={`${process.env.PUBLIC_URL}/page-path`}>…</Link>
-
-## Mais simplement ceci : 
-
     //Dans package.json
     "homepage": "https://chriscarton.github.io/app-original-cosmic/",
 
 **Important** : 
 
-    Nom du dossier = Nom du repository
+    Nom du dossier en local = Nom du repository
 
 Dans App.js
 
     <Router basename={process.env.PUBLIC_URL}>
 
-Ajouter pour les images et autres videos : 
+Ajouter pour les images et autres videos faire précéder de : 
 
     process.env.PUBLIC_URL
 

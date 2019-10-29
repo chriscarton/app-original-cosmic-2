@@ -8,7 +8,6 @@ import Tests from './components/Tests/Tests.js';
 //Import des pages (c'est quand même le plus important)
 import Landing from './pages/Landing/Landing.js';
 import Studiocontact from './pages/Studiocontact/Studiocontact.js';
-import Showreel from './pages/Showreel/Showreel.js';
 
 import Projects from './components/Projects/Projects.js';
 import SingleProject from './components/SingleProject/SingleProject.js';
@@ -52,7 +51,6 @@ export class App extends Component {
                         component={Landing}
                       />
                       <Route path="/studio" exact component={Studiocontact} />
-                      <Route path="/showreel" exact component={Showreel} />
                       <Route path="/projets" exact component={Projects} />
                       <Route path="/projet/:slug" exact component={SingleProject} />
 

@@ -36,7 +36,7 @@ export class Media extends Component {
                         autoPlay 
                         loop
                         muted
-                        playsinline={false}
+                        playsInline={false}
                     >
                         <source 
                             src={process.env.PUBLIC_URL+'/'+this.props.path+'/'+media.src} 

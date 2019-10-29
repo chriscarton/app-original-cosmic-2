@@ -169,7 +169,7 @@ Tout est plus ou moins expliqué ici :
 
 https://raquelmsmith.com/blog/how-to-deploy-create-react-app-to-github-pages/
 
-Créer **à la racine** un fichier 404.html contenant ce code :
+Créer **dans public** un fichier 404.html contenant ce code :
 
     <!DOCTYPE html>
     <html>
@@ -213,6 +213,8 @@ Créer **à la racine** un fichier 404.html contenant ce code :
 ** ATTENTION ** : *segmentCount* doit être à 1 si on utilise pas de nom de domaine : 
 
     var segmentCount = 1;
+
+Sinon 0. 
 
 Insérer le script se trouvant ci-dessous dans le head de index.html
 

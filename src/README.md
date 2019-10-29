@@ -243,6 +243,14 @@ Insérer le script se trouvant ci-dessous dans le head de index.html
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
 
+# Créer un autodeploy pour Github Pages [À TESTER] : 
+
+En gros permet de faire un build et d'envoyer direct sur github pages. 
+
+Dans *packpage.json*, ajouter : 
+
+    "autodeploy": "yarn run build && gh-pages -d build && git add . && git commit -m 'autodeploy' && git push -u origin master"
+
 # COUPER UNE VIDÉO AVEC ffmepg 
 
 

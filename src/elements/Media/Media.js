@@ -1,26 +1,32 @@
 import React, { Component } from 'react';
 import parse from 'html-react-parser';
-import './Media.scss';
 
 export class Media extends Component {
-
-    /*
-        J'enlève srcSet parce que c'est de la merde en boite. 
-        Si l'image la plus grande est trop petite, elle se retrouve étirée sur toute la largeur disponible.
-    */
 
     render() {
 
         let media = this.props.media;
 
+
+        //Cette condition permet de contraindre l'image à une largeur maximale en ajoutant un style à la balise 
+        let style= {};
+
+        if (this.props.useMaxWidth === true && media.versions){
+            style={
+                maxWidth: media.versions[media.versions.length - 1] + 'px'
+            }
+        }
+
         return (
+            
             <>
                 {media.type === 'image' &&
                     <img 
-                        // srcSet={media.versions.map((w) => (
-                        //     process.env.PUBLIC_URL+'/'+this.props.path+'/' + w + '/' + media.src + ' ' + w + 'w'
-                        // ))} 
+                        srcSet={media.versions.map((w) => (
+                            process.env.PUBLIC_URL+'/'+this.props.path+'/' + w + '/' + media.src + ' ' + w + 'w'
+                        ))} 
                         src={process.env.PUBLIC_URL+'/'+this.props.path+'/'+media.src} 
+                        style={style}
                         alt=""  
                     />
                 }

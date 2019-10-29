@@ -1,3 +1,5 @@
+//N'est pas utilisé
+
 import React, { Component } from 'react'
 import './Image.scss';
 

@@ -209,13 +209,8 @@ let data = [
                 src:"eldorado-afro-1.jpg",
                 versions: ['320', '600']
             }
-            //there is none...
         ]
     },
-
-
-    //Voilà on a tout
-    //Maintenant il faut mettre les images
     {
         id:11,
         name:"Ombres Colorées",
@@ -315,7 +310,7 @@ let data = [
             {
                 type: "image",
                 src: "ronan-martin-1.jpg",
-                versions: ['320','600','960', '1280']
+                versions: ['320','600','960']
             },
             {
                 type:"image",

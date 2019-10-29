@@ -17,12 +17,14 @@ export default class Gallery extends React.Component {
                     index={index}
                     media={media}
                     path='img/medias'
+                    useMaxWidth={true}
                 />
             </div>
         ))
     }
 
     informations(){
+
         return(
             <div className="informations">
 
@@ -40,19 +42,16 @@ export default class Gallery extends React.Component {
                         }
                     </div>
                 </div>
+                {this.props.item.medias.length > 1 && 
                 <nav id="mediasPagination">
                     {this.props.item.medias.map(this.thumbItem)}
                 </nav>
-                   
+                }
                 {this.props.item.content &&
                     <div className="content">
                         {parse(this.props.item.content)}
                     </div>
                 }
-
-                <div className="divinement-vide">
-                    {/* Solution temporaire définitive */}
-                </div>
 
             </div>
         );
@@ -83,9 +82,7 @@ export default class Gallery extends React.Component {
                         buttonsDisabled={true}
                         items={this.state.galleryItems}
                         ref={(el) => (this.Carousel = el)}
-                    />
-
-                    
+                    />                    
                 </div>
                 {this.informations()}
             </>

@@ -18,8 +18,8 @@ export class Landing extends Component {
     render() {
         return (
             <div id="Landing" onClick={(e)=>this.handleClick(e)}>
-                <h1><Link to="/projets">Original Cosmic</Link></h1>
-                <p><Link to="/projets">Studio de design graphique et d'animation</Link></p>
+                <h1><Link to="/projets">original cosmic</Link></h1>
+                <p><Link to="/projets">studio de design graphique et d'animation</Link></p>
             </div>
         )
     }

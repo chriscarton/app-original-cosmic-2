@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Header.scss';
-import { Link } from 'react-router-dom';
+
+import { Link, NavLink } from 'react-router-dom';
 
 import blacklogo from '../../assets/img/blacklogo.png';
 
@@ -17,8 +18,8 @@ export class Header extends Component {
                     <img src={blacklogo} alt="Logo de notre super agence!"/>
                 </Link>
                 <div className="menu">
-                    <Link to="/projets">Projets</Link>
-                    <Link to="/studio">Studio / contact</Link>
+                    <NavLink to="/projets" className="menu-link" activeClassName="active">Projets</NavLink>
+                    <NavLink to="/studio" className="menu-link" activeClassName="active">Studio / contact</NavLink>
                 </div>
             </header>
         )

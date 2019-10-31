@@ -30,7 +30,7 @@ export class SingleProject extends Component {
     }
 
 
-    //Pour régler le problème de persistence des images lors de la navigation précédent suivant
+    //Pour régler un eventuel problème de persistence des images lors de la navigation précédent suivant (ce problème survenait avec l'ancien design)
     componentWillUpdate(){
 
         let imgs = document.querySelectorAll('#singleProject img');
@@ -40,6 +40,11 @@ export class SingleProject extends Component {
                 img.removeAttribute('src')
             });
         }
+    }
+
+    //Juste pour être sur qu'on revienne bien au plafond lors de la navigation
+    componentDidMount() {
+        window.scrollTo(0, 0);
     }
 
     componentDidUpdate(){

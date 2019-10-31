@@ -68,6 +68,17 @@ Modifier le render de App.js comme ceci :
 Ce problème est documenté dans : 
 https://github.com/Popmotion/popmotion/issues/535
 
+# Ajouter une classe active sur la navigation 
+
+Avec React on va utiliser **NavLink** pour ajouter une classe active lors de la navigation (comparaison avec l'url) plutôt que de faire un truc maison :  
+
+    import { Link, NavLink } from 'react-router-dom';
+
+    <div className="menu">
+        <NavLink to="/projets" className="menu-link" activeClassName="active">Projets</NavLink>
+        <NavLink to="/studio" className="menu-link" activeClassName="active">Studio / contact</NavLink>
+    </div>
+
 # Problèmes avec les fontes
 
 ## Fonte Cocogoose 
@@ -100,9 +111,6 @@ Sur *ocp.1.gif* on passe donc d'un gif de 28mo à une vidéo mp4 de 3.6mo
 Ce lien explique tout : 
 
 https://rigor.com/blog/optimizing-animated-gifs-with-html5-video
-
-Du coup mon intégration comment ça se passe ?
-
 
 # Redimensionner des images avec mogrify 
 

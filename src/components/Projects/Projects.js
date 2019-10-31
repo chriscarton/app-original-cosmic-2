@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 import Media from '../../elements/Media/Media.js';
 import Header from '../../elements/Header/Header.js';
+import Footer from '../../elements/Footer/Footer.js';
 
 export class Projects extends Component {
 
@@ -13,6 +14,11 @@ export class Projects extends Component {
         this.state = {
             projects:data
         }
+    }
+
+    //Juste pour être sur qu'on revienne bien au plafond lors de la navigation
+    componentDidMount() {
+        window.scrollTo(0, 0);
     }
 
     render() {
@@ -33,6 +39,7 @@ export class Projects extends Component {
                         </div>
                     ))}
                 </div>
+                <Footer/>
             </div>
         )
     }

@@ -4,8 +4,7 @@
     display:flex;
     flex-wrap:wrap;
     align-items: center;
-    min-height:50vh;
-    //On est des dingues
+    min-height:30vh;
     padding-left:25px;
     padding-right:25px; 
     img{
@@ -22,6 +21,16 @@
             display: block;
             &:hover{
                 text-decoration: underline;
+            }
+            //Attention c'est la classe active
+            &.active{
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    border-bottom: 1px solid #000;
+                    width: 15px;
+                    margin: 0 5px;
+                }
             }
         }
     }

@@ -1,5 +1,6 @@
 @import '../../variables.scss';
 
+//Mobile version
 #singleProject{
     .item{
         display:flex;
@@ -19,7 +20,6 @@
         }
     }
     .informations{
-        background-color:rgb(240, 240, 240);
         padding:10px;
         a{
             display:block;
@@ -74,6 +74,8 @@
     }
 }
 
+
+//Tablet & Desktop version
 @media screen and (min-width:800px){
     #singleProject{
         position: relative;

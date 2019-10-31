@@ -34,7 +34,7 @@ export class Landing extends Component {
                     className="video"
                     autoPlay
                     muted
-                    playsInline={false}
+                    // playsInline={false}
                     id="landingVideo"
                     onLoadedData={(e)=>this.handleLoaded(e)}
                 >

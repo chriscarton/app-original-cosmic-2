@@ -15,30 +15,42 @@ export class Landing extends Component {
         }
     }
 
+    handleLoaded(e){
+        let video = document.querySelector('#landingVideo');
+        video.classList.add('ocaurevoir');
+        //console.log(video);
+        
+        let landing = document.querySelector('#Landing');
+        landing.classList.add('ocbonjour');
+        //console.log(landing);
+
+        //alert('loaded');
+    }
+
     render() {
         return (
-            <>
+            <div id="Screen">
                 <video
                     className="video"
                     autoPlay
-                    loop
                     muted
                     playsInline={false}
                     id="landingVideo"
+                    onLoadedData={(e)=>this.handleLoaded(e)}
                 >
                 <source
-                    src={process.env.PUBLIC_URL + '/video/ocwall.mp4'}
+                    src={process.env.PUBLIC_URL + '/video/ocwall2.mp4'}
                     type="video/mp4"
                 />
                 Votre navigateur ne supporte pas la vidéo.
                 </video>
-            <div id="Landing" onClick={(e)=>this.handleClick(e)}>
-                <div>
-                    <h1><Link to="/projets">original cosmic</Link></h1>
-                    <p><Link to="/projets">studio de design graphique<br/> et d'animation.</Link></p>
+                <div id="Landing" onClick={(e)=>this.handleClick(e)}>
+                    <div>
+                        <h1><Link to="/projets">original cosmic</Link></h1>
+                        <p><Link to="/projets">studio de design graphique<br/> et d'animation.</Link></p>
+                    </div>
                 </div>
             </div>
-            </>
         )
     }
 }

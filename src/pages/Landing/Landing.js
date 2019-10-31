@@ -38,7 +38,7 @@ export class Landing extends Component {
                     onLoadedData={(e)=>this.handleLoaded(e)}
                 >
                 <source
-                    src={process.env.PUBLIC_URL + '/video/ocwall2_faststart.mp4'}
+                    src={process.env.PUBLIC_URL + '/video/ocwall2_mobile.mp4'}
                     type="video/mp4"
                 />
                 Votre navigateur ne supporte pas la vidéo.

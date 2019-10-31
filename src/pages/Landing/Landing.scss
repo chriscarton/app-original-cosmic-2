@@ -1,6 +1,10 @@
 @import '../../variables.scss';
 
+body{
+    background-color:black;
+}
 #landingVideo{
+
     position:absolute;
     top:0px;
     bottom:0px;
@@ -11,6 +15,21 @@
     width:100vw;
     object-fit:cover;
     object-position:center center;
+    
+    opacity:1;
+    animation-name:ocAurevoir;
+    animation-delay:4s;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    @keyframes ocAurevoir{
+        from{
+            opacity:1;
+
+        }
+        to{
+            opacity:0;
+        }
+    }
 }
 
 #Landing{
@@ -22,7 +41,21 @@
     cursor:pointer;
     position:relative;
     z-index:2;
-    background-color:rgba(0,0,0,0.25);
+    // background-color:rgba(0,0,0,0.25);
+    opacity:0;
+    animation-name:ocBonjour;
+    animation-delay:6s;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    @keyframes ocBonjour{
+        from{
+            opacity:0;
+
+        }
+        to{
+            opacity:1;
+        }
+    }
     h1{
         margin:0px;
         z-index:0;
@@ -35,5 +68,6 @@
     a{
         text-decoration: none;
         color:inherit;
+        color:white !important;
     }
 }

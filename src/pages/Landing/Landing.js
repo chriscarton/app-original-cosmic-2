@@ -27,7 +27,7 @@ export class Landing extends Component {
                     id="landingVideo"
                 >
                 <source
-                    src={process.env.PUBLIC_URL + '/video/ocskills.mp4'}
+                    src={process.env.PUBLIC_URL + '/video/ocwall.mp4'}
                     type="video/mp4"
                 />
                 Votre navigateur ne supporte pas la vidéo.

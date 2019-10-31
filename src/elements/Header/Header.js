@@ -4,6 +4,7 @@ import './Header.scss';
 import { Link, NavLink } from 'react-router-dom';
 
 import blacklogo from '../../assets/img/blacklogo.png';
+import svgLogo from '../../assets/img/logo.svg';
 
 export class Header extends Component {
     
@@ -15,7 +16,7 @@ export class Header extends Component {
         return (
             <header id="Header" className="small-header">
                 <Link to="/">
-                    <img src={blacklogo} alt="Logo de notre super agence!"/>
+                    <img src={svgLogo} alt="Logo de notre super agence!"/>
                 </Link>
                 <div className="menu">
                     <NavLink to="/projets" className="menu-link" activeClassName="active">Projets</NavLink>

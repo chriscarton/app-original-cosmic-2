@@ -1,16 +1,23 @@
 @import '../../variables.scss';
 
 #Header{
-    display:flex;
+    width:100% !important;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
     flex-wrap:wrap;
+    // border:1px dashed black;
     align-items: center;
     min-height:30vh;
     padding-left:25px;
-    padding-right:25px; 
+    padding-right:25px;
     img{
         display:block;
+        max-width:200px;
+        height:auto;
+        // border:1px dashed black;
     }
     .menu{
+        text-align: right;
         display:flex;
         flex-direction: column;
         justify-content: center;
@@ -19,6 +26,7 @@
             color:black;
             text-decoration: none;
             display: block;
+            font-size:14px;
             &:hover{
                 text-decoration: underline;
             }

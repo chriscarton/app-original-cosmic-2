@@ -1,5 +1,18 @@
 @import '../../variables.scss';
 
+#landingVideo{
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    // border:5px dashed yellow;
+    height:100vh;
+    width:100vw;
+    object-fit:cover;
+    object-position:center center;
+}
+
 #Landing{
     min-height: 100vh;
     display:flex;
@@ -7,12 +20,17 @@
     justify-content: center;
     flex-direction: column;
     cursor:pointer;
+    position:relative;
+    z-index:2;
+    background-color:rgba(0,0,0,0.25);
     h1{
         margin:0px;
         z-index:0;
     }
     p{
         font-family: 'Ubuntu Mono';
+        margin:0px;
+        font-size:18px;
     }
     a{
         text-decoration: none;

@@ -40,7 +40,14 @@
             padding-right:25px;
             padding-left:25px;
             display:flex;
-            align-items: center;
+            text-align:justify;
+            font-size:14px !important;
+            line-height:20px !important;
+            width:500px;
+            margin-left:auto;
+            margin-right:auto;
+            //Finalement on ne va pas centrer le texte mais on garde quand même en commentaire pour s'en souvenir. 
+            //align-items: center;
             @media screen and (min-width:810px){
                 max-width: 50vw;
             }

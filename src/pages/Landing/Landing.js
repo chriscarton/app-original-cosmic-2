@@ -17,10 +17,28 @@ export class Landing extends Component {
 
     render() {
         return (
+            <>
+                <video
+                    className="video"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline={false}
+                    id="landingVideo"
+                >
+                <source
+                    src={process.env.PUBLIC_URL + '/video/ocskills.mp4'}
+                    type="video/mp4"
+                />
+                Votre navigateur ne supporte pas la vidéo.
+                </video>
             <div id="Landing" onClick={(e)=>this.handleClick(e)}>
-                <h1><Link to="/projets">original cosmic</Link></h1>
-                <p><Link to="/projets">studio de design graphique et d'animation</Link></p>
+                <div>
+                    <h1><Link to="/projets">original cosmic</Link></h1>
+                    <p><Link to="/projets">studio de design graphique<br/> et d'animation.</Link></p>
+                </div>
             </div>
+            </>
         )
     }
 }

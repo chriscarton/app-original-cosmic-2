@@ -18,6 +18,8 @@ export class Landing extends Component {
     handleLoaded(e){
         let video = document.querySelector('#landingVideo');
         video.classList.add('ocaurevoir');
+
+        e.target.play();
         
         let landing = document.querySelector('#Landing');
         landing.classList.add('ocbonjour');

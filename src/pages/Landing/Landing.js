@@ -18,13 +18,9 @@ export class Landing extends Component {
     handleLoaded(e){
         let video = document.querySelector('#landingVideo');
         video.classList.add('ocaurevoir');
-        //console.log(video);
         
         let landing = document.querySelector('#Landing');
         landing.classList.add('ocbonjour');
-        //console.log(landing);
-        alert('la video est chargée');
-        e.target.play();
     }
 
     render() {
@@ -32,13 +28,13 @@ export class Landing extends Component {
             <div id="Screen">
                 <video
                     className="video"
+                    autoPlay
                     muted
-                    // playsInline={false}
                     id="landingVideo"
                     onLoadedData={(e)=>this.handleLoaded(e)}
                 >
                 <source
-                    src={process.env.PUBLIC_URL + '/video/ocwall2_mobile.mp4'}
+                    src={process.env.PUBLIC_URL + '/video/ocskills.mp4'}
                     type="video/mp4"
                 />
                 Votre navigateur ne supporte pas la vidéo.

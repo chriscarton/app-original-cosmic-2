@@ -42,12 +42,13 @@
         cursor:pointer;
         position:relative;
         z-index:2;
-        opacity:0;
+        //opacity:0;
         /*
         @media screen and (max-width:600px){
             opacity:1;
         }
         */
+        /*
         &.ocbonjour{
             animation-name:ocBonjour;
             animation-delay:6s;
@@ -63,6 +64,7 @@
                 opacity:1;
             }
         }
+        */
         h1{
             margin:0px;
             z-index:0;

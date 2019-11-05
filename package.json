@@ -28,7 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "yarn run build && gh-pages -d build",
-    "autodeploy": "yarn run build && gh-pages -d build && git add . && git commit -m 'autodeploy' && git push -u origin master" 
+    "autodeploy": "yarn run build && gh-pages -d build && git add . && git commit -m 'autodeploy' && git push -u origin master"
   },
   "eslintConfig": {
     "extends": "react-app"

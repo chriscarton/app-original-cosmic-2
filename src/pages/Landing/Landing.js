@@ -23,6 +23,7 @@ export class Landing extends Component {
                     muted
                     id="landingVideo"
                     poster={process.env.PUBLIC_URL + '/img/poster.png'}
+                    playsInline={true}
                 >
                 <source
                     src={process.env.PUBLIC_URL + '/video/ocwall.mp4'}

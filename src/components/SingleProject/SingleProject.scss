@@ -20,6 +20,10 @@
         }
     }
     .informations{
+
+        display:flex;
+        flex-direction:column;
+
         padding:10px;
         a{
             display:block;
@@ -42,6 +46,10 @@
                     margin-right:5px;
                     
                 }
+            }
+            order:4;
+            @media screen and (min-width:800px){
+                order:0;
             }
         }
         #mediasPagination{

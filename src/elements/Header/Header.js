@@ -20,7 +20,7 @@ export class Header extends Component {
                 </Link>
                 <div className="menu">
                     <NavLink to="/projets" className="menu-link" activeClassName="active">Projets</NavLink>
-                    <NavLink to="/studio" className="menu-link" activeClassName="active">Studio / contact</NavLink>
+                    <NavLink to="/studio" className="menu-link" activeClassName="active">Contact</NavLink>
                 </div>
             </header>
         )

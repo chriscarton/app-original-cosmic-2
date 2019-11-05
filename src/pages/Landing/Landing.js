@@ -26,7 +26,7 @@ export class Landing extends Component {
                     playsInline={true}
                 >
                 <source
-                    src={process.env.PUBLIC_URL + '/video/ocwall.mp4'}
+                        src={process.env.PUBLIC_URL + '/video/ocwall1c.mp4'}
                     type="video/mp4"
                 />
                 Votre navigateur ne supporte pas la vidéo.

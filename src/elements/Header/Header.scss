@@ -1,7 +1,9 @@
 @import '../../variables.scss';
 
 #Header{
+    margin-bottom:20px;
     @media screen and (min-width:400px){
+        margin-bottom:0px;
         display:grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -21,9 +23,9 @@
     }
     .menu{
         text-align: center;
-        @media screen and (min-width:400px){
+        //@media screen and (min-width:400px){
             text-align: right;
-        }
+        //}
         display:flex;
         flex-direction: column;
         justify-content: center;

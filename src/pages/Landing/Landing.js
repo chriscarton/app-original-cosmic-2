@@ -19,7 +19,7 @@ export class Landing extends Component {
             <div id="Screen">
                 <video
                     className="video"
-                    // autoPlay
+                    autoPlay
                     muted
                     id="landingVideo"
                     poster={process.env.PUBLIC_URL + '/img/poster.png'}

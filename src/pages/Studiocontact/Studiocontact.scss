@@ -41,28 +41,70 @@
             padding-left:25px;
             display:flex;
             text-align:justify;
-            font-size:14px !important;
-            line-height:20px !important;
-            width:500px;
+            //instead of a width, a max width may be the solution
+            //blessed day
+            max-width:500px;
             margin-left:auto;
             margin-right:auto;
-            //Finalement on ne va pas centrer le texte mais on garde quand même en commentaire pour s'en souvenir. 
-            //align-items: center;
-            @media screen and (min-width:810px){
-                max-width: 50vw;
-            }
-            font-size:1.1rem;
-            line-height:2rem;
+
             > div {
                 hr{
                    margin-inline-end: 75%;
                 }
-
             }
             .mailto{
                 color:$yellow;
                 font-weight: bold;
             }
+            .show-form{
+                text-decoration: underline;
+                font-weight: bold;
+            }
+
+            form{
+                display:none;
+                opacity:0;
+                margin-bottom:30px;
+                //Bon là on est bien sur une classe et pas un pseudo élément
+                &.active{
+                    display:block;
+                    opacity:1;
+                }
+                .col-2{
+                    @media screen and (min-width:320px){
+                        display:grid;
+                        grid-template-columns:1fr 1fr;
+                        grid-gap:10px;
+                    }
+                }
+                input,textarea{
+                    display:block;
+                    width:100%;
+                    border:0px;
+                    border-bottom:1px solid black;
+                    min-height:35px;
+                    font-family: sans-serif;
+                }
+                textarea{
+                    min-height:150px;
+                }
+                .submit-container{
+                    text-align: center;
+                    input[type=submit]{
+                        margin-top:30px;
+                        width:auto;
+                        display:inline-block;
+                        background-color:black;
+                        border:1px solid black;
+                        font-weight: bold;
+                        color:white;
+                        &:hover{
+                            background-color:$yellow;
+                        }
+                    }
+                }
+            }
+
         }
         div{
             overflow:hidden;

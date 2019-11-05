@@ -265,6 +265,13 @@ Dans *packpage.json*, ajouter :
 
     "autodeploy": "yarn run build && gh-pages -d build && git add . && git commit -m 'autodeploy' && git push -u origin master"
 
+
+# Politique Autoplay sur mobile (Chrome, Safari)
+
+Même les videos qui disposent à la fois de l'attribut **autoPlay** et **muted** ne sont pas lues automatiquement sur mobiles tant que l'utilisateur n'a pas eu d'intéraction avec le domaine en cours. 
+
+Donc les vidéos en autoPlay à l'accueil sur mobile même muted, on oublie. Pour toujours.
+
 # COUPER UNE VIDÉO AVEC ffmepg 
 
 

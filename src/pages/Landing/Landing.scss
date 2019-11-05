@@ -16,55 +16,20 @@
         object-position:center center;
         opacity:1;
 
-        &.ocaurevoir{
-            //animation-name:ocAurevoir;
-            //animation-delay:4s;
-            //animation-duration:1s;
-            //animation-fill-mode:forwards;
-            
-        }
-        @keyframes ocAurevoir{
-            from{
-                opacity:1;
-            }
-            to{
-                opacity:0;
-            }
-        }
     }
 
     #Landing{
         min-height: 100vh;
         display:flex;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top:30px;
+        padding-left:30px;
         flex-direction: column;
         cursor:pointer;
         position:relative;
         z-index:2;
-        //opacity:0;
-        /*
-        @media screen and (max-width:600px){
-            opacity:1;
-        }
-        */
-        /*
-        &.ocbonjour{
-            animation-name:ocBonjour;
-            animation-delay:6s;
-            animation-duration:1s;
-            animation-fill-mode:forwards;
-        }
-        @keyframes ocBonjour{
-            from{
-                opacity:0;
-
-            }
-            to{
-                opacity:1;
-            }
-        }
-        */
+        
         h1{
             margin:0px;
             z-index:0;
@@ -78,6 +43,7 @@
             text-decoration: none;
             color:inherit;
             color:white !important;
+            color:$yellow !important;
         }
     }
 

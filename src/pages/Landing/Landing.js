@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Landing.scss';
-import SingleProject from '../../components/SingleProject/SingleProject.js';
 
 export class Landing extends Component {
 
@@ -15,16 +14,6 @@ export class Landing extends Component {
         }
     }
 
-    handleLoaded(e){
-        let video = document.querySelector('#landingVideo');
-        video.classList.add('ocaurevoir');
-
-        e.target.play();
-        
-        let landing = document.querySelector('#Landing');
-        landing.classList.add('ocbonjour');
-    }
-
     render() {
         return (
             <div id="Screen">
@@ -33,7 +22,6 @@ export class Landing extends Component {
                     autoPlay
                     muted
                     id="landingVideo"
-                    onLoadedData={(e)=>this.handleLoaded(e)}
                 >
                 <source
                     src={process.env.PUBLIC_URL + '/video/ocwall.mp4'}

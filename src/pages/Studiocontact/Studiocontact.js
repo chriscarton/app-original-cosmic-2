@@ -5,9 +5,6 @@ import Header from '../../elements/Header/Header.js';
 import Footer from '../../elements/Footer/Footer.js';
 
 export class Studiocontact extends Component {
-
-    //Dernière modification
-    //Inclusion du header (on pourrait peut-être essayer de le mettre dans la grille)
     
     //Juste pour être sur qu'on revienne bien au plafond lors de la navigation
     componentDidMount() {

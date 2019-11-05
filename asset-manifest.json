@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/app-original-cosmic-2/static/css/main.b5f9dcfc.chunk.css",
+    "main.js": "/app-original-cosmic-2/static/js/main.3d96c1fa.chunk.js",
+    "main.js.map": "/app-original-cosmic-2/static/js/main.3d96c1fa.chunk.js.map",
+    "runtime-main.js": "/app-original-cosmic-2/static/js/runtime-main.761ac69f.js",
+    "runtime-main.js.map": "/app-original-cosmic-2/static/js/runtime-main.761ac69f.js.map",
+    "static/css/2.a881067f.chunk.css": "/app-original-cosmic-2/static/css/2.a881067f.chunk.css",
+    "static/js/2.08b0e517.chunk.js": "/app-original-cosmic-2/static/js/2.08b0e517.chunk.js",
+    "static/js/2.08b0e517.chunk.js.map": "/app-original-cosmic-2/static/js/2.08b0e517.chunk.js.map",
+    "index.html": "/app-original-cosmic-2/index.html",
+    "precache-manifest.3d0d1772b3ccdf06507b96f86d03eb6f.js": "/app-original-cosmic-2/precache-manifest.3d0d1772b3ccdf06507b96f86d03eb6f.js",
+    "service-worker.js": "/app-original-cosmic-2/service-worker.js",
+    "static/css/2.a881067f.chunk.css.map": "/app-original-cosmic-2/static/css/2.a881067f.chunk.css.map",
+    "static/css/main.b5f9dcfc.chunk.css.map": "/app-original-cosmic-2/static/css/main.b5f9dcfc.chunk.css.map",
+    "static/media/font-awesome.min.css": "/app-original-cosmic-2/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/logo.svg": "/app-original-cosmic-2/static/media/logo.84bf977c.svg"
+  }
+}

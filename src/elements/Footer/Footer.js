@@ -36,7 +36,8 @@ export class Footer extends Component {
                     </nav>
                     <div className="text">
                         © 2019 / Original Cosmic <br/>
-                        Visual Arts Studio
+                        Visual Arts Studio <br/>
+                        <Link to="/mentions">Mentions légales</Link>
                     </div>
 
                 </div>

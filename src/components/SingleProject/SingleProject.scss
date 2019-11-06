@@ -80,6 +80,11 @@
     .content{
         margin-bottom:50px;
     }
+    .to-contact{
+        @media screen and (min-width:800px){
+            text-align: right;
+        }
+    }
 }
 
 

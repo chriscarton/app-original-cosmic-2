@@ -17,14 +17,20 @@ export class Media extends Component {
             }
         }
 
+        let srcSet = null;
+        if(media.versions != undefined){
+            srcSet = media.versions.map((w) => (
+                process.env.PUBLIC_URL + '/' + this.props.path + '/' + w + '/' + media.src + ' ' + w + 'w'
+            ));
+        }
+        
         return (
             
             <>
                 {media.type === 'image' &&
+                    
                     <img 
-                        srcSet={media.versions.map((w) => (
-                            process.env.PUBLIC_URL+'/'+this.props.path+'/' + w + '/' + media.src + ' ' + w + 'w'
-                        ))} 
+                        srcSet={srcSet}
                         src={process.env.PUBLIC_URL+'/'+this.props.path+'/'+media.src} 
                         style={style}
                         alt=""  

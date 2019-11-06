@@ -27,9 +27,9 @@ let data = [
         id: 3,
         name: "Le déserteur",
         cover:{
-            src:"le-deserteur.jpg",
+            src:"le-deserteur-2.jpg",
             type: "image",
-            versions:['320','600','800','960']
+            //versions:['320','600','800','960']
         },
         content: "Affiche française pour « <b>Le Déserteur</b> » de Maxime Giroux. Avec Martin Dubreuil, Romain Duris, Reda Kateb et SoKo. Production : Metafilms.<hr/><b>Client</b>:Ligne 7<br><b>Mission</b> : Print / Multimédia © 2019 𝘖𝘳𝘪𝘨𝘪𝘯𝘢𝘭 𝘊𝘰𝘴𝘮𝘪𝘤",
         slug:"le-deserteur",

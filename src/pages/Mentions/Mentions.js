@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './Mentions.scss';
 
 //Voir : https://www.service-public.fr/professionnels-entreprises/vosdroits/F31228
 
@@ -10,7 +11,7 @@ export class Mentions extends Component {
     render() {
         return (
             <div id="Mentions">
-                <h1>Édition</h1>
+                <div className="title">Édition</div>
                 <p>
                     Le site internet originalcosmic.fr, est édité par : <br/>
                     Nom,<br/>
@@ -22,13 +23,13 @@ export class Mentions extends Component {
                     Email : contact@originalcosmic.fr
                 </p>
 
-                <h1>Auteurs</h1>
+                <div className="title">Auteurs</div>
                 <p>
                     Le directeur de publication : Nom Prénom<br/>
                     Le co-directeur de publication : Nom Prénom<br/>
                 </p>
 
-                <h1>Hébergement</h1>
+                <div className="title">Hébergement</div>
                 <p>
                     Le site internet, originalcosmic.fr, est hébergé par :<br />
                     OVH,<br />
@@ -37,12 +38,12 @@ export class Mentions extends Component {
                     59100 Roubaix, France.<br />
                 </p>
 
-                <h1>Protection du droit d'auteur, propriété intellectuelle</h1>
+                <div className="title">Protection du droit d'auteur, propriété intellectuelle</div>
                 <p>
                     L'ensemble des documents, images, vidéos, textes et autre médias de ce site internet est protégé par les législations françaises et internationales concernant le droit d'auteur et la propriété intellectuelle. Les droits de reproduction des documents, images, vidéos et autres médias sont intégralement réservés.
                 </p>
 
-                <h1>Informatique et liberté</h1>
+                <div className="title">Informatique et liberté</div>
                 <p>
                     Conformément aux articles 39 et suivants de la loi n° 78-17 du 6 janvier 1978 modifiée en 2004 relative à l’informatique, aux fichiers et aux libertés, toute personne peut obtenir communication et, le cas échéant, rectification ou suppression des informations la concernant, en nous en adressant la demande via mail, courrier ou téléphone.
                 </p>

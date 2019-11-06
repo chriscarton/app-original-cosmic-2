@@ -55,7 +55,7 @@ export class FormContact extends Component {
 
     render() {
         return (
-            <form className="contact-form" onSubmit={this.handleSubmit}>
+            <form id="FormContact" className="contact-form" onSubmit={this.handleSubmit}>
                 <div className="col-2">
                     <input type="text" placeholder="nom" name="nom" onChange={this.handleInputChange}/>
                     <input type="text" placeholder="prénom" name="prenom" onChange={this.handleInputChange}/>

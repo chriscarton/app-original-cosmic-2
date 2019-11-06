@@ -2,16 +2,6 @@ import React, { Component } from 'react';
 
 export class Studio extends Component {
 
-
-    toggleForm(e){
-        let form = document.querySelector('.contact-form');
-        if(form.classList.contains('active')){
-            form.classList.remove('active');
-        }else{
-            form.classList.add('active');
-        }
-    }
-
     render() {
         return (
             <div>
@@ -38,7 +28,6 @@ export class Studio extends Component {
                     <hr/>
                     <p>
                         <a href="mailto:contact@originalcosmic.fr" className="mailto">contact@originalcosmic.fr</a><br/>
-                        <a className="show-form" onClick={(e)=>this.toggleForm(e)}>utiliser un superbe formulaire de contact</a><br/>
                         +33 (0) 6 18 78 43 78<br/>
                     </p>
                 </div>

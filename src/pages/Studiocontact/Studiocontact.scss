@@ -63,8 +63,6 @@
             }
 
             form{
-                display:none;
-                opacity:0;
                 margin-bottom:30px;
                 //Bon là on est bien sur une classe et pas un pseudo élément
                 &.active{
@@ -85,7 +83,9 @@
                     border-bottom:1px solid black;
                     min-height:35px;
                     font-family: sans-serif;
+                    
                 }
+
                 textarea{
                     min-height:150px;
                 }

@@ -7,9 +7,14 @@ let data = [
             type:"image",
             versions:['320','600','800','960']
         },
-        content:null,
+        content: "Alexandre Le Fou de Pedro Pires.<br/>Affiche de film. <br/>Pour : Maison 4: 3. <br/>Mission : Design graphique/// Print.",
         slug:"alex-le-fou",
-        medias:[]
+        medias:[
+            {
+                type:'image',
+                src:"alexandre-le-fou.jpg"
+            }
+        ]
     },
     {
         id: 2,
@@ -19,9 +24,18 @@ let data = [
             type: "image",
             versions:['320','600','800','960']
         },
-        content:null,
+        content:"Introspections Sélectives : Couverture de livre. <br/> Pour : AWK STUDIO. <br/> Mission : Illustration, Design graphique/// Print.",
         slug:"amanda-is",
-        medias:[]
+        medias:[
+            {
+                type: 'image',
+                src: "amanda-is.jpg"
+            },
+            {
+                type:'image',
+                src:"amanda-is-2.jpg"
+            }
+        ]
     },
     {
         id: 3,
@@ -31,7 +45,7 @@ let data = [
             type: "image",
             //versions:['320','600','800','960']
         },
-        content: "Affiche française pour « <b>Le Déserteur</b> » de Maxime Giroux. Avec Martin Dubreuil, Romain Duris, Reda Kateb et SoKo. Production : Metafilms.<hr/><b>Client</b>:Ligne 7<br><b>Mission</b> : Print / Multimédia © 2019 𝘖𝘳𝘪𝘨𝘪𝘯𝘢𝘭 𝘊𝘰𝘴𝘮𝘪𝘤",
+        content: "Affiche française pour « <b>Le Déserteur</b> » de Maxime Giroux. Avec Martin Dubreuil, Romain Duris, Reda Kateb et SoKo. Production : Metafilms.<hr/><b>Pour</b> : Ligne 7<br><b>Mission</b> : Print / Multimédia © 2019 𝘖𝘳𝘪𝘨𝘪𝘯𝘢𝘭 𝘊𝘰𝘴𝘮𝘪𝘤",
         slug:"le-deserteur",
         medias:[
             {
@@ -74,18 +88,18 @@ let data = [
             type: "image",
             versions:['320','600','800','960']
         },
-        content: "AFRIKA GLAM Pour Afrika Box<hr>Direction artistique<br>Photographie<br>Design graphique<br>Print<br>2019",
+        content: "AFRIKA GLAM<br>Pour : Afrika Box<hr>Direction artistique<br>Photographie<br>Design graphique<br>Print<br>2019",
         slug:"afrika-glam",
         medias:[
             {
                 type: "image",
                 src: "afrika-glam-1.jpg",
-                versions: ['320','600']
+                //versions: ['320','600']
             },
             {
                 type:"image",
                 src:"afrika-glam-2.jpg",
-                versions: ['320', '600', '960']
+                //versions: ['320', '600', '960']
             }
         ]
     },
@@ -96,7 +110,7 @@ let data = [
             src:"ocp1.mp4",
             type: "video"
         },
-        content:"Original Cosmic Playlist. Chaque mois, une playlist, une composition visuelle originale.",
+        content:"<b>Original Cosmic Playlist</b>. <br>Chaque mois, une playlist, une composition visuelle originale.",
         slug:"original-cosmic-playlist",
         medias:[
             {
@@ -116,7 +130,7 @@ let data = [
             src:"paleo.mp4",
             type: "video"
         },
-        content: "PALEO<hr>Animation 2D<br>clip promotionnel<br>Pour Bitteschoen TV<br>2017",
+        content: "PALEO<hr>Animation 2D<br>clip promotionnel<br>Pour : Bitteschoen TV<br>2017",
         slug:"paleo",
         medias:[
             {
@@ -201,13 +215,17 @@ let data = [
             type: "image",
             versions: ['320', '600', '800']
         },
-        content:"Eldorado Afro: Une journée sur l’héritage africain du Mexique<hr><br><b>Client</b>: Wawa L’asso<br><b>Mission</b>: Design graphique / DA<br>Direction artistique: F.E Original Cosmic<br>Photo: Elliot Duk<br>Style: Jeannine Fischer<br>Modèle: Coralie Djondo<br>Make up: Sophia<br>Assistante: Estelle Periou<hr>© 2019 𝘖𝘳𝘪𝘨𝘪𝘯𝘢𝘭 𝘊𝘰𝘴𝘮𝘪𝘤",
+        content:"Eldorado Afro: Une journée sur l’héritage africain du Mexique<hr><br><b>Pour </b> : Wawa L’asso<br><b>Mission</b>: Design graphique / DA<br>Direction artistique: F.E Original Cosmic<br>Photo: Elliot Duk<br>Style: Jeannine Fischer<br>Modèle: Coralie Djondo<br>Make up: Sophia<br>Assistante: Estelle Periou<hr>© 2019 𝘖𝘳𝘪𝘨𝘪𝘯𝘢𝘭 𝘊𝘰𝘴𝘮𝘪𝘤",
         slug:"eldorado-afro",
         medias:[
             {
                 type:"image",
                 src:"eldorado-afro-1.jpg",
                 versions: ['320', '600']
+            },
+            {
+                type:"image",
+                src:"eldorado-afro-2.jpg"
             }
         ]
     },
@@ -219,13 +237,17 @@ let data = [
             type: "image",
             versions: ['320', '600']
         },
-        content:"Ombres Colorées <hr> Client: Wawa L’Asso<br>Mission: Print / Multimédia<br>Photo: Matt Doheny<br>Model: Will B.Bell",
+        content:"Ombres Colorées <hr> Pour : Wawa L’Asso<br>Mission: Print / Multimédia<br>Photo: Matt Doheny<br>Model: Will B.Bell",
         slug:"ombres-colorees",
         medias:[
             {
                 type:"image",
                 src:"ombre-colorees-1.jpg",
-                versions: ['320', '600', '960']
+                //versions: ['320', '600', '960']
+            },
+            {
+                type: "image",
+                src: "ombre-colorees-2.jpg",
             }
         ]
     },
@@ -287,12 +309,12 @@ let data = [
             {
                 type: "image",
                 src: "doux-divorce-records-2.jpg",
-                versions: ['320']
+                //versions: ['320']
             },
             {
                 type: "image",
                 src: "doux-divorce-records-3.jpg",
-                versions: ['320']
+                //versions: ['320']
             }
         ]
     },
@@ -307,17 +329,22 @@ let data = [
         content:"RONAN MARTIN « À l’intérieur »<hr>Pochette de disque<br>Design graphique<br>2017<br>",
         slug:"ronan-martin",
         medias: [
+            //Je m'étais planté à la base c'est pour ça que les titres des fichiers ne sont pas les bons
+            //Dans l'ideal il faudrait renommer tout ça
             {
                 type: "image",
-                src: "ronan-martin-1.jpg",
-                versions: ['320','600','960']
+                src: "les-rayons-1.jpg",
+                versions: ['320', '600', '960']
             },
             {
-                type:"image",
-                src:"ronan-martin-2.jpg",
-                versions: ['320', '600']
+                type: "image",
+                src: "les-rayons-2.jpg",
+                //versions: ['320']
+            },
+            {
+                type: "iframe",
+                src: '<iframe width="560" height="315" src="https://www.youtube.com/embed/sES64_1VmVU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
             }
-            
         ]
     },
     {
@@ -333,17 +360,13 @@ let data = [
         medias: [
             {
                 type: "image",
-                src: "les-rayons-1.jpg",
+                src: "ronan-martin-1.jpg",
                 versions: ['320', '600', '960']
             },
             {
-                type: "iframe",
-                src: '<iframe width="560" height="315" src="https://www.youtube.com/embed/sES64_1VmVU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-            },
-            {
                 type: "image",
-                src: "les-rayons-2.jpg",
-                versions: ['320']
+                src: "ronan-martin-2.jpg",
+                versions: ['320', '600']
             }
         ]
     },

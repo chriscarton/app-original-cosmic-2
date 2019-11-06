@@ -27,7 +27,21 @@ export class FormContact extends Component {
         event.preventDefault();
         console.log('oh my god this form has been submited!');
 
-        axios.post(`https://originalcosmic.fr/submit`, { user })
+        //voir : 
+        //https://alligator.io/react/axios-react/
+
+        //Bon faut voir dans quoi je vais recup contact dans submit.php
+
+        const contact = {
+            prenom: this.state.prenom,
+            nom:this.state.nom,
+            sujet:this.state.sujet,
+            message:this.state.message,
+            email:this.state.email,
+            phone:this.state.phone
+        };
+
+        axios.post(`https://originalcosmic.fr/submit`, { contact })
             .then(res => {
                 console.log(res);
                 console.log(res.data);

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/app-original-cosmic-2/static/css/main.9da7de88.chunk.css",
+    "main.css": "/app-original-cosmic-2/static/css/main.8fed6e80.chunk.css",
     "main.js": "/app-original-cosmic-2/static/js/main.f10ac2f1.chunk.js",
     "main.js.map": "/app-original-cosmic-2/static/js/main.f10ac2f1.chunk.js.map",
     "runtime-main.js": "/app-original-cosmic-2/static/js/runtime-main.761ac69f.js",
@@ -9,10 +9,10 @@
     "static/js/2.08b0e517.chunk.js": "/app-original-cosmic-2/static/js/2.08b0e517.chunk.js",
     "static/js/2.08b0e517.chunk.js.map": "/app-original-cosmic-2/static/js/2.08b0e517.chunk.js.map",
     "index.html": "/app-original-cosmic-2/index.html",
-    "precache-manifest.92e2c4de27e5187cf520ed0be2abb5e0.js": "/app-original-cosmic-2/precache-manifest.92e2c4de27e5187cf520ed0be2abb5e0.js",
+    "precache-manifest.50d9ece49f7ec91f37e3b67d4dbb933d.js": "/app-original-cosmic-2/precache-manifest.50d9ece49f7ec91f37e3b67d4dbb933d.js",
     "service-worker.js": "/app-original-cosmic-2/service-worker.js",
     "static/css/2.a881067f.chunk.css.map": "/app-original-cosmic-2/static/css/2.a881067f.chunk.css.map",
-    "static/css/main.9da7de88.chunk.css.map": "/app-original-cosmic-2/static/css/main.9da7de88.chunk.css.map",
+    "static/css/main.8fed6e80.chunk.css.map": "/app-original-cosmic-2/static/css/main.8fed6e80.chunk.css.map",
     "static/media/font-awesome.min.css": "/app-original-cosmic-2/static/media/fontawesome-webfont.fee66e71.woff",
     "static/media/logo.svg": "/app-original-cosmic-2/static/media/logo.84bf977c.svg"
   }

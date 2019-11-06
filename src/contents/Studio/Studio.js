@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FormContact from '../../components/FormContact/FormContact.js';
 
 export class Studio extends Component {
 
@@ -31,19 +32,7 @@ export class Studio extends Component {
                         +33 (0) 6 18 78 43 78<br/>
                     </p>
                 </div>
-                <form className="contact-form">
-                    <div className="col-2">
-                        <input type="text" placeholder="nom"/>
-                        <input type="text" placeholder="prénom"/>
-                    </div>
-
-                    <input type="text" placeholder="sujet"/>
-
-                    <textarea placeholder="message"></textarea>
-                    <div className="submit-container">
-                        <input type="submit" value="envoyer"/>
-                    </div>
-                </form>
+                <FormContact/>
             </div>
         )
     }

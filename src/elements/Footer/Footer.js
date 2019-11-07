@@ -5,13 +5,16 @@ import './Footer.scss';
 
 export class Footer extends Component {
 
+
+    //Si on est déjà sur la page contact 
+    //On scroll vers le formulaire
     scrollToForm(){
         let form = document.querySelector('#FormContact');
         //Bon à l'avenir on trouvera une condition plus élégante j'espère
         if(form != undefined){
             if(form.length>0){
                 window.scrollTo({
-                    top:0,
+                    top:form.offsetTop-75,
                     behavior:'smooth'
                 });
             }

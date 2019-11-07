@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import data from '../Projects/data.js';
 import './SingleProject.scss';
 
+import Playlists from '../../components/Playlists/Playlists.js';
 import Gallery from '../Gallery/Gallery.js';
 
 export class SingleProject extends Component {
@@ -94,12 +95,21 @@ export class SingleProject extends Component {
         
         let prev = match.prev;
         let next = match.next;
+
+        let playlistsMode = null;
+        if(match.type != undefined){
+            if(match.type === 'playlists'){
+                playlistsMode = true;
+            }
+        }
         
         return (
             <div id="singleProject">
-                    
-                <Gallery item={match}></Gallery>
-                    
+                {playlistsMode ? (
+                    <Playlists item={match}></Playlists>
+                ) : (
+                    <Gallery item={match}></Gallery>
+                )}
             </div>
         )
     }

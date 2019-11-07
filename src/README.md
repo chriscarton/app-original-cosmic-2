@@ -106,7 +106,8 @@ Lancer la commande :
 
     ffmpeg -i animated.gif -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" video.mp4
 
-Sur *ocp.1.gif* on passe donc d'un gif de 28mo à une vidéo mp4 de 3.6mo
+Sur *ocp1.gif* on passe donc d'un gif de 28mo à une vidéo mp4 de 3.6mo
+Sur *ocp2.gif* c'est de 21mo a 1.3mo c'est du **délire** voilà
 
 Ce lien explique tout : 
 

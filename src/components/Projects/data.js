@@ -106,6 +106,7 @@ let data = [
     {
         id: 5,
         name: "Original Cosmic Playlist",
+        type: 'playlists',
         cover:{
             src:"ocp1.mp4",
             type: "video"
@@ -120,6 +121,14 @@ let data = [
             {
                 type:"playlist",
                 src:"<iframe width='100%' height='500' scrolling='no' frameborder='no' allow='autoplay' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/805416213&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'></iframe>"
+            },
+            {
+                type:"playlist",
+                src: "<iframe width='100%' height='500' scrolling='no' frameborder='no' allow='autoplay' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/806095368&amp;color=%23fc485c&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true'></iframe>"
+            },
+            {
+                type: "video",
+                src: "ocp2.mp4"
             }
         ]
     },

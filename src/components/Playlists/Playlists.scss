@@ -1,0 +1,36 @@
+@import '../../variables.scss';
+
+#Playlists{
+    @media screen and (min-width:600px){
+        min-height:100vh;
+        display:grid;
+        grid-template-columns: 50vw 50vw;
+    }
+    .media{
+        //border:5px dashed blue;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        video{
+            max-width:100%;
+            height:auto;
+            max-height:100vh;
+            display:none;
+            @media screen and (min-width:600px){
+                display:block;
+                height:100vh;
+                width:50vw;
+                object-fit:cover;
+                object-position:center center;
+            }
+        }
+        iframe{
+            margin-top:50px;
+            @media screen and (min-width:600px){
+                margin-top:0px;
+            }
+        }
+
+        
+    }
+}

@@ -272,6 +272,20 @@ Même les videos qui disposent à la fois de l'attribut **autoPlay** et **muted*
 
 Donc les vidéos en autoPlay à l'accueil sur mobile même muted, on oublie. Pour toujours.
 
+# Formulaire de contact avec Axios : 
+
+    Voir components/FormContact.js
+
+# Access Control (PHP)
+
+Si on a un script distant, par exemple du PHP dans le cas d'un formulaire de contact, ajouter ces lignes avant toutes sortie : 
+
+    header('Access-Control-Allow-Origin: *');
+    header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+    header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, X-Requested-With");
+
+Voir https://stackoverflow.com/questions/25727306/request-header-field-access-control-allow-headers-is-not-allowed-by-access-contr
+
 # COUPER UNE VIDÉO AVEC ffmepg 
 
 

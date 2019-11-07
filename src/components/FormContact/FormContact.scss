@@ -1,1 +1,10 @@
 @import '../../variables.scss';
+
+.form-response{
+    margin-bottom:10px;
+    min-height:35px;
+    display:none;
+    align-items: center;
+    justify-content: center;
+    background-color:$yellow;
+}

@@ -1,68 +1,33 @@
 <?php 
 
-header("Access-Control-Allow-Origin: *");
+//C'est un peu brut de décoffrage mais ça marche : 
+//https://stackoverflow.com/questions/25727306/request-header-field-access-control-allow-headers-is-not-allowed-by-access-contr
+
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, X-Requested-With");
+
 $rest_json = file_get_contents("php://input");
 $_POST = json_decode($rest_json, true);
 
 $response = [];
 $errors = [];
 
-if(!empty($_POST)){
+if(!empty($_POST['contact'])){
   if(
-    isset($_POST['nom']) 
-    && isset($_POST['prenom'])
-    && isset($_POST['sujet'])
-    && isset($_POST['message'])
-    && isset($_POST['email'])
+    isset($_POST['contact']['nom']) 
+    && isset($_POST['contact']['prenom'])
+    && isset($_POST['contact']['sujet'])
+    && isset($_POST['contact']['message'])
+    && isset($_POST['contact']['email'])
   ){
 
-   if(strlen($_POST['nom']) ===0){
-      $errors[] = [
-        "field"=>"nom",
-        "message"=>"Votre prénom est manquant."
-      ];
-    }
-    if(strlen($_POST['prenom']) ===0){
-      $errors[] = [
-        "field"=>"prenom",
-        "message"=>"Votre nom est manquant."
-      ];
-    }
-    if(strlen($_POST['sujet']) ===0){
-      $errors[] = [
-        "field"=>"sujet",
-        "message"=>"L'objet de votre message est manquant."
-      ];
-    }
-    if(strlen($_POST['message']) <10){
-      $errors[] = [
-        "field"=>"message",
-        "message"=>"Veuillez développer."
-      ];
-    }
-    if(strlen($_POST['email']) ===0){
-      $errors[] = [
-        "field"=>"email",
-        "message"=>"Votre email est manquant."
-      ];
-    }
-
-    $prenom = filter_var($_POST['nom'],FILTER_SANITIZE_STRING);
-    $nom = filter_var($_POST['prenom'],FILTER_SANITIZE_STRING);
-    $phone = filter_var($_POST['phone'],FILTER_SANITIZE_STRING);
-    $sujet = filter_var($_POST['sujet'],FILTER_SANITIZE_STRING);
-    $message = filter_var($_POST['message'],FILTER_SANITIZE_STRING);
-    $email = filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
-
-    if(!empty($_POST['email'])){
-      if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false){
-        //L'adresse email est incorrecte... 
-        $errors[] = [
-          "field"=>"email",
-          "message"=>"L'adresse email est incorrecte."
-        ];
-      }
-    }
+    $prenom = filter_var($_POST['contact']['nom'],FILTER_SANITIZE_STRING);
+    $nom = filter_var($_POST['contact']['prenom'],FILTER_SANITIZE_STRING);
+    $phone = filter_var($_POST['contact']['phone'],FILTER_SANITIZE_STRING);
+    $sujet = filter_var($_POST['contact']['sujet'],FILTER_SANITIZE_STRING);
+    $message = filter_var($_POST['contact']['message'],FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['contact']['email'],FILTER_SANITIZE_EMAIL);
 
     $from = 'sangoku@originalcosmic.fr';
     $to = 'contact@originalcosmic.fr';
@@ -70,24 +35,39 @@ if(!empty($_POST)){
 
     if(empty($errors)){
 
-      
       $send = mail($to, $sujet, $message,$headers);
       if($send){
       
         $response = [
           'type'=>'success',
-          'message'=>'Message envoyé !'
+          'message'=>'Message envoyé.'
+        ];
+        die(json_encode($response));
+
+      }else{
+        $response = [
+          'type'=>'success',
+          'message'=>'Message validé (mais pas envoyé).'
         ];
         die(json_encode($response));
       }
 
     }else{
+
       $response = [
         'type'=>'error',
         'errors'=>$errors
       ];
       die(json_encode($response));
+
     }
+
+  }else{
+
+    die(json_encode([
+      'type'=>'error',
+      'value'=>'Il manque un champ.'
+    ]));
 
   }
 

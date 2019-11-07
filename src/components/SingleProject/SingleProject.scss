@@ -18,6 +18,13 @@
             //Pour que l'image soit alignée au centre
             vertical-align: middle;   
         }
+        max-height:100vh;
+        video{
+            max-height:100vh;
+        }
+        img{
+            max-height:100vh;
+        }
     }
     .informations{
 

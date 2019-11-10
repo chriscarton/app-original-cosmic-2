@@ -10,8 +10,9 @@ export class Footer extends Component {
     //On scroll vers le formulaire
     scrollToForm(){
         let form = document.querySelector('#FormContact');
+        
         //Bon à l'avenir on trouvera une condition plus élégante j'espère
-        if(form != undefined){
+        if(form !== null){
             if(form.length>0){
                 window.scrollTo({
                     top:form.offsetTop-75,

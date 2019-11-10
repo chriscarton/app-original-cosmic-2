@@ -20,6 +20,8 @@ export class SingleProject extends Component {
                 entry.next = data[index+1];
 
                 return entry;
+            }else{
+                return null;
             }
         });
         let match = results[0];
@@ -79,9 +81,6 @@ export class SingleProject extends Component {
 
     Gallery = () => {
 
-        let match = this.state.match;
-
-        const handleOnDragStart = e => e.preventDefault();
         return (
             <div className="visual">
                 
@@ -92,12 +91,9 @@ export class SingleProject extends Component {
     render() {
 
         let match = this.state.match;
-        
-        let prev = match.prev;
-        let next = match.next;
 
         let playlistsMode = null;
-        if(match.type != undefined){
+        if(typeof match.type !== "undefined"){
             if(match.type === 'playlists'){
                 playlistsMode = true;
             }

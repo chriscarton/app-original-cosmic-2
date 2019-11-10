@@ -56,9 +56,11 @@ export class FormContact extends Component {
         //axios.post(`https://originalcosmic.fr/submit`, { contact })
             .then(res => {
                 //console.log(res);
-                console.log(res.data);
-                if(res.data != undefined){
+                
+                //Ceci fonctionne mais me donne un warning
+                //if(res.data != undefined){
 
+                if(res.data !== null){
                     //On sélectionne le formulaire
                     let form = document.querySelector('form');
 

@@ -73,9 +73,9 @@ export default class Gallery extends React.Component {
     }
 
     thumbItem = (item, i) => (
-        <a className="media-link" key={item} onClick={(e) => this.handleThumbClick(i,e)}>
+        <button className="media-link" href="#" key={item} onClick={(e) => this.handleThumbClick(i,e)}>
             {i+1}
-        </a>
+        </button>
     )
 
     render() {

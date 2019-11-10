@@ -11,8 +11,11 @@ Devrait-on faire pareil pour les iframes ?
 Cela nous permettra de les mettre à jour par la suite avec la cohérence pour objectif. 
 En effet les présentations sont différentes les unes des autres au niveau de la mise en forme. 
 
-# Arranger le bouton contact sur mobile dans les présentations. 
+## Résoudre les warnings
 
-# Résoudre les warnings
+## Faire une revue de code 
 
-# Faire une revue de code 
+## Ne pas oublier pour la mise en prod : 
+FormContact 
+Remplacer l'url localhost par : 
+//axios.post(`https://originalcosmic.fr/submit`, { contact })

@@ -6,10 +6,6 @@ import ProjectNav from '../../elements/ProjectNav/ProjectNav.js';
 
 export class Playlists extends Component {
 
-    constructor(props){
-        super(props);
-    }
-
     render() {        
         let props = this.props;
         console.log(props.item.medias);

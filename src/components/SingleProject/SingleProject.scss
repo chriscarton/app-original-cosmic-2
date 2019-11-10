@@ -66,9 +66,12 @@
             margin-top:10px;
             justify-content: center;
             margin-bottom:50px;
-            a{
+            button{
+                border:0px;
+                appearance: none;
+                background-color:white;
                 display:flex;
-                border:1px solid #272727;
+                border:1px solid white;
                 cursor:pointer;
                 font-size:0.8rem;
                 width:25px;
@@ -79,7 +82,7 @@
                 margin-bottom:5px;
                 &.media-link-active{
                     background-color:white;
-                    border:1px solid white;
+                    border:1px solid #272727;
                 }
             }
         }

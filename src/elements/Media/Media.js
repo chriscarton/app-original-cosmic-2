@@ -7,7 +7,6 @@ export class Media extends Component {
 
         let media = this.props.media;
 
-
         //Cette condition permet de contraindre l'image à une largeur maximale en ajoutant un style à la balise 
         let style= {};
 
@@ -18,7 +17,9 @@ export class Media extends Component {
         }
 
         let srcSet = null;
-        if(media.versions != undefined){
+        //J'avais un warning avec cette condition (mais elle fonctionne quand même)
+        //if(media.versions != undefined){
+        if (typeof media.versions !== 'undefined') {
             srcSet = media.versions.map((w) => (
                 process.env.PUBLIC_URL + '/' + this.props.path + '/' + w + '/' + media.src + ' ' + w + 'w'
             ));

@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import parse from 'html-react-parser';
-
+import './Media.scss';
 export class Media extends Component {
+    
+    /* 
+        Permet d'ajouter une classe pour déclencher une animation lorsque l'image ou la video est chargée
+        Pour l'instant je ne vois pas comment le faire pour les iframes... 
+    */
+    mediaIsLoaded(e){  
+        e.target.classList.add('is-loaded');
+    }
 
     render() {
 
@@ -34,16 +42,19 @@ export class Media extends Component {
                         srcSet={srcSet}
                         src={process.env.PUBLIC_URL+'/'+this.props.path+'/'+media.src} 
                         style={style}
-                        alt=""  
+                        alt=""
+                        className="media"
+                        onLoad={this.mediaIsLoaded}
                     />
                 }
                 {media.type === 'video' &&
                     <video
-                        className="video"
+                        className="media video"
                         autoPlay 
                         loop
                         muted
                         playsInline={true}
+                        onLoadedData={this.mediaIsLoaded}
                     >
                         <source 
                             src={process.env.PUBLIC_URL+'/'+this.props.path+'/'+media.src} 

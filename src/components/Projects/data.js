@@ -51,7 +51,7 @@ let data = [
             {
                 type:'image',
                 src:"le-deserteur-1.jpg",
-                versions:['320','480','600','800','960']
+                //versions:['320','480','600','800','960']
             },
             {
                 type:'image',

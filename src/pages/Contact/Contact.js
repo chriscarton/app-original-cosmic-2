@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './Studiocontact.scss';
+import './Contact.scss';
 import StudioContent from '../../contents/Studio/Studio.js';
 import Header from '../../elements/Header/Header.js';
 import Footer from '../../elements/Footer/Footer.js';
 
-export class Studiocontact extends Component {
+export class Contact extends Component {
     
     //Juste pour être sur qu'on revienne bien au plafond lors de la navigation
     componentDidMount() {
@@ -15,7 +15,7 @@ export class Studiocontact extends Component {
         return (
             <>
                 <Header/>
-                <div className="page" id="Studiocontact">
+                <div className="page" id="Contact">
                     <div className="grid">
                         
                         <article>
@@ -57,4 +57,4 @@ export class Studiocontact extends Component {
     }
 }
 
-export default Studiocontact
+export default Contact

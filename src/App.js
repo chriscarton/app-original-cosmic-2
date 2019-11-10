@@ -7,7 +7,7 @@ import Tests from './components/Tests/Tests.js';
 
 //Import des pages (c'est quand même le plus important)
 import Landing from './pages/Landing/Landing.js';
-import Studiocontact from './pages/Studiocontact/Studiocontact.js';
+import Contact from './pages/Contact/Contact.js.js';
 //Pour les mentions légales
 import Mentions from './pages/Mentions/Mentions.js';
 
@@ -52,7 +52,7 @@ export class App extends Component {
                         exact 
                         component={Landing}
                       />
-                      <Route path="/studio" exact component={Studiocontact} />
+                      <Route path="/contact" exact component={Contact} />
                       <Route path="/projets" exact component={Projects} />
                       <Route path="/projet/:slug" exact component={SingleProject} />
                       <Route path="/mentions" exact component={Mentions} />

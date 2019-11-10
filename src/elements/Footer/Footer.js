@@ -26,7 +26,7 @@ export class Footer extends Component {
             <footer id="Footer">
                 <div className="content">
                     <nav id="Socials">
-                        <Link to="/studio" onClick={this.scrollToForm}>
+                        <Link to="/contact" onClick={this.scrollToForm}>
                             <i className="fa fa-envelope" aria-hidden="true"></i>
                         </Link>
                         <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/OriginalCosmic">

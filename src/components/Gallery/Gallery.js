@@ -53,7 +53,7 @@ export default class Gallery extends React.Component {
                     </div>
                 }
                 <div className="to-contact">
-                    <Link to="/studio" onClick={this.scrollToForm}>
+                    <Link to="/contact" onClick={this.scrollToForm}>
                         <i className="fa fa-envelope" aria-hidden="true"></i> Contact
                     </Link>
                 </div>

@@ -83,15 +83,14 @@
                 }
             }
         }
+        .to-contact{
+            display:none;
+        }
     }
     .content{
         margin-bottom:50px;
     }
-    .to-contact{
-        @media screen and (min-width:800px){
-            text-align: right;
-        }
-    }
+    
 }
 
 
@@ -122,6 +121,10 @@
                 margin-top:0px;
                 justify-content: flex-start;
                 margin-bottom:75px;
+            }
+            .to-contact{
+                display:inline-block;
+                text-align: right;
             }
         }
     }

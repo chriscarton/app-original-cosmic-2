@@ -13,4 +13,6 @@ En effet les présentations sont différentes les unes des autres au niveau de l
 
 # Arranger le bouton contact sur mobile dans les présentations. 
 
+# Résoudre les warnings
+
 # Faire une revue de code 

@@ -7,7 +7,7 @@ import Tests from './components/Tests/Tests.js';
 
 //Import des pages (c'est quand même le plus important)
 import Landing from './pages/Landing/Landing.js';
-import Contact from './pages/Contact/Contact.js.js';
+import Contact from './pages/Contact/Contact.js';
 //Pour les mentions légales
 import Mentions from './pages/Mentions/Mentions.js';
 
@@ -19,7 +19,6 @@ import NotFound from './components/NotFound/NotFound';
 
 //On va faire nos jolies petites routes.
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-//Link, HashRouter...
 
 //On met du font awesome
 import './assets/font-awesome-4.7.0/css/font-awesome.min.css';

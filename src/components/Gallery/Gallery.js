@@ -65,18 +65,24 @@ export default class Gallery extends React.Component {
     //Doesn't work on I.E, A A
     handleThumbClick(i,e){
         this.Carousel.slideTo(i);
-        let prevActive = document.querySelector('.media-link-active');
+        let prevActive = document.querySelector('.media-active');
         if(prevActive != null){
-            prevActive.classList.remove('media-link-active');
+            prevActive.classList.remove('media-active');
         }
-        e.target.classList.add('media-link-active');
+        e.target.classList.add('media-active');
     }
 
-    thumbItem = (item, i) => (
-        <button className="media-link" href="#" key={item} onClick={(e) => this.handleThumbClick(i,e)}>
+    thumbItem = (item, i) => {
+        let addClass = null;
+        if(i===0){
+            addClass ="media-active"
+        }
+        return(
+        <button className={`media-link ${addClass}`} href="#" key={i} onClick={(e) => this.handleThumbClick(i,e)}>
             {i+1}
         </button>
-    )
+        )
+    }
 
     render() {
         return (

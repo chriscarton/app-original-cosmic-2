@@ -34,7 +34,7 @@ export class SingleProject extends Component {
 
 
     //Pour régler un eventuel problème de persistence des images lors de la navigation précédent suivant (ce problème survenait avec l'ancien design)
-    componentWillUpdate(){
+    UNSAFE_componentWillUpdate(){
 
         let imgs = document.querySelectorAll('#singleProject img');
 
@@ -55,7 +55,7 @@ export class SingleProject extends Component {
     }
 
     //Pour mettre à jour le composant si navigation précédent ou suivant
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
 
         window.scrollTo(0, 0);
 

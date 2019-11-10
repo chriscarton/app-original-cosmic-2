@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/app-original-cosmic-2/static/css/main.85bedbc3.chunk.css",
-    "main.js": "/app-original-cosmic-2/static/js/main.f3b4a487.chunk.js",
-    "main.js.map": "/app-original-cosmic-2/static/js/main.f3b4a487.chunk.js.map",
+    "main.css": "/app-original-cosmic-2/static/css/main.dc274331.chunk.css",
+    "main.js": "/app-original-cosmic-2/static/js/main.d377ffcc.chunk.js",
+    "main.js.map": "/app-original-cosmic-2/static/js/main.d377ffcc.chunk.js.map",
     "runtime-main.js": "/app-original-cosmic-2/static/js/runtime-main.761ac69f.js",
     "runtime-main.js.map": "/app-original-cosmic-2/static/js/runtime-main.761ac69f.js.map",
     "static/css/2.a881067f.chunk.css": "/app-original-cosmic-2/static/css/2.a881067f.chunk.css",
-    "static/js/2.08101601.chunk.js": "/app-original-cosmic-2/static/js/2.08101601.chunk.js",
-    "static/js/2.08101601.chunk.js.map": "/app-original-cosmic-2/static/js/2.08101601.chunk.js.map",
+    "static/js/2.acfd9f84.chunk.js": "/app-original-cosmic-2/static/js/2.acfd9f84.chunk.js",
+    "static/js/2.acfd9f84.chunk.js.map": "/app-original-cosmic-2/static/js/2.acfd9f84.chunk.js.map",
     "index.html": "/app-original-cosmic-2/index.html",
-    "precache-manifest.52a352a90f71bdcf68eed73dd7f1a22c.js": "/app-original-cosmic-2/precache-manifest.52a352a90f71bdcf68eed73dd7f1a22c.js",
+    "precache-manifest.d08c8b426bc23ae42890ff15853bf375.js": "/app-original-cosmic-2/precache-manifest.d08c8b426bc23ae42890ff15853bf375.js",
     "service-worker.js": "/app-original-cosmic-2/service-worker.js",
     "static/css/2.a881067f.chunk.css.map": "/app-original-cosmic-2/static/css/2.a881067f.chunk.css.map",
-    "static/css/main.85bedbc3.chunk.css.map": "/app-original-cosmic-2/static/css/main.85bedbc3.chunk.css.map",
+    "static/css/main.dc274331.chunk.css.map": "/app-original-cosmic-2/static/css/main.dc274331.chunk.css.map",
     "static/media/font-awesome.min.css": "/app-original-cosmic-2/static/media/fontawesome-webfont.fee66e71.woff",
     "static/media/logo.svg": "/app-original-cosmic-2/static/media/logo.84bf977c.svg"
   }

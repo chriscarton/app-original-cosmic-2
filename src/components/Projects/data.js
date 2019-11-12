@@ -1,13 +1,86 @@
 let data = [
     {
-        id:1,
+        id: 1,
+        name: "Jeune Juliette",
+        cover: {
+            src: "jeune-juliette.jpg",
+            type: "image",
+            //versions: ['320', '600', '800', '960']
+        },
+        content: "Jeune Juliette, un film de Anne Émond.<br/>Affiche de film. <br/><hr/><b>Pour</b> : Ligne 7. <br/><b>Mission</b> : Design graphique.<br>2019",
+        slug: "jeune-juliette",
+        medias: [
+            {
+                type: 'image',
+                src: "jeune-juliette-1.jpg"
+            },
+            {
+                type: 'image',
+                src: "jeune-juliette-2.jpg"
+            }
+        ]
+    },
+    {
+        id: 2,
+        name: "Les Alchimistes",
+        cover: {
+            src: "les-alchimistes-2.mp4",
+            type: "video"
+        },
+        content: "Conception identité et charte graphique. Conception bande sonore.<hr><b>Pour : </b>Les Alchimistes, société de production et de distribution de films<br><b>Mission : </b>Design graphique, animation 2D<br><i>Musique originale : Frank Essam</i><br>2019",
+        slug: "les-alchimistes",
+        medias: [
+            {
+                src:"ALALTER2.png",
+                type:"image"
+            },
+            {
+                src: "ALLOGANIM.mp4",
+                type: "video"
+            },
+            // {
+            //     src: "ALALTER2BLANC.png",
+            //     type: "image"
+            // },
+            {
+                src: "ALALTER2BLEU.png",
+                type: "image"
+            },
+            {
+                src: "ALALTER2CYAN.png",
+                type: "image"
+            },
+            {
+                src: "ALALTER2MAGENTA.png",
+                type: "image"
+            },
+            {
+                src: "ALALTER2MAGENTAJAUNE.png",
+                type: "image"
+            },
+            {
+                src: "ALALTER2NOIR.png",
+                type: "image"
+            },
+            {
+                src: "ALALTER2ROUGE.png",
+                type: "image"
+            },
+            {
+                src: "ALALTER2VERT.png",
+                type: "image"
+            },
+        ]
+    },
+    {
+        id:3,
         name:"Alexandre le fou",
         cover:{
             src:"alexandre-le-fou.jpg",
             type:"image",
             versions:['320','600','800','960']
         },
-        content: "Alexandre Le Fou de Pedro Pires.<br/>Affiche de film. <br/>Pour : Maison 4: 3. <br/>Mission : Design graphique/// Print.",
+        content: "Alexandre Le Fou de Pedro Pires.<br/>Affiche de film. <br/><hr/><b>Pour</b> : Maison 4: 3. <br/><b>Mission</b> : Design graphique.<br>2019",
         slug:"alex-le-fou",
         medias:[
             {
@@ -17,14 +90,14 @@ let data = [
         ]
     },
     {
-        id: 2,
-        name: "Amanda",
+        id: 4,
+        name: "Introspections sélectives",
         cover:{
             src:"amanda-is.jpg",
             type: "image",
             versions:['320','600','800','960']
         },
-        content:"Introspections Sélectives : Couverture de livre. <br/> Pour : AWK STUDIO. <br/> Mission : Illustration, Design graphique/// Print.",
+        content:"Couverture de livre.<hr/><b>Pour</b> : AWK STUDIO. <br/> <b>Mission</b> : Illustration, Design graphique.<br>2019",
         slug:"amanda-is",
         medias:[
             {
@@ -38,14 +111,14 @@ let data = [
         ]
     },
     {
-        id: 3,
+        id: 5,
         name: "Le déserteur",
         cover:{
-            src:"le-deserteur-2.jpg",
+            src:"Dsrtraccdefdef2.jpg",
             type: "image",
             //versions:['320','600','800','960']
         },
-        content: "Affiche française pour « <b>Le Déserteur</b> » de Maxime Giroux. Avec Martin Dubreuil, Romain Duris, Reda Kateb et SoKo. Production : Metafilms.<hr/><b>Pour</b> : Ligne 7<br><b>Mission</b> : Print / Multimédia © 2019 𝘖𝘳𝘪𝘨𝘪𝘯𝘢𝘭 𝘊𝘰𝘴𝘮𝘪𝘤",
+        content: "Affiche française pour « <b>Le Déserteur</b> » de Maxime Giroux. Avec Martin Dubreuil, Romain Duris, Reda Kateb et SoKo. Production : Metafilms.<hr/><b>Pour</b> : Ligne 7<br><b>Mission</b> : Print / Multimédia <br>2019",
         slug:"le-deserteur",
         medias:[
             {
@@ -81,14 +154,14 @@ let data = [
         ]
     },
     {
-        id: 4,
+        id: 6,
         name: "Afrika Glam",
         cover:{
             src:"afrika-glam.jpg",
             type: "image",
             versions:['320','600','800','960']
         },
-        content: "AFRIKA GLAM<br>Pour : Afrika Box<hr>Direction artistique<br>Photographie<br>Design graphique<br>Print<br>2019",
+        content: "<b>Pour</b> : Afrika Box<br/>Direction artistique<br>Photographie<br>Design graphique<br>Print<br>2019",
         slug:"afrika-glam",
         medias:[
             {
@@ -104,14 +177,14 @@ let data = [
         ]
     },
     {
-        id: 5,
+        id: 7,
         name: "Original Cosmic Playlist",
         type: 'playlists',
         cover:{
             src:"ocp1.mp4",
             type: "video"
         },
-        content:"<b>Original Cosmic Playlist</b>. <br>Chaque mois, une playlist, une composition visuelle originale.",
+        content:"<br>Chaque mois, une playlist, une composition visuelle originale.",
         slug:"original-cosmic-playlist",
         medias:[
             {
@@ -133,13 +206,13 @@ let data = [
         ]
     },
     {
-        id: 6,
+        id: 8,
         name: "Paleo",
         cover:{
             src:"paleo.mp4",
             type: "video"
         },
-        content: "PALEO<hr>Animation 2D<br>clip promotionnel<br>Pour : Bitteschoen TV<br>2017",
+        content: "Clip promotionnel<hr/><b>Pour</b> : Bitteschoen TV<br/><b>Mission</b> : Animation 2D<br>2017",
         slug:"paleo",
         medias:[
             {
@@ -149,14 +222,14 @@ let data = [
         ]
     },
     {
-        id: 7,
+        id: 9,
         name: "The Mice",
         cover:{
-            src:"the-mice.jpg",
+            src:"the-mice-2.jpg",
             type: "image",
-            versions:['320','600','800','960']
+            //versions:['320','600','800','960']
         },
-        content: "THE MICE « Incantations »<hr><br>Pochette de disque<br>Photographie<br>Design graphique<br>Clip musical<br>2016",
+        content: "THE MICE « Incantations »<hr>Pochette de disque<br>Photographie<br>Design graphique<br>Clip musical<br>2016",
         slug:"the-mice",
         medias:[
             {
@@ -176,14 +249,14 @@ let data = [
         ]
     },
     {
-        id: 8,
+        id: 10,
         name: "Yellow and blue",
         cover:{
-            src:"yellow-and-blue.jpg",
+            src:"yellow-and-blue-2.jpg",
             type: "image",
-            versions:['320','600','800','960']
+            //versions:['320','600','800','960']
         },
-        content: "MARK ROTHKO « Yellow and blue »<hr><br>Réinterprétation Photographique<br>Direction artistique<br>2016",
+        content: "MARK ROTHKO « Yellow and blue »<hr>Réinterprétation Photographique<br>Direction artistique<br>2016",
         slug:"yellow-and-blue",
         medias:[
             {
@@ -194,14 +267,14 @@ let data = [
         ]
     },
     {
-        id: 9,
+        id: 11,
         name: "Akina Wise",
         cover:{
-            src:"akina-wise.jpg",
+            src:"akina-wise-2.jpg",
             type: "image",
-            versions: ['320', '600', '800','960']
+            //versions: ['320', '600', '800','960']
         },
-        content: "AKINA WISE « Galaxy Girl »<hr><br>Pochette de disque<br>Design graphique / Photographie<br>2017",
+        content: "AKINA WISE « Galaxy Girl »<hr>Pochette de disque<br>Design graphique / Photographie<br>2017",
         slug:"akina-wise",
         medias:[
             {
@@ -217,14 +290,14 @@ let data = [
         ]
     },
     {
-        id: 10,
+        id: 12,
         name: "Eldorado Afro",
         cover:{
             src: "eldorado-afro.jpg",
             type: "image",
             versions: ['320', '600', '800']
         },
-        content:"Eldorado Afro: Une journée sur l’héritage africain du Mexique<hr><br><b>Pour </b> : Wawa L’asso<br><b>Mission</b>: Design graphique / DA<br>Direction artistique: F.E Original Cosmic<br>Photo: Elliot Duk<br>Style: Jeannine Fischer<br>Modèle: Coralie Djondo<br>Make up: Sophia<br>Assistante: Estelle Periou<hr>© 2019 𝘖𝘳𝘪𝘨𝘪𝘯𝘢𝘭 𝘊𝘰𝘴𝘮𝘪𝘤",
+        content:"Une journée sur l’héritage africain du Mexique<hr><b>Pour </b> : Wawa L’asso<br><b>Mission</b> : Design graphique / DA<br><b>Direction artistique</b> : F.E Original Cosmic<br><b>Photo</b> : Elliot Duk<br><b>Style</b> : Jeannine Fischer<br><b>Modèle</b> : Coralie Djondo<br><b>Make up</b> : Sophia<br><b>Assistante </b>: Estelle Periou<br/>2019",
         slug:"eldorado-afro",
         medias:[
             {
@@ -239,14 +312,14 @@ let data = [
         ]
     },
     {
-        id:11,
+        id:13,
         name:"Ombres Colorées",
         cover:{
             src:"ombre-colorees.jpg",
             type: "image",
             versions: ['320', '600']
         },
-        content:"Ombres Colorées <hr> Pour : Wawa L’Asso<br>Mission: Print / Multimédia<br>Photo: Matt Doheny<br>Model: Will B.Bell",
+        content:"<b>Pour</b> : Wawa L’Asso<br><b>Mission</b> : Print / Multimédia<br><b>Photo</b> : Matt Doheny<br><b>Modèle</b> : Will B.Bell<br/>2019",
         slug:"ombres-colorees",
         medias:[
             {
@@ -261,14 +334,14 @@ let data = [
         ]
     },
     {
-        id:12,
+        id:14,
         name:'Maescroc',
         cover:{
             src:"maescroc.jpg",
             type: "image",
             versions: ['320', '600']
         },
-        content:"MAESCROC « NordikZoo »<hr><br>Pochette de disque<br>Poster<br>Design graphique<br>2016",
+        content:"MAESCROC « NordikZoo »<hr>Pochette de disque<br>Poster<br>Design graphique<br>2016",
         slug:'maescroc',
         medias:[
             {
@@ -284,13 +357,13 @@ let data = [
         ]
     },
     {
-        id:13,
+        id:15,
         name:"OMG",
         cover:{
             src:"omg.mp4",
             type:"video"
         },
-        content: "OMG<br>En développement<br>Film court d’animation",
+        content: "Film court d’animation<br/>En développement",
         slug:'omg',
         medias: [
             {
@@ -300,14 +373,14 @@ let data = [
         ]
     },
     {
-        id:14,
+        id:16,
         name:"Doux divorce records",
         cover:{
             src:"doux-divorce-records.jpg",
             type: "image",
             versions: ['320', '600']
         },
-        content:"DOUX DIVORCE RECORDS<br>Label de musique<hr>Identité visuelle<br>Design graphique<br>2017",
+        content:"Label de musique<hr>Identité visuelle<br>Design graphique<br>2017",
         slug:"doux-divorce-records",
         medias: [
             {
@@ -328,43 +401,46 @@ let data = [
         ]
     },
     {
-        id:15,
-        name:"Ronan Martin",
+        id:17,
+        name:"Ronan Martin « Les rayons »",
         cover:{
             src:"ronan-martin.jpg",
             type: "image",
-            versions: ['320', '600']
+            //versions: ['320', '600']
         },
-        content:"RONAN MARTIN « À l’intérieur »<hr>Pochette de disque<br>Design graphique<br>2017<br>",
+        content: "« Les rayons »<hr>Pochette de disque<br>Direction artistique<br>Réalisation vidéo<br>Design graphique<br>2015",
         slug:"ronan-martin",
         medias: [
-            //Je m'étais planté à la base c'est pour ça que les titres des fichiers ne sont pas les bons
-            //Dans l'ideal il faudrait renommer tout ça
             {
                 type: "image",
                 src: "les-rayons-1.jpg",
-                versions: ['320', '600', '960']
+                //versions: ['320', '600', '960']
             },
             {
                 type: "image",
                 src: "les-rayons-2.jpg",
-                //versions: ['320']
+            },
+            {
+                type: "image",
+                src: "ronanrayonaff.jpg",
             },
             {
                 type: "iframe",
                 src: '<iframe width="560" height="315" src="https://www.youtube.com/embed/sES64_1VmVU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
             }
         ]
+
+        
     },
     {
-        id:16,
-        name: "Ronan Martin « Les rayons »",
+        id:18,
+        name: "Ronan Martin",
         cover:{
             src: "les-rayons.jpg",
             type: "image",
-            versions: ['320', '600', '800']
+            //versions: ['320', '600', '800']
         },
-        content: "RONAN MARTIN « Les rayons »<hr>Pochette de disque<br>Clip musical<br>Direction artistique<br>Réalisation vidéo<br>Design graphique<br>2015",
+        content: "« À l’intérieur »<hr>Pochette de disque<br>Design graphique<br>2017<br>",
         slug: "ronan-martin-les-rayons",
         medias: [
             {
@@ -378,15 +454,21 @@ let data = [
                 versions: ['320', '600']
             }
         ]
+
+
+
+
+
+
     },
     {
-        id:17,
-        name: "Salvak « Vendetta »",
+        id:19,
+        name: "Salvak",
         cover:{
             src: "cycle-01.mp4",
             type: "video"
         },
-        content: "SALVAK « Vendetta »<hr>Clip musical<br>Animation 2d<br>2017",
+        content: "« Vendetta »<hr>Clip musical<br>Animation 2d<br>2017",
         slug: "vendetta",
         medias: [
             {
@@ -395,6 +477,25 @@ let data = [
             }
         ]
     }
+    /*,
+    {
+        id: 20,
+        name: "Les équilibristes",
+        cover: {
+            src: "les-equilibristes.jpg",
+            type: "image",
+            //versions: ['320', '600', '800', '960']
+        },
+        content: "Alexandre Le Fou de Pedro Pires.<br/>Affiche de film. <br/><hr/><b>Pour</b> : Maison 4: 3. <br/><b>Mission</b> : Design graphique.<br>2019",
+        slug: "les-equilibristes",
+        medias: [
+            {
+                type: 'image',
+                //src: "alexandre-le-fou.jpg"
+            }
+        ]
+    },
+    */
 
 
 ];

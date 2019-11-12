@@ -49,6 +49,7 @@ export default class Gallery extends React.Component {
                 }
                 {this.props.item.content &&
                     <div className="content">
+                        <h1 className="title">{this.props.item.name}</h1>
                         {parse(this.props.item.content)}
                     </div>
                 }

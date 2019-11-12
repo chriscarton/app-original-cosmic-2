@@ -16,6 +16,7 @@ export class Tests extends Component {
                     {items.map(function(item){
                         return(
                             <div className="item">
+                                <h1>{item.name}</h1>
                                 {parse(item.content)}
                             </div>
                         )

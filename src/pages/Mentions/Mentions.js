@@ -19,20 +19,19 @@ export class Mentions extends Component {
                     <div className="title">Édition</div>
                     <p>
                         Le site internet originalcosmic.fr, est édité par : <br/>
-                        Nom,<br/>
-                        Adresse,<br/>
-                        Code Postal Ville,<br/>
-                        Pays<br/>
-                        En tant que (personne morale),<br/>
-                        Téléphone : <br/>
+                        Original Cosmic Studio<br/>
+                        11b Rue Copernic,<br/>
+                        59 000 Lille<br/>
+                        France<br/>
+                        Téléphone : +33(0)6 18 78 43 78 <br/>
                         Email : contact@originalcosmic.fr
                     </p>
 
-                    <div className="title">Auteurs</div>
+                    {/* <div className="title">Auteurs</div>
                     <p>
                         Le directeur de publication : Nom Prénom<br/>
                         Le co-directeur de publication : Nom Prénom<br/>
-                    </p>
+                    </p> */}
 
                     <div className="title">Hébergement</div>
                     <p>

@@ -5,9 +5,10 @@
     .items{
         @media screen and (min-width:600px){
             grid-template-areas: 
-                'alex-le-fou     alex-le-fou   amanda-is        amanda-is' 
-                'le-deserteur    le-deserteur  afrika-glam      original-cosmic-playlist'
-                'le-deserteur    le-deserteur  paleo            the-mice'
+                'jeune-juliette  jeune-juliette les-alchimistes les-alchimistes'
+                'amanda-is       amanda-is     alex-le-fou      alex-le-fou' 
+                'le-deserteur    le-deserteur  original-cosmic-playlist afrika-glam'
+                'le-deserteur    le-deserteur  the-mice         paleo'
                 'le-deserteur    le-deserteur  yellow-and-blue  yellow-and-blue'
                 'akina-wise      akina-wise    eldorado-afro    eldorado-afro'
                 'ombres-colorees maescroc      omg              doux-divorce-records'
@@ -30,7 +31,12 @@
                 }
             }
         }
-        
+    }
+    .jeune-juliette{
+        grid-area:jeune-juliette;
+    }
+    .les-alchimistes{
+        grid-area:les-alchimistes;
     }
     .alex-le-fou{
         grid-area: alex-le-fou;
@@ -41,6 +47,15 @@
     
     .le-deserteur{
         grid-area:le-deserteur;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        img{
+            max-height:100vh;
+            // max-width:500px;
+            object-fit:contain;
+            // object-fit:cover;
+        }
     }
     .afrika-glam {
         grid-area:afrika-glam;
@@ -53,6 +68,9 @@
     }
     .the-mice{
         grid-area:the-mice;
+        img{
+            object-fit:contain;
+        }
     }
     .yellow-and-blue{
         grid-area:yellow-and-blue;

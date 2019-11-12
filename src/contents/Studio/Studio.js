@@ -21,7 +21,8 @@ export class Studio extends Component {
                     </p>
                     <hr/>
                     <p>
-                        <b>Directeur de création :</b> Frank Essam<br/>
+                        <b>Directeur de création / Designer graphique :</b> Frank Essam<br/>
+                        <b>Directrice de projet / Designer graphique : </b> Emma Brianchon<br/>
                         <b>Directeur artistique / Designer graphique :</b> Raphaël Kucharski<br/>
                         <b>Développeurs / Intégrateurs web :</b> Chris Carton & Julien Leclercq<br/>
                         <b>Animateurs 2D-3D / Illustrateurs :</b> Romain Marchetti, Denis Fleurion, Adrien Lannoy, Julien Adoum<br/>

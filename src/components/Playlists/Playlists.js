@@ -8,7 +8,7 @@ export class Playlists extends Component {
 
     render() {        
         let props = this.props;
-        console.log(props.item.medias);
+        //console.log(props.item.medias);
 
         return (
             <div id="Playlists">
@@ -27,7 +27,7 @@ export class Playlists extends Component {
                     </div>
                 </div>
                 {props.item.medias.map((media,index)=>(
-                    <div className="media">
+                    <div className="media" key={index}>
                         <Media 
                             key={index}
                             media={media}

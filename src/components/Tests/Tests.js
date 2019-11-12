@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './Tests.scss';
+import items from '../Projects/data.js';
+import parse from 'html-react-parser';
+
 
 export class Tests extends Component {
 
@@ -9,7 +12,15 @@ export class Tests extends Component {
         
         return (
             <div id="Tests">
-                {/* Pour faire tout un tas de tests */}
+                <div className="grid">
+                    {items.map(function(item){
+                        return(
+                            <div className="item">
+                                {parse(item.content)}
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
         )
     }

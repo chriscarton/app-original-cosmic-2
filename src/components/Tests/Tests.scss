@@ -1,7 +1,7 @@
 @import '../../variables.scss';
 
 #Tests{
-    width:75%;
+    width:95%;
     margin-left: auto;
     margin-right:auto;
     min-height:100vh;
@@ -20,4 +20,15 @@
         color:$yellow;
         font-size:1.8rem;
     }
+
+    .grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap:10px;
+        .item{
+            background-color:rgb(224, 224, 224);
+            padding:20px;
+        }
+    }
+
 }

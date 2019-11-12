@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6f54f4f79bd172d6157a163083159e15",
+    "revision": "80d7b6b360592e5f0053f56f70848007",
     "url": "/app-original-cosmic-2/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/app-original-cosmic-2/static/css/2.a881067f.chunk.css"
   },
   {
-    "revision": "861a0766a2e8a21426ba",
-    "url": "/app-original-cosmic-2/static/css/main.c41dd781.chunk.css"
+    "revision": "ad6894b0ad210f509480",
+    "url": "/app-original-cosmic-2/static/css/main.b0a20a81.chunk.css"
   },
   {
     "revision": "e89ac11b395cd69c3935",
     "url": "/app-original-cosmic-2/static/js/2.6418bc53.chunk.js"
   },
   {
-    "revision": "861a0766a2e8a21426ba",
-    "url": "/app-original-cosmic-2/static/js/main.c092bc88.chunk.js"
+    "revision": "ad6894b0ad210f509480",
+    "url": "/app-original-cosmic-2/static/js/main.15d941a7.chunk.js"
   },
   {
     "revision": "b39cff05547ded7df1dc",

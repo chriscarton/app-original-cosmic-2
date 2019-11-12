@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5d6f8ef9d316a1a74f5077f44613b368",
+    "revision": "235927aa38ed66c4f54da600fc65aba6",
     "url": "/app-original-cosmic-2/index.html"
   },
   {
-    "revision": "db632f73cb78958b68d6",
+    "revision": "e89ac11b395cd69c3935",
     "url": "/app-original-cosmic-2/static/css/2.a881067f.chunk.css"
   },
   {
-    "revision": "adecb20507958b6dd3a8",
-    "url": "/app-original-cosmic-2/static/css/main.dc274331.chunk.css"
+    "revision": "aabfd716b51835d5b162",
+    "url": "/app-original-cosmic-2/static/css/main.0003f2b0.chunk.css"
   },
   {
-    "revision": "db632f73cb78958b68d6",
-    "url": "/app-original-cosmic-2/static/js/2.acfd9f84.chunk.js"
+    "revision": "e89ac11b395cd69c3935",
+    "url": "/app-original-cosmic-2/static/js/2.6418bc53.chunk.js"
   },
   {
-    "revision": "adecb20507958b6dd3a8",
-    "url": "/app-original-cosmic-2/static/js/main.d377ffcc.chunk.js"
+    "revision": "aabfd716b51835d5b162",
+    "url": "/app-original-cosmic-2/static/js/main.88002100.chunk.js"
   },
   {
     "revision": "b39cff05547ded7df1dc",

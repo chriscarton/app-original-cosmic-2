@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/app-original-cosmic-2/precache-manifest.d08c8b426bc23ae42890ff15853bf375.js"
+  "/app-original-cosmic-2/precache-manifest.bba678ad6e56494a9fb938927a05b406.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -15,14 +15,6 @@ export class Landing extends Component {
         }
     }
 
-    /* 
-        Bon on pourrait mettre le logo en svg en tant que poster 
-        Mais le logo est noir, de plus il est dans src/assets... 
-        Et ensuite je ne sais pas comment le positionner. 
-
-        Donc pour l'instant on garde le poster.png
-    */
-
     render() {
         return (
             <div id="Screen">
@@ -31,8 +23,7 @@ export class Landing extends Component {
                     autoPlay
                     muted
                     id="landingVideo"
-                    poster={process.env.PUBLIC_URL + '/img/poster.png'}
-                    //poster={process.env.PUBLIC_URL + '/img/logo.svg'}
+                    poster={process.env.PUBLIC_URL + '/img/poster.svg'}
                     playsInline={true}
                 >
                 <source

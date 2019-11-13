@@ -15,6 +15,7 @@
     "react-hashchange": "^0.1.0",
     "react-image": "^2.2.0",
     "react-lazy-load": "^3.0.13",
+    "react-lazyload": "^2.6.5",
     "react-plyr": "^2.2.0",
     "react-pose": "^4.0.9",
     "react-router-dom": "^5.1.2",
@@ -22,7 +23,7 @@
     "tiny-slider": "^2.9.2",
     "typed.js": "^2.0.11"
   },
-  "homepage":"http://originalcosmic.fr/",
+  "homepage": "http://originalcosmic.fr/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

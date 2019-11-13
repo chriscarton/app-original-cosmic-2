@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import parse from 'html-react-parser';
 import './Media.scss';
+import LazyLoad from 'react-lazyload';
+
 export class Media extends Component {
     
     /* 
@@ -42,15 +44,16 @@ export class Media extends Component {
             
             <>
                 {media.type === 'image' &&
-                    
-                    <img 
-                        srcSet={srcSet}
-                        src={process.env.PUBLIC_URL+'/'+this.props.path+'/'+media.src} 
-                        style={style}
-                        alt=""
-                        className="media"
-                        onLoad={this.mediaIsLoaded}
-                    />
+                    <LazyLoad throttle={-200} height={0} once>
+                        <img 
+                            srcSet={srcSet}
+                            src={process.env.PUBLIC_URL+'/'+this.props.path+'/'+media.src} 
+                            style={style}
+                            alt=""
+                            className="media"
+                            onLoad={this.mediaIsLoaded}
+                        />
+                    </LazyLoad>
                 }
                 {media.type === 'video' &&
                     <video

@@ -33,8 +33,6 @@ const RouteContainer = posed.div({
 
 export class App extends Component {
 
-  //final version 12
-  //hello :)
   render(){
     
     return (

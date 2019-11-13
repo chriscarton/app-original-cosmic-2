@@ -52,8 +52,8 @@ export class FormContact extends Component {
 
         
 
-        axios.post(`http://localhost/submit.php`, { contact })
-        //axios.post(`https://originalcosmic.fr/submit`, { contact })
+        //axios.post(`http://localhost/submit.php`, { contact })
+        axios.post(`https://originalcosmic.fr/submit`, { contact })
             .then(res => {
                 //console.log(res);
                 

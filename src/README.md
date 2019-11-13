@@ -258,6 +258,22 @@ Insérer le script se trouvant ci-dessous dans le head de index.html
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
 
+# Mise en production OVH 
+
+## Modifier segmentCount
+
+Dans 404.html, *segmentCount* être à 0 si on utilise un nom de domaine. 
+
+    var segmentCount = 0;
+
+## Redirection vers 404.html en PRODUCTION 
+
+Il faut créer un fichier .htaccess à la racine et indiquer : 
+    
+    ErrorDocument 404 /404.html
+
+Ça fonctionne sur OVH. 
+
 # Créer un autodeploy pour Github Pages : 
 
 En gros permet de faire un build et d'envoyer direct sur github pages. 
@@ -317,3 +333,7 @@ Voir https://stackoverflow.com/questions/25727306/request-header-field-access-co
     ffmpeg -i omg_cut.mp4 -vf "scale=800:-2" omg_resized.mp4
 
     ffmpeg -i omg_resized.mp4 -ss 00.00 -t 05.00 -c:v copy -c:a copy  omg_resized-2.mp4
+
+# retour sur github 
+
+    "homepage": "https://chriscarton.github.io/app-original-cosmic-2/",

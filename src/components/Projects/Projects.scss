@@ -5,7 +5,7 @@
     .items{
         @media screen and (min-width:600px){
             grid-template-areas: 
-                'jeune-juliette  jeune-juliette les-alchimistes les-alchimistes'
+                'jeune-juliette  jeune-juliette . .'
                 'amanda-is       amanda-is     alex-le-fou      alex-le-fou' 
                 'le-deserteur    le-deserteur  original-cosmic-playlist afrika-glam'
                 'le-deserteur    le-deserteur  the-mice         paleo'
@@ -19,9 +19,7 @@
         }
         
         .item{
-            
             a{
-                
                 img, video{
                     display:block;
                     width: 100%;                   
@@ -35,8 +33,14 @@
     .jeune-juliette{
         grid-area:jeune-juliette;
     }
+    /*
     .les-alchimistes{
         grid-area:les-alchimistes;
+    }
+    */
+    #placeholderVideo{
+        grid-area:placeholderVideo;
+        object-fit:cover;
     }
     .alex-le-fou{
         grid-area: alex-le-fou;
@@ -52,9 +56,7 @@
         justify-content: center;
         img{
             max-height:100vh;
-            // max-width:500px;
             object-fit:contain;
-            // object-fit:cover;
         }
     }
     .afrika-glam {

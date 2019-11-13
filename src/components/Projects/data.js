@@ -20,6 +20,7 @@ let data = [
             }
         ]
     },
+    /*
     {
         id: 2,
         name: "Les Alchimistes",
@@ -72,6 +73,7 @@ let data = [
             },
         ]
     },
+    */
     {
         id:3,
         name:"Alexandre le fou",

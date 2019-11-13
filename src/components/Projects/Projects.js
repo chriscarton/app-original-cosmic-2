@@ -21,6 +21,8 @@ export class Projects extends Component {
         window.scrollTo(0, 0);
     }
 
+ 
+
     render() {
         return (
             <div id="Projects">
@@ -38,6 +40,20 @@ export class Projects extends Component {
                             </Link>
                         </div>
                     ))}
+                    {/* <video
+                        className="video"
+                        autoPlay
+                        muted
+                        id="placeholderVideo"
+                        // poster={process.env.PUBLIC_URL + '/img/poster.svg'}
+                        playsInline={true}
+                    >
+                        <source
+                            src={process.env.PUBLIC_URL + '/video/ocwall1c.mp4'}
+                            type="video/mp4"
+                        />
+                        Votre navigateur ne supporte pas la vidéo.
+                    </video> */}
                 </div>
                 <Footer/>
             </div>

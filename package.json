@@ -22,7 +22,7 @@
     "tiny-slider": "^2.9.2",
     "typed.js": "^2.0.11"
   },
-  "homepage": "https://chriscarton.github.io/app-original-cosmic-2/",
+  "homepage":"http://originalcosmic.fr/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

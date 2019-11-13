@@ -5,7 +5,8 @@ let data = [
         cover: {
             src: "jeune-juliette.jpg",
             type: "image",
-            //versions: ['320', '600', '800', '960']
+            versions:['600'],
+            originalWidth:1000
         },
         content: "Jeune Juliette, un film de Anne Émond.<br/>Affiche de film. <br/><hr/><b>Pour</b> : Ligne 7. <br/><b>Mission</b> : Design graphique.<br>2019",
         slug: "jeune-juliette",
@@ -25,7 +26,7 @@ let data = [
         id: 2,
         name: "Les Alchimistes",
         cover: {
-            src: "les-alchimistes-2.mp4",
+            src: "les-alchimistes.mp4",
             type: "video"
         },
         content: "Conception identité et charte graphique. Conception bande sonore.<hr><b>Pour : </b>Les Alchimistes, société de production et de distribution de films<br><b>Mission : </b>Design graphique, animation 2D<br><i>Musique originale : Frank Essam</i><br>2019",
@@ -80,7 +81,8 @@ let data = [
         cover:{
             src:"alexandre-le-fou.jpg",
             type:"image",
-            versions:['320','600','800','960']
+            versions:['600'],
+            originalWidth: 960
         },
         content: "Alexandre Le Fou de Pedro Pires.<br/>Affiche de film. <br/><hr/><b>Pour</b> : Maison 4: 3. <br/><b>Mission</b> : Design graphique.<br>2019",
         slug:"alex-le-fou",
@@ -97,7 +99,8 @@ let data = [
         cover:{
             src:"amanda-is.jpg",
             type: "image",
-            versions:['320','600','800','960']
+            versions:['600'],
+            originalWidth: 960
         },
         content:"Couverture de livre.<hr/><b>Pour</b> : AWK STUDIO. <br/> <b>Mission</b> : Illustration, Design graphique.<br>2019",
         slug:"amanda-is",
@@ -116,9 +119,10 @@ let data = [
         id: 5,
         name: "Le déserteur",
         cover:{
-            src:"Dsrtraccdefdef2.jpg",
+            src:"le-deserteur.jpg",
             type: "image",
-            //versions:['320','600','800','960']
+            versions: ['600'],
+            originalWidth: 953
         },
         content: "Affiche française pour « <b>Le Déserteur</b> » de Maxime Giroux. Avec Martin Dubreuil, Romain Duris, Reda Kateb et SoKo. Production : Metafilms.<hr/><b>Pour</b> : Ligne 7<br><b>Mission</b> : Print / Multimédia <br>2019",
         slug:"le-deserteur",
@@ -161,7 +165,8 @@ let data = [
         cover:{
             src:"afrika-glam.jpg",
             type: "image",
-            versions:['320','600','800','960']
+            versions: ['600'],
+            originalWidth: 960
         },
         content: "<b>Pour</b> : Afrika Box<br/>Direction artistique<br>Photographie<br>Design graphique<br>Print<br>2019",
         slug:"afrika-glam",
@@ -227,9 +232,10 @@ let data = [
         id: 9,
         name: "The Mice",
         cover:{
-            src:"the-mice-2.jpg",
+            src:"the-mice.jpg",
             type: "image",
-            //versions:['320','600','800','960']
+            versions: ['600'],
+            originalWidth: 1024
         },
         content: "THE MICE « Incantations »<hr>Pochette de disque<br>Photographie<br>Design graphique<br>Clip musical<br>2016",
         slug:"the-mice",
@@ -254,9 +260,10 @@ let data = [
         id: 10,
         name: "Yellow and blue",
         cover:{
-            src:"yellow-and-blue-2.jpg",
+            src:"yellow-and-blue.jpg",
             type: "image",
-            //versions:['320','600','800','960']
+            versions: ['600'],
+            originalWidth: 1024
         },
         content: "MARK ROTHKO « Yellow and blue »<hr>Réinterprétation Photographique<br>Direction artistique<br>2016",
         slug:"yellow-and-blue",
@@ -272,9 +279,10 @@ let data = [
         id: 11,
         name: "Akina Wise",
         cover:{
-            src:"akina-wise-2.jpg",
+            src:"akina-wise.jpg",
             type: "image",
-            //versions: ['320', '600', '800','960']
+            versions: ['600'],
+            originalWidth: 1000
         },
         content: "AKINA WISE « Galaxy Girl »<hr>Pochette de disque<br>Design graphique / Photographie<br>2017",
         slug:"akina-wise",
@@ -297,7 +305,8 @@ let data = [
         cover:{
             src: "eldorado-afro.jpg",
             type: "image",
-            versions: ['320', '600', '800']
+            versions: ['600'],
+            originalWidth: 800
         },
         content:"Une journée sur l’héritage africain du Mexique<hr><b>Pour </b> : Wawa L’asso<br><b>Mission</b> : Design graphique / DA<br><b>Direction artistique</b> : F.E Original Cosmic<br><b>Photo</b> : Elliot Duk<br><b>Style</b> : Jeannine Fischer<br><b>Modèle</b> : Coralie Djondo<br><b>Make up</b> : Sophia<br><b>Assistante </b>: Estelle Periou<br/>2019",
         slug:"eldorado-afro",
@@ -319,7 +328,8 @@ let data = [
         cover:{
             src:"ombre-colorees.jpg",
             type: "image",
-            versions: ['320', '600']
+            versions: ['600'],
+            originalWidth: 768
         },
         content:"<b>Pour</b> : Wawa L’Asso<br><b>Mission</b> : Print / Multimédia<br><b>Photo</b> : Matt Doheny<br><b>Modèle</b> : Will B.Bell<br/>2019",
         slug:"ombres-colorees",
@@ -341,7 +351,8 @@ let data = [
         cover:{
             src:"maescroc.jpg",
             type: "image",
-            versions: ['320', '600']
+            versions: ['600'],
+            originalWidth: 900
         },
         content:"MAESCROC « NordikZoo »<hr>Pochette de disque<br>Poster<br>Design graphique<br>2016",
         slug:'maescroc',
@@ -380,7 +391,8 @@ let data = [
         cover:{
             src:"doux-divorce-records.jpg",
             type: "image",
-            versions: ['320', '600']
+            versions: ['600'],
+            originalWidth: 768
         },
         content:"Label de musique<hr>Identité visuelle<br>Design graphique<br>2017",
         slug:"doux-divorce-records",
@@ -408,7 +420,8 @@ let data = [
         cover:{
             src:"ronan-martin.jpg",
             type: "image",
-            //versions: ['320', '600']
+            versions: ['600','1280','1920'],
+            originalWidth: 1920
         },
         content: "« Les rayons »<hr>Pochette de disque<br>Direction artistique<br>Réalisation vidéo<br>Design graphique<br>2015",
         slug:"ronan-martin",
@@ -440,7 +453,8 @@ let data = [
         cover:{
             src: "les-rayons.jpg",
             type: "image",
-            //versions: ['320', '600', '800']
+            versions: ['600'],
+            originalWidth: 1000
         },
         content: "« À l’intérieur »<hr>Pochette de disque<br>Design graphique<br>2017<br>",
         slug: "ronan-martin-les-rayons",
@@ -456,12 +470,6 @@ let data = [
                 versions: ['320', '600']
             }
         ]
-
-
-
-
-
-
     },
     {
         id:19,

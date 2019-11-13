@@ -25,12 +25,17 @@ export class Media extends Component {
         }
 
         let srcSet = null;
-        //J'avais un warning avec cette condition (mais elle fonctionne quand même)
-        //if(media.versions != undefined){
+
         if (typeof media.versions !== 'undefined') {
             srcSet = media.versions.map((w) => (
                 process.env.PUBLIC_URL + '/' + this.props.path + '/' + w + '/' + media.src + ' ' + w + 'w'
             ));
+            
+            //On ajoute l'image originale (il faut que sa largeur soit spécifiée)
+            if(typeof media.originalWidth !== 'undefined'){
+                srcSet.push(process.env.PUBLIC_URL + '/' + this.props.path + '/' + media.src + ' ' + media.originalWidth + 'w');
+            }
+
         }
         
         return (

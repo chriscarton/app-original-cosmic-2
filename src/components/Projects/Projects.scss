@@ -12,8 +12,8 @@
                 'le-deserteur    le-deserteur  yellow-and-blue  yellow-and-blue'
                 'akina-wise      akina-wise    eldorado-afro    eldorado-afro'
                 'ombres-colorees maescroc      omg              doux-divorce-records'
-                'ronan-martin    ronan-martin  les-rayons       les-rayons'
-                'vendetta        vendetta      les-rayons       les-rayons'
+                'les-rayons      les-rayons    a-linterieur     a-linterieur'
+                'vendetta        vendetta      a-linterieur     a-linterieur'
             ;
             display:grid;
         }
@@ -96,11 +96,11 @@
         grid-area:doux-divorce-records;
     }
 
-    .ronan-martin{
-        grid-area:ronan-martin;
+    .a-linterieur{
+        grid-area:a-linterieur;
     }
 
-    .ronan-martin-les-rayons{
+    .les-rayons{
         grid-area:les-rayons;
     }
     .vendetta{

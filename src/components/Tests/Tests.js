@@ -7,31 +7,45 @@ import parse from 'html-react-parser';
 export class Tests extends Component {
 
 
-    componentDidMount(){
+    componentDidMount() {
         let imgs = document.querySelectorAll('img');
-        
-        imgs.forEach(function(img){
-            
-            img.addEventListener('load',function(){
-                console.log(img.src+img.naturalWidth);
+
+        imgs.forEach(function (img) {
+
+            img.addEventListener('load', function () {
+                console.log(img.src + '   '+ img.naturalWidth);
             });
 
         });
-        
-    }
-    
-    render() {
 
+    }
+
+    render() {
+        console.log(items);
+        //let path = 'img/medias';
         let path = 'img/projects';
-        
+
         return (
             <div id="Tests">
                 <div className="grid">
-                    {items.map(function(item){
-                        return(
+                    {items.map(function (item) {
+                        return (
                             <div className="item" key={item.id}>
-                                <img src={process.env.PUBLIC_URL + '/' + path + '/' + item.cover.src}/> 
+                                {item.cover.type === "image" &&
+                                    <div>
+                                        {item.cover.versions.map(function(version,i){
+                                            return(
+                                                <div>
+                                                    version {version} : <br/>
 
+                                                    <img src={process.env.PUBLIC_URL + '/' + path + '/' + version + '/' + item.cover.src} />
+                                                </div>
+                                            )
+                                        })}
+                                        {/* <img src={process.env.PUBLIC_URL + '/' + path + '/' + media.src} /> */}
+
+                                    </div>
+                                }
                             </div>
                         )
                     })}

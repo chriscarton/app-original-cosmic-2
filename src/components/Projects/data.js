@@ -14,14 +14,14 @@ let data = [
             {
                 type: 'image',
                 src: "jeune-juliette-1.jpg",
-                versions:['320','600','1280','1920'],
-                originalWidth: 3402
+                versions:['320','600','1280'],
+                originalWidth: 1920
             },
             {
                 type: 'image',
                 src: "jeune-juliette-2.jpg",
-                versions: ['320', '600', '1280', '1920'],
-                originalWidth: 2375
+                versions: ['320', '600', '1280'],
+                originalWidth: 1920
             }
         ]
     },

@@ -25,6 +25,26 @@ let data = [
             }
         ]
     },
+    {
+        id: 20,
+        name: "Les équilibristes",
+        cover: {
+            src: "les-equilibristes.jpg",
+            type: "image",
+            originalWidth: 1000,
+            versions: ['320', '600']
+        },
+        content: "Les équilibristes, de Perrine Michel.<br/>Affiche de film. <hr/><b>Pour</b> : Les Alchimistes. <br/><b>Mission</b> : Design graphique.<br>2019",
+        slug: "les-equilibristes",
+        medias: [
+            {
+                type: 'image',
+                src: "les-equilibristes.jpg",
+                originalWidth: 874,
+                versions: ['320', '600']
+            }
+        ]
+    },
     /*
     {
         id: 2,
@@ -528,25 +548,7 @@ let data = [
             }
         ]
     }
-    /*,
-    {
-        id: 20,
-        name: "Les équilibristes",
-        cover: {
-            src: "les-equilibristes.jpg",
-            type: "image",
-            //versions: ['320', '600', '800', '960']
-        },
-        content: "Alexandre Le Fou de Pedro Pires.<br/>Affiche de film. <br/><hr/><b>Pour</b> : Maison 4: 3. <br/><b>Mission</b> : Design graphique.<br>2019",
-        slug: "les-equilibristes",
-        medias: [
-            {
-                type: 'image',
-                //src: "alexandre-le-fou.jpg"
-            }
-        ]
-    },
-    */
+    
 
 
 ];

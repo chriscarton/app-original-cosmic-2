@@ -5,7 +5,7 @@
     .items{
         @media screen and (min-width:600px){
             grid-template-areas: 
-                'jeune-juliette  jeune-juliette . .'
+                'jeune-juliette  jeune-juliette les-equilibris  les-equilibris'
                 'amanda-is       amanda-is     alex-le-fou      alex-le-fou' 
                 'le-deserteur    le-deserteur  original-cosmic-playlist afrika-glam'
                 'le-deserteur    le-deserteur  the-mice         paleo'
@@ -32,6 +32,9 @@
     }
     .jeune-juliette{
         grid-area:jeune-juliette;
+    }
+    .les-equilibristes{
+        grid-area:les-equilibris;
     }
     /*
     .les-alchimistes{

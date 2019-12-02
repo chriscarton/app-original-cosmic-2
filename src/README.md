@@ -337,3 +337,44 @@ Voir https://stackoverflow.com/questions/25727306/request-header-field-access-co
 # retour sur github 
 
     "homepage": "https://chriscarton.github.io/app-original-cosmic-2/",
+
+# WordPress API 
+
+Pour faire fonctionner avec un backend 
+
+D'abord changer les permaliens de WordPress : 
+
+    Réglages > Permaliens > Titre de la publication
+
+Si WordPress est dans un sous-dossier, par exemple *backend* ou encore *wordpress* dans le cas présent, l'url d'accès à l'API sera : 
+
+    http://localhost/backend-oc/wordpress/wp-json
+
+Et l'url d'accès aux posts par exemple sera : 
+
+    http://localhost/backend-oc/wordpress/wp-json/wp/v2/posts
+
+Voyons ce que ça donne en pratique : 
+
+    componentDidMount() {
+        window.scrollTo(0, 0);
+
+        var the_url = "http://localhost/backend-oc/wordpress/wp-json/wp/v2/posts";
+
+        fetch(the_url)
+            .then(response=>response.json())
+            .then(response=>{
+                this.setState({
+                    projects:response
+                })
+            });
+    }
+
+Voici comment customiser une requête : 
+
+    var the_url = "http://localhost/backend-oc/wordpress/wp-json/wp/v2/posts?_embed&per_page=100&order=asc";
+
+Le paramètre *_embed* permet de récupérer l'image mise en avant. 
+Voici comment afficher une image : 
+
+    <img src={item._embedded['wp:featuredmedia']['0'].source_url}/>

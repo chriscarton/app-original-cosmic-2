@@ -5,15 +5,15 @@
     .items{
         @media screen and (min-width:600px){
             grid-template-areas: 
-                'jeune-juliette  jeune-juliette les-equilibris  les-equilibris'
-                'amanda-is       amanda-is     alex-le-fou      alex-le-fou' 
-                'le-deserteur    le-deserteur  original-cosmic-playlist afrika-glam'
-                'le-deserteur    le-deserteur  the-mice         paleo'
-                'le-deserteur    le-deserteur  yellow-and-blue  yellow-and-blue'
-                'akina-wise      akina-wise    eldorado-afro    eldorado-afro'
-                'ombres-colorees maescroc      omg              doux-divorce-records'
-                'les-rayons      les-rayons    a-linterieur     a-linterieur'
-                'vendetta        vendetta      a-linterieur     a-linterieur'
+'jeune-juliette                 jeune-juliette              les-equilibris  les-equilibris'
+'introspections-selectives      introspections-selectives   alexandre-le-fou      alexandre-le-fou' 
+'le-deserteur                   le-deserteur                original-cosmic-playlist afrika-glam'
+'le-deserteur                   le-deserteur                the-mice         paleo'
+'le-deserteur                   le-deserteur                yellow-and-blue  yellow-and-blue'
+'akina-wise                     akina-wise                  eldorado-afro    eldorado-afro'
+'ombres-colorees                maescroc                    omg              doux-divorce-records'
+'les-rayons                     les-rayons                  a-linterieur     a-linterieur'
+'vendetta                       vendetta                    a-linterieur     a-linterieur'
             ;
             display:grid;
         }
@@ -45,12 +45,17 @@
         grid-area:placeholderVideo;
         object-fit:cover;
     }
-    .alex-le-fou{
-        grid-area: alex-le-fou;
+    .alexandre-le-fou{
+        grid-area: alexandre-le-fou;
     }
+    .introspections-selectives{
+        grid-area:introspections-selectives;
+    }
+    /*
     .amanda-is{
         grid-area: amanda-is;
     }
+    */
     
     .le-deserteur{
         grid-area:le-deserteur;
@@ -98,12 +103,11 @@
     .doux-divorce-records{
         grid-area:doux-divorce-records;
     }
-
-    .a-linterieur{
+    .ronan-martin{
         grid-area:a-linterieur;
     }
 
-    .les-rayons{
+    .ronan-martin-les-rayons{
         grid-area:les-rayons;
     }
     .vendetta{

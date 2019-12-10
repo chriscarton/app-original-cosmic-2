@@ -118,7 +118,8 @@ export class SingleProject extends Component {
         */
 
         let project = this.state.project;
-        // console.log(project);
+        console.log(project);
+        
         if(project !== null){
             return(
                 <div id="singleProject">

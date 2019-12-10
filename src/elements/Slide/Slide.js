@@ -13,9 +13,7 @@ export class Slide extends Component {
     render() {
 
         let slide = this.props.slide;
-        //console.log(slide);
-        console.log(slide.type);
-
+        
         return (
             <div id="Slide">
                 {slide.type==='image' && 

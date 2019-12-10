@@ -21,10 +21,10 @@ export class Projects extends Component {
        //Juste pour être sur qu'on revienne bien au plafond lors de la navigation
         window.scrollTo(0, 0);
 
-        var the_prefix = "http://localhost/backend-oc/wordpress/wp-json/wp/v2/";
-        var the_url = the_prefix+"posts?_embed=true&per_page=100&order=asc";
+        var the_prefix = "http://localhost/backend-oc/wordpress/wp-json/oc/v1/";
+        var the_url = the_prefix+"posts";
 
-        //alert(the_url);
+        
 
         fetch(the_url)
             .then(response=>response.json())
@@ -49,10 +49,12 @@ export class Projects extends Component {
 
     render() {
 
+        let projects = this.state.projects;
+
         return (
             <div id="Projects">
                 <Header />
-                {this.state.projects ? 
+                {projects ? 
                 <div className="items">
                     {this.state.projects.map((item, index) => (
                         <div

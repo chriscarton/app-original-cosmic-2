@@ -8,13 +8,17 @@ export class Media extends Component {
     constructor(props){
         super(props);
         this.state = {
-            item:this.props.item
+            item:null,
+            featuredMedia:null
         }
     }
 
     componentDidMount(){
-        
-        /*
+        let item = this.props.item;
+        this.setState({
+            item:item
+        });
+
         let featured_media = item._embedded['wp:featuredmedia'];
 
         if(typeof featured_media !== 'undefined'){
@@ -23,8 +27,7 @@ export class Media extends Component {
             this.setState({
                 featuredMedia:media
             });
-        }
-        */   
+        }        
     }
 
     
@@ -39,23 +42,27 @@ export class Media extends Component {
 
     render() {
 
-        let item = this.state.item;
-        console.log(item);
-        let thumbnails = item.thumbnails;
+        let media = this.state.featuredMedia;
 
-        //console.log(thumbnails.full);
+        if(media !== null){
 
-        return(
-            <div class={`media is-loaded ${item.slug}`}>
+            return(
                 <img 
-                    srcSet=""
-                    src={thumbnails.full.src}
+                srcSet={
+                        Object.keys(media.media_details.sizes).map(function(key){
+                            let size = media.media_details.sizes[key];
+                            return(
+                                size.source_url + ' ' + size.width + 'w'
+                            );
+                        })
+                    }
                     alt="myimagealt"
                 />
-            </div>
-        );
-        
-       
+            );
+            
+        }else{
+            return null;
+        }
         
 
 

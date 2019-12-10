@@ -21,8 +21,6 @@ export default class Gallery extends React.Component {
 
     informations(){
 
-        //return 'no informations';
-
         return(
             <div className="informations">
 
@@ -31,14 +29,14 @@ export default class Gallery extends React.Component {
                         <i className="fa fa-chevron-left"></i>
                         &nbsp;Retour
                     </Link>
-                    {/* <div id="projectNav">
-                        {this.props.project.prev &&
-                            <ProjectNav direction="prev" arrow="left" link={`/projet/${this.props.project.prev.slug}`} text="Précédent" />    
+                    <div id="projectNav">
+                        {this.props.project.previous &&
+                            <ProjectNav direction="prev" arrow="left" link={`/projet/${this.props.project.previous.slug}`} text="Précédent" />    
                         }
                         {this.props.project.next &&
                             <ProjectNav direction="next" arrow="right" link={`/projet/${this.props.project.next.slug}`} text="Suivant" />
                         }
-                    </div> */}
+                    </div>
                 </div>
                 {this.props.project.slides.length > 1 && 
                 <nav id="mediasPagination">

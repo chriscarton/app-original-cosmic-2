@@ -4,24 +4,26 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import { Link } from "react-router-dom";
 import ProjectNav from '../../elements/ProjectNav/ProjectNav.js';
 import parse from 'html-react-parser';
-import Slide from '../../elements/Slide/Slide';
-//import Media from '../../elements/Media/Media.js';
-
+import Media from '../../elements/Media/Media.js';
 
 export default class Gallery extends React.Component {
 
     //Ce serait là dedans qu'il faudrait inclure notre composant Media
     state = {
-        galleryItems: this.props.project.slides.map((slide,index) => (
-            <div className="slide" key={index}>
-                <Slide slide={slide}/>
+        galleryItems: this.props.item.medias.map((media,index) => (
+            <div className="item" key={index}>
+                <Media
+                    key={index}
+                    index={index}
+                    media={media}
+                    path='img/medias'
+                    useMaxWidth={true}
+                />
             </div>
         ))
     }
 
     informations(){
-
-        //return 'no informations';
 
         return(
             <div className="informations">
@@ -31,24 +33,24 @@ export default class Gallery extends React.Component {
                         <i className="fa fa-chevron-left"></i>
                         &nbsp;Retour
                     </Link>
-                    {/* <div id="projectNav">
-                        {this.props.project.prev &&
-                            <ProjectNav direction="prev" arrow="left" link={`/projet/${this.props.project.prev.slug}`} text="Précédent" />    
+                    <div id="projectNav">
+                        {this.props.item.prev &&
+                            <ProjectNav direction="prev" arrow="left" link={`/projet/${this.props.item.prev.slug}`} text="Précédent" />    
                         }
-                        {this.props.project.next &&
-                            <ProjectNav direction="next" arrow="right" link={`/projet/${this.props.project.next.slug}`} text="Suivant" />
+                        {this.props.item.next &&
+                            <ProjectNav direction="next" arrow="right" link={`/projet/${this.props.item.next.slug}`} text="Suivant" />
                         }
-                    </div> */}
+                    </div>
                 </div>
-                {this.props.project.slides.length > 1 && 
+                {this.props.item.medias.length > 1 && 
                 <nav id="mediasPagination">
-                    {this.props.project.slides.map(this.thumbproject)}
+                    {this.props.item.medias.map(this.thumbItem)}
                 </nav>
                 }
-                {this.props.project.content &&
+                {this.props.item.content &&
                     <div className="content">
-                        <h1 className="title">{this.props.project.name}</h1>
-                        {parse(this.props.project.content)}
+                        <h1 className="title">{this.props.item.name}</h1>
+                        {parse(this.props.item.content)}
                     </div>
                 }
                 <div className="to-contact">
@@ -71,7 +73,7 @@ export default class Gallery extends React.Component {
         e.target.classList.add('media-active');
     }
 
-    thumbproject = (project, i) => {
+    thumbItem = (item, i) => {
         let addClass = null;
         if(i===0){
             addClass ="media-active"

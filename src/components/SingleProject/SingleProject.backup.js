@@ -6,17 +6,30 @@ import Playlists from '../../components/Playlists/Playlists.js';
 import Gallery from '../Gallery/Gallery.js';
 
 export class SingleProject extends Component {
-
     constructor(props) {
 
         super(props);
 
         let paramSlug = this.props.match.params.slug;
 
+        let results = data.filter(function (entry,index) {
+            
+            if (entry.slug === paramSlug) {
+
+                entry.prev = data[index-1];
+                entry.next = data[index+1];
+
+                return entry;
+            }else{
+                return null;
+            }
+        });
+        let match = results[0];
+
         this.state = {
-            slug:paramSlug,
-            project:null
+            match: match
         }
+
     }
 
 
@@ -32,29 +45,9 @@ export class SingleProject extends Component {
         }
     }
 
-    queryingPost(){
-
-        var the_prefix = "http://localhost/backend-oc/wordpress/wp-json/oc/v1/";
-        var the_url = the_prefix+"single/"+this.state.slug;
-
-        //http://localhost/backend-oc/wordpress/wp-json/oc/v1/single/le-deserteur
-
-        fetch(the_url)
-            .then(response=>response.json())
-            .then(response=>{
-                this.setState({
-                    project:response
-                })
-            });
-
-
-    }
-
     //Juste pour être sur qu'on revienne bien au plafond lors de la navigation
     componentDidMount() {
         window.scrollTo(0, 0);
-
-        this.queryingPost();
     }
 
     componentDidUpdate(){
@@ -96,7 +89,7 @@ export class SingleProject extends Component {
     }
 
     render() {
-        /*
+
         let match = this.state.match;
 
         let playlistsMode = null;
@@ -115,20 +108,6 @@ export class SingleProject extends Component {
                 )}
             </div>
         )
-        */
-
-        let project = this.state.project;
-        // console.log(project);
-        if(project !== null){
-            return(
-                <div id="singleProject">
-                    <Gallery project={project}></Gallery>
-                </div>
-            )
-        }else{
-            return 'ça charge';
-        }
-
     }
 }
 

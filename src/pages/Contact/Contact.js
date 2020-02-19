@@ -1,54 +1,74 @@
 import React, { Component } from 'react';
 import './Contact.scss';
-import StudioContent from '../../contents/Studio/Studio.js';
+import Studio from '../../contents/Studio/Studio.js';
 import Header from '../../elements/Header/Header.js';
 import Footer from '../../elements/Footer/Footer.js';
 
 export class Contact extends Component {
     
-    //Juste pour être sur qu'on revienne bien au plafond lors de la navigation
+    constructor(props){
+        super(props);
+        
+        this.state = {
+            items:null
+        }
+        
+    }
+
     componentDidMount() {
+       //Juste pour être sur qu'on revienne bien en haut de la page lors de la navigation
         window.scrollTo(0, 0);
+
+        var the_prefix = "http://localhost/backend-oc/wordpress/wp-json/oc/v1/";
+        var the_url = the_prefix+"members";
+
+        
+
+        fetch(the_url)
+            .then(response=>response.json())
+            .then(response=>{
+
+                console.log(the_url);
+                console.log(response);
+                /*
+                response.forEach(function(item){
+                    console.log(item);
+                });
+                */
+                this.setState({
+                    items:response
+                })
+            });
+
+        
     }
     
     render() {
+
+        let items = this.state.items;
+
         return (
             <>
                 <Header/>
                 <div className="page" id="Contact">
                     <div className="grid">
-                        
                         <article>
-                            <StudioContent/>
+                            <Studio/>
                         </article>
-
-                        <div id="Denis">
-                            <img alt="" src={process.env.PUBLIC_URL+"/img/team/DENIS.jpg"}/>
-                        </div>
-                        <div id="Adrien">
-                            <img alt="" src={process.env.PUBLIC_URL+"/img/team/ADRIEN.jpg"} />
-                        </div>
-                        
-                        <div id="Romain">
-                            <img alt="" src={process.env.PUBLIC_URL+"/img/team/ROMAIN.jpg"} />
-                        </div>
-                        <div id="Julien">
-                            <img alt="" src={process.env.PUBLIC_URL+"/img/team/JULIEN.jpg"} />
-                        </div>
-                        
-                        <div id="Raph">
-                            <img alt="" src={process.env.PUBLIC_URL+"/img/team/RAPH.jpg"} />
-                        </div>
-                        <div id="Frank">
-                            <img alt="" src={process.env.PUBLIC_URL+"/img/team/FRANK.jpg"} />
-                        </div>
-                        <div id="Chris">
-                            <img alt="" src={process.env.PUBLIC_URL+"/img/team/CHRIS.jpg"} />
-                        </div>
-                        <div id="Emma">
-                            <img alt="" src={process.env.PUBLIC_URL+"/img/team/EMMA.jpg"} />
-                        </div>
-                        
+                        {items ? 
+                            <>
+                                {items.map(function(item){
+                                    return(
+                                        <div key={item.id}>
+                                            <img 
+                                                alt="" 
+                                                src={item.thumbnails.full.src}
+                                            />
+                                        </div>
+                                    )
+                                })}
+                            </>
+                        : null }                        
                     </div>
                 </div>
                 <Footer/>

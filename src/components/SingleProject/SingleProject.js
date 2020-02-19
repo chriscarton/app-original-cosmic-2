@@ -118,7 +118,6 @@ export class SingleProject extends Component {
         */
 
         let project = this.state.project;
-        console.log(project);
         
         if(project !== null){
             return(
@@ -127,7 +126,7 @@ export class SingleProject extends Component {
                 </div>
             )
         }else{
-            return 'ça charge';
+            return '';
         }
 
     }

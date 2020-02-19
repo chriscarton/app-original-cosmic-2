@@ -4,6 +4,9 @@ import './Mentions.scss';
 import Header from '../../elements/Header/Header.js';
 import Footer from '../../elements/Footer/Footer.js';
 
+import parse from 'html-react-parser';
+
+
 //Voir : https://www.service-public.fr/professionnels-entreprises/vosdroits/F31228
 
 /*
@@ -11,47 +14,58 @@ import Footer from '../../elements/Footer/Footer.js';
 */
 
 export class Mentions extends Component {
+
+
+    constructor(props) {
+
+        super(props);
+
+        this.state = {
+            text:null
+        }
+
+    }
+
+    queryingPost(){
+
+        var the_prefix = "http://localhost/backend-oc/wordpress/wp-json/oc/v1/";
+        var the_url = the_prefix+"singleText/mentions-legales";
+        
+        //http://localhost/backend-oc/wordpress/wp-json/oc/v1/singleText/mentions-legales
+
+        fetch(the_url)
+            .then(response=>response.json())
+            .then(response=>{
+                this.setState({
+                    text:response
+                })
+            });
+
+
+    }
+
+    componentDidMount() {
+        //Juste pour être sur qu'on revienne bien en haut de la page lors de la navigation
+        window.scrollTo(0, 0);
+
+        this.queryingPost();
+    }
+
+
+
     render() {
+        let text = this.state.text;
+
         return (
             <>
                 <Header/>
-                <div id="Mentions">
-                    <div className="title">Édition</div>
-                    <p>
-                        Le site internet originalcosmic.fr, est édité par : <br/>
-                        Original Cosmic Studio<br/>
-                        11b Rue Copernic,<br/>
-                        59 000 Lille<br/>
-                        France<br/>
-                        Téléphone : +33(0)6 18 78 43 78 <br/>
-                        Email : contact@originalcosmic.fr
-                    </p>
-
-                    {/* <div className="title">Auteurs</div>
-                    <p>
-                        Le directeur de publication : Nom Prénom<br/>
-                        Le co-directeur de publication : Nom Prénom<br/>
-                    </p> */}
-
-                    <div className="title">Hébergement</div>
-                    <p>
-                        Le site internet, originalcosmic.fr, est hébergé par :<br />
-                        OVH,<br />
-                        dont le siège social se situe :<br />
-                        2 rue Kellermann,<br />
-                        59100 Roubaix, France.<br />
-                    </p>
-
-                    <div className="title">Protection du droit d'auteur, propriété intellectuelle</div>
-                    <p>
-                        L'ensemble des documents, images, vidéos, textes et autre médias de ce site internet est protégé par les législations françaises et internationales concernant le droit d'auteur et la propriété intellectuelle. Les droits de reproduction des documents, images, vidéos et autres médias sont intégralement réservés.
-                    </p>
-
-                    <div className="title">Informatique et liberté</div>
-                    <p>
-                        Conformément aux articles 39 et suivants de la loi n° 78-17 du 6 janvier 1978 modifiée en 2004 relative à l’informatique, aux fichiers et aux libertés, toute personne peut obtenir communication et, le cas échéant, rectification ou suppression des informations la concernant, en nous en adressant la demande via mail, courrier ou téléphone.
-                    </p>
-                </div>
+                {text ? (
+                    <div id="Mentions">
+                        {parse(text.content)}
+                    </div>
+                ):(
+                    <div></div>
+                )}
                 <Footer/>
             </>
         )

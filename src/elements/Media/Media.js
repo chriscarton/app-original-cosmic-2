@@ -40,26 +40,33 @@ export class Media extends Component {
     render() {
 
         let item = this.state.item;
-        console.log(item);
         let thumbnails = item.thumbnails;
 
-        //console.log(thumbnails.full);
-
+        if(item.slug=="original-cosmic-playlist" || item.slug=="paleo"){
+            console.log(item);
+        }
+        
         return(
-            <div class={`media is-loaded ${item.slug}`}>
+            <div className={`media is-loaded ${item.slug}`}>
+                {item.extrait_video ? (
+                    <video 
+                        className="media video"
+                        onLoadedData={this.mediaIsLoaded}
+                        src={item.extrait_video} 
+                        autoPlay 
+                        loop
+                        muted
+                        playsInline={true}
+                    ></video>
+                ):(
                 <img 
                     srcSet=""
                     src={thumbnails.full.src}
                     alt="myimagealt"
                 />
+                )}
             </div>
         );
-        
-       
-        
-
-
-
 
         
     }

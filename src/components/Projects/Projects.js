@@ -18,7 +18,7 @@ export class Projects extends Component {
     }
 
     componentDidMount() {
-       //Juste pour être sur qu'on revienne bien au plafond lors de la navigation
+       //Juste pour être sur qu'on revienne bien en haut de la page lors de la navigation
         window.scrollTo(0, 0);
 
         var the_prefix = "http://localhost/backend-oc/wordpress/wp-json/oc/v1/";

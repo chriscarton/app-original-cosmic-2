@@ -4,21 +4,24 @@
     background-color:white;
     .items{
         @media screen and (min-width:600px){
-            grid-template-areas: 
-'jeune-juliette                 jeune-juliette              les-equilibris  les-equilibris'
-'introspections-selectives      introspections-selectives   alexandre-le-fou      alexandre-le-fou' 
-'le-deserteur                   le-deserteur                original-cosmic-playlist afrika-glam'
-'le-deserteur                   le-deserteur                the-mice         paleo'
-'le-deserteur                   le-deserteur                yellow-and-blue  yellow-and-blue'
-'akina-wise                     akina-wise                  eldorado-afro    eldorado-afro'
-'ombres-colorees                maescroc                    omg              doux-divorce-records'
-'les-rayons                     les-rayons                  a-linterieur     a-linterieur'
-'vendetta                       vendetta                    a-linterieur     a-linterieur'
-            ;
             display:grid;
+            
+            //Ca marche mieux avec ceci :
+
+            grid-template-columns:1fr 1fr 1fr 1fr;
+            
+            //Qu'avec ça :
+            
+            //grid-template-rows:1fr 1fr 1fr;
+            //grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+            //grid-template-rows: repeat(auto-fit, minmax(320px,1fr));
+
+            //Surtout en responsive (ça se pète la gueule sur les grands écrans)
         }
         
         .item{
+            grid-column: span 1;
+            grid-row: span 1;
             a{
                 img, video{
                     display:block;
@@ -28,89 +31,47 @@
                     object-position: center center;
                 }
             }
+            &.jeune-juliette{
+                grid-column: span 2;
+            }
+            &.les-equilibristes{
+                grid-column: span 2;
+            }
+            &.alexandre-le-fou{
+                grid-column: span 2;
+            }
+            &.introspections-selectives{
+                grid-column: span 2;
+            }
+            &.le-deserteur{
+                grid-column:span 2;
+                grid-row:span 3;
+            }
+            &.yellow-and-blue{
+                grid-column: span 2;
+            }
+            &.akina-wise{
+                grid-column: span 2;
+            }
+            &.eldorado-afro{
+                grid-column: span 2;
+            }
+            &.ronan-martin-les-rayons{
+                grid-column: span 2;
+            }
+            &.ronan-martin{
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+            &.salvak{
+                grid-column: span 2;
+            }
         }
     }
-    .jeune-juliette{
-        grid-area:jeune-juliette;
-    }
-    .les-equilibristes{
-        grid-area:les-equilibris;
-    }
-    /*
-    .les-alchimistes{
-        grid-area:les-alchimistes;
-    }
-    */
+
+    //Je n'ai aucune idée de ce qu'est ceci : 
     #placeholderVideo{
         grid-area:placeholderVideo;
         object-fit:cover;
-    }
-    .alexandre-le-fou{
-        grid-area: alexandre-le-fou;
-    }
-    .introspections-selectives{
-        grid-area:introspections-selectives;
-    }
-    /*
-    .amanda-is{
-        grid-area: amanda-is;
-    }
-    */
-    
-    .le-deserteur{
-        grid-area:le-deserteur;
-        display:flex;
-        align-items:center;
-        justify-content: center;
-        img{
-            max-height:100vh;
-            object-fit:contain;
-        }
-    }
-    .afrika-glam {
-        grid-area:afrika-glam;
-    }
-    .original-cosmic-playlist{
-        grid-area:original-cosmic-playlist;
-    }
-    .paleo{
-        grid-area:paleo;
-    }
-    .the-mice{
-        grid-area:the-mice;
-        img{
-            object-fit:contain;
-        }
-    }
-    .yellow-and-blue{
-        grid-area:yellow-and-blue;
-    }
-    .akina-wise{
-        grid-area:akina-wise;
-    }
-    .eldorado-afro{
-        grid-area:eldorado-afro;
-    }
-    .ombres-colorees{
-        grid-area:ombres-colorees;
-    }
-    .maescroc{
-        grid-area:maescroc;
-    }
-    .omg{
-        grid-area:omg;
-    }
-    .doux-divorce-records{
-        grid-area:doux-divorce-records;
-    }
-    .ronan-martin{
-        grid-area:a-linterieur;
-    }
-
-    .ronan-martin-les-rayons{
-        grid-area:les-rayons;
-    }
-    .vendetta{
-        grid-area:vendetta;
     }
 }

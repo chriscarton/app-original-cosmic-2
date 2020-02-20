@@ -41,10 +41,6 @@ export class Media extends Component {
 
         let item = this.state.item;
         let thumbnails = item.thumbnails;
-
-        if(item.slug=="original-cosmic-playlist" || item.slug=="paleo"){
-            console.log(item);
-        }
         
         return(
             <div className={`media is-loaded ${item.slug}`}>
@@ -62,7 +58,7 @@ export class Media extends Component {
                 <img 
                     srcSet=""
                     src={thumbnails.full.src}
-                    alt="myimagealt"
+                    alt=""
                 />
                 )}
             </div>

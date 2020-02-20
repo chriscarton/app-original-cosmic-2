@@ -1,8 +1,11 @@
-#Slide{
+.slide{
     display:flex;
     align-items: center;
     justify-content: center;
     overflow:hidden;
+    @media screen and (min-width:800px){
+        height:100vh;
+    }
     img{
         max-width:100%;
     }

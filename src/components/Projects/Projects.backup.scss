@@ -1,0 +1,119 @@
+@import '../../variables.scss';
+
+#Projects{
+    background-color:white;
+    .items{
+        @media screen and (min-width:600px){
+            display:grid;
+            /*
+            grid-template-areas: 
+                'p1  p1  p2  p2'
+                'p3  p3  p4  p4' 
+                'p5  p5  p6  p7'
+                'p5  p5  p8  p9'
+                'p5  p5  p10 p10'
+                'p11 p11 p12 p12'
+                'p13 p14 p15 p16'
+                'p18 p18 p17 p17'
+                'p19 p19 p17 p17'
+            ;
+            */
+            
+        }
+        
+        .item{
+            a{
+                img, video{
+                    display:block;
+                    width: 100%;                   
+                    height:100%;
+                    object-fit:cover;
+                    object-position: center center;
+                }
+            }
+        }
+    }
+    .jeune-juliette{
+        grid-area:p1;
+    }
+    .les-equilibristes{
+        grid-area:p2;
+    }
+    /*
+    .les-alchimistes{
+        grid-area:les-alchimistes;
+    }
+    */
+    #placeholderVideo{
+        grid-area:placeholderVideo;
+        object-fit:cover;
+    }
+    .alexandre-le-fou{
+        grid-area: p4;
+    }
+    .introspections-selectives{
+        grid-area:p3;
+    }
+    /*
+    .amanda-is{
+        grid-area: amanda-is;
+    }
+    */
+    
+    .le-deserteur{
+        grid-area:p5;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        img{
+            max-height:100vh;
+            object-fit:contain;
+        }
+    }
+    .original-cosmic-playlist{
+        grid-area:p6;
+    }
+    .afrika-glam {
+        grid-area:p7;
+    }
+    .the-mice{
+        grid-area:p8;
+        img{
+            object-fit:contain;
+        }
+    }
+    .paleo{
+        grid-area:p9;
+    }
+    .yellow-and-blue{
+        grid-area:p10;
+    }
+    .akina-wise{
+        grid-area:p11;
+    }
+    .eldorado-afro{
+        grid-area:p12;
+    }
+    .ombres-colorees{
+        grid-area:p13;
+    }
+    .maescroc{
+        grid-area:p14;
+    }
+    .omg{
+        grid-area:p15;
+    }
+    .doux-divorce-records{
+        grid-area:p16;
+    }
+    .ronan-martin{
+        grid-area:p17;
+    }
+
+    .ronan-martin-les-rayons{
+        grid-area:p18;
+    }
+    .salvak{
+        grid-area:p19;
+    }
+}

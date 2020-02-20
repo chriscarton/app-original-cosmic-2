@@ -1,7 +1,7 @@
 @import '../../variables.scss';
 
-#Playlists{
-
+#ocPlaylists{
+    
     .bar{
         position:fixed;
         height:25px;
@@ -31,8 +31,8 @@
         top:0px;
         justify-content: space-between;
         #projectNav{
-                display:flex;
-                flex-wrap:wrap;        
+            display:flex;
+            flex-wrap:wrap;        
         }
         
     }
@@ -41,36 +41,57 @@
         bottom:0px;
     }
 
-    @media screen and (min-width:600px){
-        min-height:100vh;
-        display:grid;
-        grid-template-columns: 50vw 50vw;
-    }
-    .media{
-        opacity:1;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        video{
-            max-width:100%;
-            height:auto;
-            max-height:100vh;
-            display:none;
-            @media screen and (min-width:600px){
-                display:block;
-                height:100vh;
-                width:50vw;
-                object-fit:contain;
-                object-position:center center;
-            }
-        }
-        iframe{
-            margin-top:50px;
-            @media screen and (min-width:600px){
-                margin-top:0px;
-            }
+    
+    .container{
+        @media screen and (min-width:600px){
+            width:75%;
+            margin-left:auto;
+            margin-right:auto;
         }
 
+        #mainPlaylist{
+            padding:10px;
+            min-height:100vh;
+
+            @media screen and(min-width:800px){
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap:10px;
+                align-items: center;
+            }
+             
+        }
+        h3{
+            font-family: 'Roboto';
+        }
         
+        #otherPlaylists{
+            background-color: rgb(230, 230, 230);
+            margin-bottom:100px;
+            padding-bottom:50px;
+
+            >.title{
+                padding-top:50px;
+                //padding-bottom:50px;
+                text-align: center;
+                font-family: 'Roboto';
+            }
+        
+            .grid{
+                padding:10px;
+                @media screen and(min-width:800px){
+                    display:grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap:10px;
+                }
+            }
+        }
     }
+
+    video{
+        //border:2px dashed black;
+        max-width: 100%;
+        height:auto;
+    }
+    
 }

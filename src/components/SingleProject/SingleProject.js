@@ -21,6 +21,7 @@ export class SingleProject extends Component {
 
 
     //Pour régler un eventuel problème de persistence des images lors de la navigation précédent suivant (ce problème survenait avec l'ancien design)
+    /*
     UNSAFE_componentWillUpdate(){
 
         let imgs = document.querySelectorAll('#singleProject img');
@@ -31,12 +32,13 @@ export class SingleProject extends Component {
             });
         }
     }
-
+    */
     queryingPost(){
 
         var the_prefix = "http://localhost/backend-oc/wordpress/wp-json/oc/v1/";
         var the_url = the_prefix+"single/"+this.state.slug;
 
+        //console.log(the_url);
         //http://localhost/backend-oc/wordpress/wp-json/oc/v1/single/le-deserteur
 
         fetch(the_url)
@@ -86,14 +88,6 @@ export class SingleProject extends Component {
     }
 
 
-    Gallery = () => {
-
-        return (
-            <div className="visual">
-                
-            </div>
-        )
-    }
 
     render() {
         /*
@@ -118,13 +112,27 @@ export class SingleProject extends Component {
         */
 
         let project = this.state.project;
+
+        //console.log(project);
         
         if(project !== null){
-            return(
-                <div id="singleProject">
-                    <Gallery project={project}></Gallery>
-                </div>
-            )
+
+
+            if(project.playlist != null){
+                //alert('ET une playlist!');
+                return(
+                        <Playlists item={project}></Playlists>
+                    
+                );
+            }else{
+                return(
+                    <div id="singleProject">
+                        <Gallery project={project}></Gallery>
+                    </div>
+                );
+            }
+
+
         }else{
             return '';
         }

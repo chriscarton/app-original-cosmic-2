@@ -1,0 +1,5 @@
+ErrorDocument 404 /404.html
+# Redirect http to https : 
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.originalcosmic.fr/$1 [R,L]

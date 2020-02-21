@@ -5,6 +5,8 @@ import './SingleProject.scss';
 import Playlists from '../../components/Playlists/Playlists.js';
 import Gallery from '../Gallery/Gallery.js';
 
+import url_prefix from '../../url_prefix.js';
+
 export class SingleProject extends Component {
 
     constructor(props) {
@@ -35,10 +37,8 @@ export class SingleProject extends Component {
     */
     queryingPost(){
 
-        var the_prefix = "http://localhost/backend-oc/wordpress/wp-json/oc/v1/";
-        var the_url = the_prefix+"single/"+this.state.slug;
+        var the_url = url_prefix+"single/"+this.state.slug;
 
-        //console.log(the_url);
         //http://localhost/backend-oc/wordpress/wp-json/oc/v1/single/le-deserteur
 
         fetch(the_url)
@@ -52,8 +52,8 @@ export class SingleProject extends Component {
 
     }
 
-    //Juste pour être sur qu'on revienne bien au plafond lors de la navigation
     componentDidMount() {
+        //Juste pour être sur qu'on revienne en haut de la page lors de la navigation
         window.scrollTo(0, 0);
 
         this.queryingPost();
@@ -90,36 +90,13 @@ export class SingleProject extends Component {
 
 
     render() {
-        /*
-        let match = this.state.match;
-
-        let playlistsMode = null;
-        if(typeof match.type !== "undefined"){
-            if(match.type === 'playlists'){
-                playlistsMode = true;
-            }
-        }
         
-        return (
-            <div id="singleProject">
-                {playlistsMode ? (
-                    <Playlists item={match}></Playlists>
-                ) : (
-                    <Gallery item={match}></Gallery>
-                )}
-            </div>
-        )
-        */
-
         let project = this.state.project;
-
-        //console.log(project);
         
         if(project !== null){
 
 
             if(project.playlist != null){
-                //alert('ET une playlist!');
                 return(
                         <Playlists item={project}></Playlists>
                     

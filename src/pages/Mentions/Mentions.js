@@ -6,7 +6,7 @@ import Footer from '../../elements/Footer/Footer.js';
 
 import parse from 'html-react-parser';
 
-
+import url_prefix from '../../url_prefix.js';
 //Voir : https://www.service-public.fr/professionnels-entreprises/vosdroits/F31228
 
 /*
@@ -28,8 +28,8 @@ export class Mentions extends Component {
 
     queryingPost(){
 
-        var the_prefix = "http://localhost/backend-oc/wordpress/wp-json/oc/v1/";
-        var the_url = the_prefix+"singleText/mentions-legales";
+
+        var the_url = url_prefix+"singleText/mentions-legales";
         
         //http://localhost/backend-oc/wordpress/wp-json/oc/v1/singleText/mentions-legales
 

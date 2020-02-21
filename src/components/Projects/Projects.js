@@ -6,6 +6,9 @@ import Media from '../../elements/Media/Media.js';
 import Header from '../../elements/Header/Header.js';
 import Footer from '../../elements/Footer/Footer.js';
 
+import url_prefix from '../../url_prefix';
+
+
 export class Projects extends Component {
 
     constructor(props){
@@ -21,10 +24,7 @@ export class Projects extends Component {
        //Juste pour être sur qu'on revienne bien en haut de la page lors de la navigation
         window.scrollTo(0, 0);
 
-        var the_prefix = "http://localhost/backend-oc/wordpress/wp-json/oc/v1/";
-        var the_url = the_prefix+"posts";
-
-        
+        var the_url = url_prefix+"posts";
 
         fetch(the_url)
             .then(response=>response.json())

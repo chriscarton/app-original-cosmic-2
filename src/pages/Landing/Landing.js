@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Landing.scss';
 import parse from 'html-react-parser';
-
+import url_prefix from '../../url_prefix';
 
 export class Landing extends Component {
 
@@ -17,9 +17,7 @@ export class Landing extends Component {
 
     queryingPost(){
 
-        var the_prefix = "http://localhost/backend-oc/wordpress/wp-json/oc/v1/";
-        var the_url = the_prefix+"landing";
-        console.log(the_url);
+        var the_url = url_prefix+"landing";
         
         fetch(the_url)
             .then(response=>response.json())

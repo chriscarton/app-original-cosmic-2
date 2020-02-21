@@ -4,6 +4,8 @@ import Studio from '../../contents/Studio/Studio.js';
 import Header from '../../elements/Header/Header.js';
 import Footer from '../../elements/Footer/Footer.js';
 
+import url_prefix from '../../url_prefix.js';
+
 export class Contact extends Component {
     
     constructor(props){
@@ -19,22 +21,12 @@ export class Contact extends Component {
        //Juste pour être sur qu'on revienne bien en haut de la page lors de la navigation
         window.scrollTo(0, 0);
 
-        var the_prefix = "http://localhost/backend-oc/wordpress/wp-json/oc/v1/";
-        var the_url = the_prefix+"members";
-
-        
+        var the_url = url_prefix+"members";
 
         fetch(the_url)
             .then(response=>response.json())
             .then(response=>{
-
-                console.log(the_url);
-                console.log(response);
-                /*
-                response.forEach(function(item){
-                    console.log(item);
-                });
-                */
+                
                 this.setState({
                     items:response
                 })

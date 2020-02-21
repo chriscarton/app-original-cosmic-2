@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FormContact from '../../components/FormContact/FormContact.js';
 import parse from 'html-react-parser';
 
+import url_prefix from '../../url_prefix.js';
 
 export class Studio extends Component {
 
@@ -17,8 +18,7 @@ export class Studio extends Component {
 
     queryingPost(){
 
-        var the_prefix = "http://localhost/backend-oc/wordpress/wp-json/oc/v1/";
-        var the_url = the_prefix+"singleText/contact";
+        var the_url = url_prefix+"singleText/contact";
         
         //http://localhost/backend-oc/wordpress/wp-json/oc/v1/singleText/contact
 
